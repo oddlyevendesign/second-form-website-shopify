@@ -504,6 +504,11 @@
     }
   }
 
+  /* Invert the logo to white when header is transparent and not in sticky/hovered state */
+  .header[transparent]:not([data-sticky-state='active']):not(:has(.menu-list__link:is(:hover, [aria-expanded='true']))):not(:has(.mega-menu__list:hover)) .header-logo__image-container--inverse .header-logo__image {
+    filter: brightness(0) invert(1);
+  }
+
   /* When top row has transparent background, make it inherit colors from header component */
   [data-transparent-color-scheme='top']:hover .header__row--top,
   [data-transparent-color-scheme='top']:focus-within .header__row--top,
