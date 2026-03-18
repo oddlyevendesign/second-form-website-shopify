@@ -1,0 +1,287 @@
+
+<style>
+  .fabric-feature__inner {
+    display: grid;
+    grid-template-columns: var(--fabric-feature-image-width, 260px) 1fr;
+    gap: 0;
+    overflow: hidden;
+    align-items: start;
+  }
+
+  .fabric-feature__media {
+    flex-shrink: 0;
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .fabric-feature__media img,
+  .fabric-feature__media .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .fabric-feature__media-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);
+    color: #fff;
+  }
+
+  .fabric-feature__fabric-name {
+    font-family: var(--font-primary--family);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 2px;
+    line-height: 1.2;
+  }
+
+  .fabric-feature__fabric-desc {
+    font-family: var(--font-body--family);
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  .fabric-feature__products-wrap {
+    overflow: hidden;
+    padding-left: 16px;
+  }
+
+  .fabric-feature__products {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .fabric-feature__products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fabric-feature__product {
+    flex-shrink: 0;
+    width: calc(var(--fabric-feature-image-width, 260px) - 28px);
+    text-decoration: none;
+    color: inherit;
+    scroll-snap-align: start;
+    display: block;
+  }
+
+  .fabric-feature__product-image {
+    background: #ffffff;
+    padding: 10px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .fabric-feature__product-image img,
+  .fabric-feature__product-image .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .fabric-feature__product:hover .fabric-feature__product-image img {
+    transform: scale(1.06);
+  }
+
+  .fabric-feature__product-info {
+    padding-top: 10px;
+  }
+
+  .fabric-feature__product-title {
+    font-family: var(--font-body--family);
+    font-size: 0.9rem;
+    margin: 0 0 4px;
+    color: var(--color-foreground-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fabric-feature__product-price {
+    font-family: var(--font-body--family);
+    font-size: 0.85rem;
+    color: var(--color-foreground);
+    margin: 0;
+  }
+
+  @media (max-width: 749px) {
+    .fabric-feature__inner {
+      grid-template-columns: 180px 1fr;
+      --fabric-feature-image-width: 180px;
+    }
+
+    .fabric-feature__product {
+      width: 55vw;
+    }
+
+    .fabric-feature__products-wrap {
+      padding-left: 12px;
+    }
+  }
+</style>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+  <div class="fabric-feature__inner">
+
+    {%- comment -%} Left: Fabric Image with label overlay {%- endcomment -%}
+    <div class="fabric-feature__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 600
+          | image_tag: loading: 'lazy', alt: section.settings.fabric_name
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+
+      {%- if section.settings.fabric_name != blank or section.settings.fabric_description != blank -%}
+        <div class="fabric-feature__media-label">
+          {%- if section.settings.fabric_name != blank -%}
+            <p class="fabric-feature__fabric-name">{{ section.settings.fabric_name }}</p>
+          {%- endif -%}
+          {%- if section.settings.fabric_description != blank -%}
+            <p class="fabric-feature__fabric-desc">{{ section.settings.fabric_description }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Right: Scrollable Products {%- endcomment -%}
+    <div class="fabric-feature__products-wrap">
+      <div class="fabric-feature__products">
+        {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
+          {%- for product in section.settings.collection.products limit: 8 -%}
+            <a href="{{ product.url }}" class="fabric-feature__product">
+              <div class="fabric-feature__product-image">
+                {%- if product.featured_image -%}
+                  {{
+                    product.featured_image
+                    | image_url: width: 500
+                    | image_tag: loading: 'lazy', alt: product.title
+                  }}
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="fabric-feature__product-info">
+                <p class="fabric-feature__product-title">{{ product.title }}</p>
+                <p class="fabric-feature__product-price">{{ product.price | money }}</p>
+              </div>
+            </a>
+          {%- endfor -%}
+        {%- else -%}
+          {%- for i in (1..5) -%}
+            <div class="fabric-feature__product">
+              <div class="fabric-feature__product-image">
+                {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+              <div class="fabric-feature__product-info">
+                <p class="fabric-feature__product-title">Sample Product</p>
+                <p class="fabric-feature__product-price">₹0.00</p>
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fabric Feature",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Fabric image"
+    },
+    {
+      "type": "text",
+      "id": "fabric_name",
+      "label": "Fabric name",
+      "default": "CloudSoft™"
+    },
+    {
+      "type": "text",
+      "id": "fabric_description",
+      "label": "Short description",
+      "default": "Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Products collection"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fabric Feature",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}

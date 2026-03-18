@@ -167,62 +167,46 @@
         "padding-block-end": 72
       }
     },
-    "featured_product_sf": {
-      "type": "featured-product-information",
+    "featured_products_css": {
+      "type": "custom-liquid",
+      "blocks": {},
+      "block_order": [],
+      "name": "Featured Products CSS",
+      "settings": {
+        "custom_liquid": "<style>\n#shopify-section-featured_products_sf .card-gallery {\n  background-color: #ffffff;\n  padding: 12px;\n  overflow: hidden;\n}\n#shopify-section-featured_products_sf .card-gallery .media-block__media {\n  transition: transform 0.4s ease;\n}\n#shopify-section-featured_products_sf .product-card:hover .card-gallery .media-block__media {\n  transform: scale(1.08);\n}\n</style>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "featured_products_sf": {
+      "type": "product-list",
       "blocks": {
-        "media-gallery": {
-          "type": "_featured-product-information-carousel",
+        "static-header": {
+          "type": "_product-list-content",
           "static": true,
           "settings": {
-            "aspect_ratio": "adapt",
-            "constrain_to_viewport": true,
-            "media_fit": "cover",
-            "icons_style": "arrow",
-            "slideshow_controls_style": "counter",
-            "slideshow_mobile_controls_style": "dots",
-            "zoom": false,
-            "video_loop": false,
-            "hide_variants": false,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "product-details": {
-          "type": "_product-details",
-          "static": true,
-          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "details_position": "flex-start",
-            "gap": 20,
-            "sticky_details_desktop": true,
-            "inherit_color_scheme": true,
-            "color_scheme": "scheme-1",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 32,
-            "padding-block-end": 32,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "custom_width_mobile": 100
           },
           "blocks": {
-            "product_title_sf": {
+            "heading_featured": {
               "type": "text",
-              "name": "Product title",
+              "name": "Heading",
               "settings": {
-                "text": "<h2>{{ closest.product.title }}</h2>",
-                "width": "100%",
+                "text": "<h2>Bestsellers</h2>",
+                "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h3",
@@ -242,6 +226,61 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_featured"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 12,
+            "inherit_color_scheme": true,
+            "color_scheme": "scheme-1",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "gallery_sf": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "portrait",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "title_sf": {
+              "type": "product-title",
+              "settings": {
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "alignment": "left",
+                "color": "",
+                "padding-block-start": 8,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "price_sf": {
               "type": "price",
@@ -253,7 +292,7 @@
                 "width": "100%",
                 "alignment": "left",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.875rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -265,85 +304,41 @@
               },
               "blocks": {}
             },
-            "divider_sf": {
-              "type": "_divider",
-              "name": "Divider",
+            "swatches_sf": {
+              "type": "swatches",
               "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
                 "padding-block-start": 4,
-                "padding-block-end": 4
-              },
-              "blocks": {}
-            },
-            "variant_picker_sf": {
-              "type": "variant-picker",
-              "settings": {
-                "variant_style": "buttons",
-                "show_swatches": true,
-                "alignment": "left",
-                "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "buy_buttons_sf": {
-              "type": "buy-buttons",
-              "settings": {
-                "stacking": true,
-                "show_pickup_availability": false,
-                "padding-block-start": 8,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "quantity": {
-                  "type": "quantity",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "add-to-cart": {
-                  "type": "add-to-cart",
-                  "static": true,
-                  "settings": {
-                    "style_class": "button"
-                  },
-                  "blocks": {}
-                },
-                "accelerated-checkout": {
-                  "type": "accelerated-checkout",
-                  "static": true,
-                  "settings": {},
-                  "blocks": {}
-                }
-              },
-              "block_order": []
             }
           },
           "block_order": [
-            "product_title_sf",
+            "gallery_sf",
+            "title_sf",
             "price_sf",
-            "divider_sf",
-            "variant_picker_sf",
-            "buy_buttons_sf"
+            "swatches_sf"
           ]
         }
       },
-      "name": "Featured Product",
+      "block_order": [],
+      "name": "Bestsellers",
       "settings": {
-        "content_width": "content-center-aligned",
-        "desktop_media_position": "left",
-        "equal_columns": false,
-        "limit_details_width": false,
-        "gap": 48,
-        "color_scheme": "scheme-1",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "layout_type": "carousel",
+        "carousel_on_mobile": true,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_card_size": "60cqw",
+        "columns_gap": 16,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "page-width",
+        "gap": 32,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "brand_story_sf": {
@@ -508,6 +503,519 @@
         "padding-block-end": 0
       }
     },
+    "shop_the_look_sf": {
+      "type": "product-hotspots",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Heading",
+          "static": true,
+          "settings": {
+            "text": "<h2>Shop the Look</h2>",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "alignment": "left",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "hotspot-1": {
+          "type": "_hotspot-product",
+          "settings": {
+            "x-position": 28,
+            "y-position": 55
+          },
+          "blocks": {}
+        },
+        "hotspot-2": {
+          "type": "_hotspot-product",
+          "settings": {
+            "x-position": 50,
+            "y-position": 45
+          },
+          "blocks": {}
+        },
+        "hotspot-3": {
+          "type": "_hotspot-product",
+          "settings": {
+            "x-position": 72,
+            "y-position": 50
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["hotspot-1", "hotspot-2", "hotspot-3"],
+      "name": "Shop the Look",
+      "settings": {
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "section_width": "page-width",
+        "section_height": "auto",
+        "hotspot_color": "#FFFFFF57",
+        "bullseye_color": "#ffffff",
+        "color_scheme": "scheme-1",
+        "product_title_gap": 8,
+        "product_title_preset": "paragraph",
+        "product_price_preset": "paragraph",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "fabric_system_sf": {
+      "type": "carousel",
+      "blocks": {
+        "static-header": {
+          "type": "group",
+          "name": "Header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading_fabric": {
+              "type": "text",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Engineered for your lifestyle</h2>",
+                "type_preset": "h3",
+                "font": "var(--font-primary--family)",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "subheading_fabric": {
+              "type": "text",
+              "name": "Subheading",
+              "settings": {
+                "text": "<p>Each fabric in our collection is designed with a purpose.</p>",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_fabric", "subheading_fabric"]
+        },
+        "static-carousel-content": {
+          "type": "_carousel-content",
+          "name": "Fabric Cards",
+          "static": true,
+          "settings": {
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "position": "top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "height": "fit"
+          },
+          "blocks": {
+            "card_cloudsoft": {
+              "type": "_card",
+              "name": "CloudSoft™",
+              "blocks": {
+                "img_cloudsoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_cloudsoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>CloudSoft™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_cloudsoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_cloudsoft", "heading_cloudsoft", "text_cloudsoft"]
+            },
+            "card_luxemodal": {
+              "type": "_card",
+              "name": "LuxeModal™",
+              "blocks": {
+                "img_luxemodal": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_luxemodal": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>LuxeModal™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_luxemodal": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Cotton Modal Spandex. Silky, lightweight stretch.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_luxemodal", "heading_luxemodal", "text_luxemodal"]
+            },
+            "card_airsoft": {
+              "type": "_card",
+              "name": "AirSoft™",
+              "blocks": {
+                "img_airsoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_airsoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>AirSoft™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_airsoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Micro Modal + Spandex French Terry. Brushed interior, lightweight warmth.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_airsoft", "heading_airsoft", "text_airsoft"]
+            },
+            "card_ecosoft": {
+              "type": "_card",
+              "name": "EcoSoft™",
+              "blocks": {
+                "img_ecosoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_ecosoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>EcoSoft™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_ecosoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Recycled Poly + Cotton + Spandex Terry. Soft, durable, eco.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_ecosoft", "heading_ecosoft", "text_ecosoft"]
+            },
+            "card_ecolite": {
+              "type": "_card",
+              "name": "EcoLite™",
+              "blocks": {
+                "img_ecolite": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_ecolite": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>EcoLite™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_ecolite": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Recycled Poly + Cotton + Spandex Jersey. Breathable, sustainable.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_ecolite", "heading_ecolite", "text_ecolite"]
+            },
+            "card_sculptstretch": {
+              "type": "_card",
+              "name": "SculptStretch™",
+              "blocks": {
+                "img_sculptstretch": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_sculptstretch": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>SculptStretch™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_sculptstretch": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Nylon Rayon Spandex Roma. Structured, smooth, strong recovery.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_sculptstretch", "heading_sculptstretch", "text_sculptstretch"]
+            },
+            "card_texturerib": {
+              "type": "_card",
+              "name": "TextureRib™",
+              "blocks": {
+                "img_texturerib": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_texturerib": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>TextureRib™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_texturerib": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>1x1 Rib Cotton Poly Spandex. Flexible, textured.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_texturerib", "heading_texturerib", "text_texturerib"]
+            },
+            "card_waverib": {
+              "type": "_card",
+              "name": "WaveRib™",
+              "blocks": {
+                "img_waverib": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {}
+                },
+                "heading_waverib": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>WaveRib™</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "case": "uppercase",
+                    "letter_spacing": "0.08em",
+                    "alignment": "left",
+                    "color": "var(--color-foreground-heading)"
+                  }
+                },
+                "text_waverib": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Variegated Rib Cotton Poly Spandex. Textured rib, stylish.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["img_waverib", "heading_waverib", "text_waverib"]
+            }
+          },
+          "block_order": [
+            "card_cloudsoft",
+            "card_luxemodal",
+            "card_airsoft",
+            "card_ecosoft",
+            "card_ecolite",
+            "card_sculptstretch",
+            "card_texturerib",
+            "card_waverib"
+          ]
+        }
+      },
+      "block_order": [],
+      "name": "Our Fabrics",
+      "settings": {
+        "columns": 4,
+        "mobile_columns": "1",
+        "section_width": "page-width",
+        "columns_gap": 20,
+        "color_scheme": "scheme-1",
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "fabric_feature_sf": {
+      "type": "fabric-feature",
+      "blocks": {},
+      "block_order": [],
+      "name": "CloudSoft™ Feature",
+      "settings": {
+        "fabric_name": "CloudSoft™",
+        "fabric_description": "Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday.",
+        "color_scheme": "scheme-2",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
     "categories_sf": {
       "type": "collection-list",
       "blocks": {
@@ -558,12 +1066,266 @@
         "padding-block-start": 64,
         "padding-block-end": 64
       }
+    },
+    "wide_image_sf": {
+      "type": "hero",
+      "blocks": {},
+      "block_order": [],
+      "name": "Wide Image",
+      "settings": {
+        "media_type_1": "image",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "flex-end",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-6",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "faq_sf": {
+      "type": "section",
+      "blocks": {
+        "faq_heading": {
+          "type": "text",
+          "name": "FAQ Heading",
+          "settings": {
+            "text": "<h2>Frequently Asked Questions</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "faq_accordion": {
+          "type": "accordion",
+          "name": "FAQ Accordion",
+          "settings": {
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h6",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "faq_1": {
+              "type": "_accordion-row",
+              "name": "FAQ 1",
+              "settings": {
+                "heading": "What fabrics do you use?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_1_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We use a range of proprietary fabric blends — CloudSoft™, LuxeModal™, AirSoft™, EcoSoft™, and more — each engineered for softness, breathability, and all-day comfort. Visit our Fabrics page to learn more about each one.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_1_text"]
+            },
+            "faq_2": {
+              "type": "_accordion-row",
+              "name": "FAQ 2",
+              "settings": {
+                "heading": "How do I find my size?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_2_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Each product page includes a size guide with detailed measurements. Our pieces are generally true to size — if you're between sizes, we recommend sizing up for a relaxed fit or sizing down for a fitted look.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_2_text"]
+            },
+            "faq_3": {
+              "type": "_accordion-row",
+              "name": "FAQ 3",
+              "settings": {
+                "heading": "What is your return policy?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_3_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We accept returns within 14 days of delivery. Items must be unworn, unwashed, and in original packaging. Sale items are final sale. To initiate a return, contact us at hello@secondform.in.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_3_text"]
+            },
+            "faq_4": {
+              "type": "_accordion-row",
+              "name": "FAQ 4",
+              "settings": {
+                "heading": "Do you offer free shipping?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_4_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes — we offer free shipping on all orders above ₹2,499. Standard delivery takes 3–5 business days. Express options are available at checkout.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_4_text"]
+            },
+            "faq_5": {
+              "type": "_accordion-row",
+              "name": "FAQ 5",
+              "settings": {
+                "heading": "Are your products sustainable?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_5_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sustainability is a core part of what we do. Our EcoSoft™ and EcoLite™ fabrics are made from recycled materials. We're continuously working to reduce our environmental footprint across packaging, production, and supply chain.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_5_text"]
+            },
+            "faq_6": {
+              "type": "_accordion-row",
+              "name": "FAQ 6",
+              "settings": {
+                "heading": "How do I care for my Second Form pieces?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_6_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low or lay flat to dry. Avoid ironing directly on prints. Following these steps will keep your pieces looking and feeling their best.</p>",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.9375rem",
+                    "line_height": "1.7",
+                    "alignment": "left",
+                    "color": "var(--color-foreground)"
+                  }
+                }
+              },
+              "block_order": ["faq_6_text"]
+            }
+          },
+          "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"]
+        }
+      },
+      "block_order": ["faq_heading", "faq_accordion"],
+      "name": "FAQ",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
     }
   },
   "order": [
+
     "hero_sf",
-    "featured_product_sf",
+    "featured_products_css",
+    "featured_products_sf",
     "brand_story_sf",
-    "categories_sf"
+    "shop_the_look_sf",
+    "categories_sf",
+    "fabric_system_sf",
+    "fabric_feature_sf",
+    "wide_image_sf",
+    "faq_sf"
   ]
 }
