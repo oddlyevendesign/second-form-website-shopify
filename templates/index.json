@@ -15,7 +15,7 @@
           "type": "text",
           "name": "Headline",
           "settings": {
-            "text": "<h1>Comfort That Looks Good</h1>",
+            "text": "<h1>Made for slow mornings, long days,</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -41,7 +41,7 @@
           "type": "text",
           "name": "Subheading",
           "settings": {
-            "text": "<p>Elevated lounge &amp; hybrid wear — effortless, polished, yours.</p>",
+            "text": "<p>and everything in between.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
