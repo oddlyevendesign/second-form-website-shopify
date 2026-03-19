@@ -173,7 +173,7 @@
       "block_order": [],
       "name": "Featured Products CSS",
       "settings": {
-        "custom_liquid": "<style>\n#shopify-section-featured_products_sf .card-gallery {\n  background-color: #ffffff;\n  padding: 12px;\n  overflow: hidden;\n}\n#shopify-section-featured_products_sf .card-gallery .media-block__media {\n  transition: transform 0.4s ease;\n}\n#shopify-section-featured_products_sf .product-card:hover .card-gallery .media-block__media {\n  transform: scale(1.08);\n}\n</style>",
+        "custom_liquid": "<style>\n#shopify-section-featured_products_sf .card-gallery {\n  background-color: #ffffff;\n  padding: 12px;\n  overflow: hidden;\n}\n#shopify-section-featured_products_sf .card-gallery .product-media__image {\n  transition: transform 0.4s ease;\n}\n#shopify-section-featured_products_sf .product-card:hover .card-gallery .product-media__image {\n  transform: scale(1.06);\n}\n</style>",
         "color_scheme": "",
         "section_width": "page-width",
         "padding-block-start": 0,
