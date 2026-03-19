@@ -1150,6 +1150,11 @@
     "cf_cloudsoft": {
       "type": "fabric-collection-feature",
       "name": "CloudSoft™",
+      "blocks": {
+        "cf_cloudsoft_header": { "type": "header", "settings": {} },
+        "cf_cloudsoft_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_cloudsoft_header", "cf_cloudsoft_products"],
       "settings": {
         "collection": "cloudsoft",
         "color_scheme": "scheme-1",
@@ -1161,6 +1166,11 @@
     "cf_luxemodal": {
       "type": "fabric-collection-feature",
       "name": "LuxeModal™",
+      "blocks": {
+        "cf_luxemodal_header": { "type": "header", "settings": {} },
+        "cf_luxemodal_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_luxemodal_header", "cf_luxemodal_products"],
       "settings": {
         "color_scheme": "scheme-2",
         "section_width": "page-width",
@@ -1171,6 +1181,11 @@
     "cf_airsoft": {
       "type": "fabric-collection-feature",
       "name": "AirSoft™",
+      "blocks": {
+        "cf_airsoft_header": { "type": "header", "settings": {} },
+        "cf_airsoft_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_airsoft_header", "cf_airsoft_products"],
       "settings": {
         "color_scheme": "scheme-1",
         "section_width": "page-width",
@@ -1181,6 +1196,11 @@
     "cf_ecosoft": {
       "type": "fabric-collection-feature",
       "name": "EcoSoft™",
+      "blocks": {
+        "cf_ecosoft_header": { "type": "header", "settings": {} },
+        "cf_ecosoft_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_ecosoft_header", "cf_ecosoft_products"],
       "settings": {
         "color_scheme": "scheme-2",
         "section_width": "page-width",
@@ -1191,6 +1211,11 @@
     "cf_ecolite": {
       "type": "fabric-collection-feature",
       "name": "EcoLite™",
+      "blocks": {
+        "cf_ecolite_header": { "type": "header", "settings": {} },
+        "cf_ecolite_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_ecolite_header", "cf_ecolite_products"],
       "settings": {
         "color_scheme": "scheme-1",
         "section_width": "page-width",
@@ -1201,6 +1226,11 @@
     "cf_sculptstretch": {
       "type": "fabric-collection-feature",
       "name": "SculptStretch™",
+      "blocks": {
+        "cf_sculptstretch_header": { "type": "header", "settings": {} },
+        "cf_sculptstretch_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_sculptstretch_header", "cf_sculptstretch_products"],
       "settings": {
         "color_scheme": "scheme-2",
         "section_width": "page-width",
@@ -1211,6 +1241,11 @@
     "cf_texturerib": {
       "type": "fabric-collection-feature",
       "name": "TextureRib™",
+      "blocks": {
+        "cf_texturerib_header": { "type": "header", "settings": {} },
+        "cf_texturerib_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_texturerib_header", "cf_texturerib_products"],
       "settings": {
         "color_scheme": "scheme-1",
         "section_width": "page-width",
@@ -1221,6 +1256,11 @@
     "cf_waverib": {
       "type": "fabric-collection-feature",
       "name": "WaveRib™",
+      "blocks": {
+        "cf_waverib_header": { "type": "header", "settings": {} },
+        "cf_waverib_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_waverib_header", "cf_waverib_products"],
       "settings": {
         "color_scheme": "scheme-2",
         "section_width": "page-width",
@@ -1231,6 +1271,11 @@
     "cf_elevateknit": {
       "type": "fabric-collection-feature",
       "name": "ElevateKnit™",
+      "blocks": {
+        "cf_elevateknit_header": { "type": "header", "settings": {} },
+        "cf_elevateknit_products": { "type": "products", "settings": { "products_limit": 10 } }
+      },
+      "block_order": ["cf_elevateknit_header", "cf_elevateknit_products"],
       "settings": {
         "color_scheme": "scheme-1",
         "section_width": "page-width",

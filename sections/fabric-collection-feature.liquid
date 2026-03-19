@@ -165,80 +165,73 @@
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
 
-  {%- comment -%} Top row: image left + info right {%- endcomment -%}
-  <div class="fcf__top">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
 
-    <div class="fcf__media">
-      {%- if section.settings.image != blank -%}
-        {{
-          section.settings.image
-          | image_url: width: 600
-          | image_tag: loading: 'lazy', alt: section.settings.collection.title
-        }}
-      {%- elsif section.settings.collection != blank and section.settings.collection.featured_image != blank -%}
-        {{
-          section.settings.collection.featured_image
-          | image_url: width: 600
-          | image_tag: loading: 'lazy', alt: section.settings.collection.title
-        }}
-      {%- else -%}
-        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
-
-    <div class="fcf__info">
-      {%- if section.settings.collection != blank -%}
-        <p class="fcf__title">{{ section.settings.collection.title }}</p>
-        {%- if section.settings.collection.description != blank -%}
-          <div class="fcf__desc">{{ section.settings.collection.description }}</div>
-        {%- endif -%}
-        <a href="{{ section.settings.collection.url }}" class="fcf__link">Shop collection →</a>
-      {%- else -%}
-        <p class="fcf__title">Fabric Name</p>
-        <p class="fcf__desc">Select a collection to display fabric details here.</p>
-      {%- endif -%}
-    </div>
-
-  </div>
-
-  {%- comment -%} Products row: full-width scrollable {%- endcomment -%}
-  <div class="fcf__products-wrap">
-    <div class="fcf__products">
-      {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
-        {%- for product in section.settings.collection.products limit: 10 -%}
-          <a href="{{ product.url }}" class="fcf__product">
-            <div class="fcf__product-image">
-              {%- if product.featured_image -%}
-                {{
-                  product.featured_image
-                  | image_url: width: 500
-                  | image_tag: loading: 'lazy', alt: product.title
-                }}
-              {%- else -%}
-                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
-            </div>
-            <div class="fcf__product-info">
-              <p class="fcf__product-title">{{ product.title }}</p>
-              <p class="fcf__product-price">{{ product.price | money }}</p>
-            </div>
-          </a>
-        {%- endfor -%}
-      {%- else -%}
-        {%- for i in (1..5) -%}
-          <div class="fcf__product">
-            <div class="fcf__product-image">
-              {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-            <div class="fcf__product-info">
-              <p class="fcf__product-title">Sample Product</p>
-              <p class="fcf__product-price">₹0.00</p>
-            </div>
+      {%- when 'header' -%}
+        {%- assign override_image = block.settings.image -%}
+        <div class="fcf__top" {{ block.shopify_attributes }}>
+          <div class="fcf__media">
+            {%- if override_image != blank -%}
+              {{ override_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
+            {%- elsif section.settings.collection != blank and section.settings.collection.featured_image != blank -%}
+              {{ section.settings.collection.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
+            {%- else -%}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
           </div>
-        {%- endfor -%}
-      {%- endif -%}
-    </div>
-  </div>
+          <div class="fcf__info">
+            {%- if section.settings.collection != blank -%}
+              <p class="fcf__title">{{ section.settings.collection.title }}</p>
+              {%- if section.settings.collection.description != blank -%}
+                <div class="fcf__desc">{{ section.settings.collection.description }}</div>
+              {%- endif -%}
+              <a href="{{ section.settings.collection.url }}" class="fcf__link">Shop collection →</a>
+            {%- else -%}
+              <p class="fcf__title">Fabric Name</p>
+              <p class="fcf__desc">Select a collection to display fabric details here.</p>
+            {%- endif -%}
+          </div>
+        </div>
+
+      {%- when 'products' -%}
+        <div class="fcf__products-wrap" {{ block.shopify_attributes }}>
+          <div class="fcf__products">
+            {%- assign limit = block.settings.products_limit -%}
+            {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
+              {%- for product in section.settings.collection.products limit: limit -%}
+                <a href="{{ product.url }}" class="fcf__product">
+                  <div class="fcf__product-image">
+                    {%- if product.featured_image -%}
+                      {{ product.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: product.title }}
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </div>
+                  <div class="fcf__product-info">
+                    <p class="fcf__product-title">{{ product.title }}</p>
+                    <p class="fcf__product-price">{{ product.price | money }}</p>
+                  </div>
+                </a>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..5) -%}
+                <div class="fcf__product">
+                  <div class="fcf__product-image">
+                    {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                  <div class="fcf__product-info">
+                    <p class="fcf__product-title">Sample Product</p>
+                    <p class="fcf__product-price">₹0.00</p>
+                  </div>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
+        </div>
+
+    {%- endcase -%}
+  {%- endfor -%}
 
 </div>
 
@@ -253,12 +246,6 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
-    },
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Override image",
-      "info": "Optional. Replaces the collection's featured image."
     },
     {
       "type": "color_scheme",
@@ -301,10 +288,45 @@
       "default": 48
     }
   ],
+  "blocks": [
+    {
+      "type": "header",
+      "name": "Collection Header",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Override image",
+          "info": "Optional. Replaces the collection's featured image."
+        }
+      ]
+    },
+    {
+      "type": "products",
+      "name": "Product List",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "products_limit",
+          "label": "Max products shown",
+          "min": 4,
+          "max": 16,
+          "step": 1,
+          "default": 10
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Fabric Collection Feature",
-      "category": "Products"
+      "category": "Products",
+      "blocks": [
+        { "type": "header" },
+        { "type": "products" }
+      ]
     }
   ]
 }
