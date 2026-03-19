@@ -1,9 +1,8 @@
 
 <style>
-  .fcf__top {
+  .fcf__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
   }
 
   .fcf__media {
@@ -69,6 +68,7 @@
   }
 
   .fcf__products-wrap {
+    grid-column: 1 / -1;
     overflow: hidden;
     padding-top: 16px;
   }
@@ -136,10 +136,6 @@
   }
 
   @media (max-width: 749px) {
-    .fcf__top {
-      grid-template-columns: 1fr 1fr;
-    }
-
     .fcf__info {
       padding: 16px 12px 16px 14px;
       gap: 8px;
@@ -161,37 +157,36 @@
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
-  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
+  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style fcf__section"
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
 
   {%- for block in section.blocks -%}
     {%- case block.type -%}
 
-      {%- when 'header' -%}
-        {%- assign override_image = block.settings.image -%}
-        <div class="fcf__top" {{ block.shopify_attributes }}>
-          <div class="fcf__media">
-            {%- if override_image != blank -%}
-              {{ override_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
-            {%- elsif section.settings.collection != blank and section.settings.collection.featured_image != blank -%}
-              {{ section.settings.collection.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
-            {%- else -%}
-              {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- when 'image' -%}
+        <div class="fcf__media" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
+          {%- elsif section.settings.collection != blank and section.settings.collection.featured_image != blank -%}
+            {{ section.settings.collection.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: section.settings.collection.title }}
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+
+      {%- when 'info' -%}
+        <div class="fcf__info" {{ block.shopify_attributes }}>
+          {%- if section.settings.collection != blank -%}
+            <p class="fcf__title">{{ section.settings.collection.title }}</p>
+            {%- if section.settings.collection.description != blank -%}
+              <div class="fcf__desc">{{ section.settings.collection.description }}</div>
             {%- endif -%}
-          </div>
-          <div class="fcf__info">
-            {%- if section.settings.collection != blank -%}
-              <p class="fcf__title">{{ section.settings.collection.title }}</p>
-              {%- if section.settings.collection.description != blank -%}
-                <div class="fcf__desc">{{ section.settings.collection.description }}</div>
-              {%- endif -%}
-              <a href="{{ section.settings.collection.url }}" class="fcf__link">Shop collection →</a>
-            {%- else -%}
-              <p class="fcf__title">Fabric Name</p>
-              <p class="fcf__desc">Select a collection to display fabric details here.</p>
-            {%- endif -%}
-          </div>
+            <a href="{{ section.settings.collection.url }}" class="fcf__link">Shop collection →</a>
+          {%- else -%}
+            <p class="fcf__title">Fabric Name</p>
+            <p class="fcf__desc">Select a collection to display fabric details here.</p>
+          {%- endif -%}
         </div>
 
       {%- when 'products' -%}
@@ -290,17 +285,23 @@
   ],
   "blocks": [
     {
-      "type": "header",
-      "name": "Collection Header",
+      "type": "image",
+      "name": "Image",
       "limit": 1,
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Override image",
-          "info": "Optional. Replaces the collection's featured image."
+          "label": "Image",
+          "info": "Optional. Overrides the collection's featured image."
         }
       ]
+    },
+    {
+      "type": "info",
+      "name": "Collection Info",
+      "limit": 1,
+      "settings": []
     },
     {
       "type": "products",
@@ -324,7 +325,8 @@
       "name": "Fabric Collection Feature",
       "category": "Products",
       "blocks": [
-        { "type": "header" },
+        { "type": "image" },
+        { "type": "info" },
         { "type": "products" }
       ]
     }
