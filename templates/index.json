@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Headline",
           "settings": {
-            "text": "<h1>Made for slow mornings, long days,</h1>",
+            "text": "<h1>Made for</h1><h1>slow mornings,</h1><h1>long days,</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -145,6 +145,9 @@
         "text_headline",
         "text_subheading",
         "button_group_sf"
+      ],
+      "custom_css": [
+        "h1 {line-height: 24px;}"
       ],
       "name": "Hero",
       "settings": {
