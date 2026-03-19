@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_sf": {
       "type": "hero",
@@ -84,10 +85,19 @@
             "inherit_color_scheme": true,
             "color_scheme": "",
             "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
             "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -139,11 +149,13 @@
       "name": "Hero",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/SF_Hero.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -154,7 +166,7 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 16,
         "section_width": "page-width",
-        "section_height": "large",
+        "section_height": "full-screen",
         "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
@@ -169,8 +181,6 @@
     },
     "featured_products_css": {
       "type": "custom-liquid",
-      "blocks": {},
-      "block_order": [],
       "name": "Featured Products CSS",
       "settings": {
         "custom_liquid": "<style>\n#shopify-section-featured_products_sf .card-gallery {\n  background-color: #ffffff;\n  padding: 12px;\n  overflow: hidden;\n}\n#shopify-section-featured_products_sf .card-gallery .product-media__image {\n  transition: transform 0.4s ease;\n}\n#shopify-section-featured_products_sf .product-card:hover .card-gallery .product-media__image {\n  transform: scale(1.06);\n}\n</style>",
@@ -198,7 +208,22 @@
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
-            "custom_width_mobile": 100
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "heading_featured": {
@@ -236,7 +261,7 @@
           "type": "_product-card",
           "static": true,
           "settings": {
-            "product_card_gap": 12,
+            "product_card_gap": 4,
             "inherit_color_scheme": true,
             "color_scheme": "scheme-1",
             "border": "none",
@@ -267,14 +292,20 @@
             "title_sf": {
               "type": "product-title",
               "settings": {
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
                 "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
-                "alignment": "left",
+                "wrap": "pretty",
                 "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
                 "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -307,34 +338,79 @@
             "swatches_sf": {
               "type": "swatches",
               "settings": {
-                "padding-block-start": 4,
+                "product_swatches_alignment": "flex-start",
+                "product_swatches_alignment_mobile": "flex-start",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_mwxhwg": {
+              "type": "buy-buttons",
+              "name": "t:names.product_buy_buttons",
+              "settings": {
+                "stacking": false,
+                "show_pickup_availability": true,
+                "gift_card_form": true,
+                "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button-secondary"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "disabled": true,
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
             }
           },
           "block_order": [
             "gallery_sf",
             "title_sf",
             "price_sf",
-            "swatches_sf"
+            "swatches_sf",
+            "buy_buttons_mwxhwg"
           ]
         }
       },
-      "block_order": [],
       "name": "Bestsellers",
       "settings": {
+        "collection": "bestsellers",
         "layout_type": "carousel",
         "carousel_on_mobile": true,
         "max_products": 8,
         "columns": 4,
+        "mobile_columns": "2",
         "mobile_card_size": "60cqw",
         "columns_gap": 16,
+        "rows_gap": 8,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
+        "horizontal_alignment": "flex-start",
         "gap": 32,
         "color_scheme": "scheme-2",
         "padding-block-start": 64,
@@ -349,12 +425,12 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/Gemini_Generated_Image_pt2t4vpt2t4vpt2t.png",
+            "link": "",
+            "video_loop": true,
+            "video_autoplay": false,
             "image_position": "cover",
-            "video_position": "cover",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "video_position": "cover"
           },
           "blocks": {}
         },
@@ -362,31 +438,9 @@
           "type": "_content-without-appearance",
           "static": true,
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 20,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "gap": 20
           },
           "blocks": {
             "label_sf": {
@@ -506,15 +560,49 @@
     "shop_the_look_sf": {
       "type": "product-hotspots",
       "blocks": {
+        "hotspot-1": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "",
+            "x-position": 28,
+            "y-position": 55
+          },
+          "blocks": {}
+        },
+        "hotspot-2": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "",
+            "x-position": 50,
+            "y-position": 45
+          },
+          "blocks": {}
+        },
+        "hotspot-3": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "",
+            "x-position": 72,
+            "y-position": 50
+          },
+          "blocks": {}
+        },
         "heading": {
           "type": "text",
           "name": "Heading",
           "static": true,
           "settings": {
             "text": "<h2>Shop the Look</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h3",
             "font": "var(--font-primary--family)",
-            "alignment": "left",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
             "color": "",
             "background": false,
             "background_color": "#00000026",
@@ -525,493 +613,28 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "hotspot-1": {
-          "type": "_hotspot-product",
-          "settings": {
-            "x-position": 28,
-            "y-position": 55
-          },
-          "blocks": {}
-        },
-        "hotspot-2": {
-          "type": "_hotspot-product",
-          "settings": {
-            "x-position": 50,
-            "y-position": 45
-          },
-          "blocks": {}
-        },
-        "hotspot-3": {
-          "type": "_hotspot-product",
-          "settings": {
-            "x-position": 72,
-            "y-position": 50
-          },
-          "blocks": {}
         }
       },
-      "block_order": ["hotspot-1", "hotspot-2", "hotspot-3"],
+      "block_order": [
+        "hotspot-1",
+        "hotspot-2",
+        "hotspot-3"
+      ],
       "name": "Shop the Look",
       "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_k4iuf8k4iuf8k4iu.png",
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
+        "gradient_direction": "to top",
         "section_width": "page-width",
         "section_height": "auto",
-        "hotspot_color": "#FFFFFF57",
+        "hotspot_color": "#ffffff57",
         "bullseye_color": "#ffffff",
         "color_scheme": "scheme-1",
         "product_title_gap": 8,
         "product_title_preset": "paragraph",
         "product_price_preset": "paragraph",
-        "padding-block-start": 64,
-        "padding-block-end": 64
-      }
-    },
-    "fabric_system_sf": {
-      "type": "carousel",
-      "blocks": {
-        "static-header": {
-          "type": "group",
-          "name": "Header",
-          "static": true,
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 16,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "heading_fabric": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>Engineered for your lifestyle</h2>",
-                "type_preset": "h3",
-                "font": "var(--font-primary--family)",
-                "wrap": "pretty",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "subheading_fabric": {
-              "type": "text",
-              "name": "Subheading",
-              "settings": {
-                "text": "<p>Each fabric in our collection is designed with a purpose.</p>",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "wrap": "pretty",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": ["heading_fabric", "subheading_fabric"]
-        },
-        "static-carousel-content": {
-          "type": "_carousel-content",
-          "name": "Fabric Cards",
-          "static": true,
-          "settings": {
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "position": "top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "height": "fit"
-          },
-          "blocks": {
-            "card_cloudsoft": {
-              "type": "_card",
-              "name": "CloudSoft™",
-              "blocks": {
-                "img_cloudsoft": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_cloudsoft": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>CloudSoft™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_cloudsoft": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_cloudsoft", "heading_cloudsoft", "text_cloudsoft"]
-            },
-            "card_luxemodal": {
-              "type": "_card",
-              "name": "LuxeModal™",
-              "blocks": {
-                "img_luxemodal": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_luxemodal": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>LuxeModal™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_luxemodal": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Cotton Modal Spandex. Silky, lightweight stretch.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_luxemodal", "heading_luxemodal", "text_luxemodal"]
-            },
-            "card_airsoft": {
-              "type": "_card",
-              "name": "AirSoft™",
-              "blocks": {
-                "img_airsoft": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_airsoft": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>AirSoft™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_airsoft": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Micro Modal + Spandex French Terry. Brushed interior, lightweight warmth.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_airsoft", "heading_airsoft", "text_airsoft"]
-            },
-            "card_ecosoft": {
-              "type": "_card",
-              "name": "EcoSoft™",
-              "blocks": {
-                "img_ecosoft": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_ecosoft": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>EcoSoft™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_ecosoft": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Recycled Poly + Cotton + Spandex Terry. Soft, durable, eco.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_ecosoft", "heading_ecosoft", "text_ecosoft"]
-            },
-            "card_ecolite": {
-              "type": "_card",
-              "name": "EcoLite™",
-              "blocks": {
-                "img_ecolite": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_ecolite": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>EcoLite™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_ecolite": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Recycled Poly + Cotton + Spandex Jersey. Breathable, sustainable.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_ecolite", "heading_ecolite", "text_ecolite"]
-            },
-            "card_sculptstretch": {
-              "type": "_card",
-              "name": "SculptStretch™",
-              "blocks": {
-                "img_sculptstretch": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_sculptstretch": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>SculptStretch™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_sculptstretch": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Nylon Rayon Spandex Roma. Structured, smooth, strong recovery.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_sculptstretch", "heading_sculptstretch", "text_sculptstretch"]
-            },
-            "card_texturerib": {
-              "type": "_card",
-              "name": "TextureRib™",
-              "blocks": {
-                "img_texturerib": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_texturerib": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>TextureRib™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_texturerib": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>1x1 Rib Cotton Poly Spandex. Flexible, textured.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_texturerib", "heading_texturerib", "text_texturerib"]
-            },
-            "card_waverib": {
-              "type": "_card",
-              "name": "WaveRib™",
-              "blocks": {
-                "img_waverib": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {}
-                },
-                "heading_waverib": {
-                  "type": "text",
-                  "name": "Heading",
-                  "settings": {
-                    "text": "<p>WaveRib™</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "case": "uppercase",
-                    "letter_spacing": "0.08em",
-                    "alignment": "left",
-                    "color": "var(--color-foreground-heading)"
-                  }
-                },
-                "text_waverib": {
-                  "type": "text",
-                  "name": "Description",
-                  "settings": {
-                    "text": "<p>Variegated Rib Cotton Poly Spandex. Textured rib, stylish.</p>",
-                    "type_preset": "paragraph",
-                    "font": "var(--font-body--family)",
-                    "font_size": "0.875rem",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
-                }
-              },
-              "block_order": ["img_waverib", "heading_waverib", "text_waverib"]
-            }
-          },
-          "block_order": [
-            "card_cloudsoft",
-            "card_luxemodal",
-            "card_airsoft",
-            "card_ecosoft",
-            "card_ecolite",
-            "card_sculptstretch",
-            "card_texturerib",
-            "card_waverib"
-          ]
-        }
-      },
-      "block_order": [],
-      "name": "Our Fabrics",
-      "settings": {
-        "columns": 4,
-        "mobile_columns": "1",
-        "section_width": "page-width",
-        "columns_gap": 20,
-        "color_scheme": "scheme-1",
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "padding-block-start": 64,
-        "padding-block-end": 64
-      }
-    },
-    "fabric_feature_sf": {
-      "type": "fabric-feature",
-      "blocks": {},
-      "block_order": [],
-      "name": "CloudSoft™ Feature",
-      "settings": {
-        "fabric_name": "CloudSoft™",
-        "fabric_description": "Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday.",
-        "color_scheme": "scheme-2",
-        "section_width": "page-width",
         "padding-block-start": 64,
         "padding-block-end": 64
       }
@@ -1044,6 +667,41 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "static-collection-card": {
+          "type": "_collection-card",
+          "static": true,
+          "settings": {
+            "placement": "on_image",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "collection_card_gap": 8,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0
+          },
+          "blocks": {
+            "collection-card-image": {
+              "type": "_collection-card-image",
+              "static": true,
+              "settings": {
+                "image_ratio": "portrait",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
         }
       },
       "block_order": [
@@ -1051,13 +709,21 @@
       ],
       "name": "Shop by Category",
       "settings": {
+        "collection_list": [
+          "lounging-at-home",
+          "out-about",
+          "work-from-home",
+          "travel-edit"
+        ],
         "layout_type": "grid",
         "carousel_on_mobile": true,
-        "max_collections": 8,
         "columns": 4,
         "mobile_columns": "2",
+        "mobile_card_size": "44cqw",
         "columns_gap": 8,
+        "bento_gap": 8,
         "rows_gap": 8,
+        "max_collections": 8,
         "icons_style": "none",
         "icons_shape": "none",
         "section_width": "page-width",
@@ -1067,18 +733,1059 @@
         "padding-block-end": 64
       }
     },
+    "fabric_system_sf": {
+      "type": "carousel",
+      "blocks": {
+        "static-header": {
+          "type": "group",
+          "name": "Header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading_fabric": {
+              "type": "text",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Engineered for your lifestyle</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-primary--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "subheading_fabric": {
+              "type": "text",
+              "name": "Subheading",
+              "settings": {
+                "text": "<p>Each fabric in our collection is designed with a purpose.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_fabric",
+            "subheading_fabric"
+          ]
+        },
+        "static-carousel-content": {
+          "type": "_carousel-content",
+          "name": "Fabric Cards",
+          "static": true,
+          "settings": {
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "height": "fit",
+            "position": "top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "card_cloudsoft": {
+              "type": "_card",
+              "name": "CloudSoft™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "shopify://collections/cloudsoft",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_cloudsoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_cloudsoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<h4><strong>CloudSoft™</strong></h4>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_cloudsoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Pima Cotton + Modal + Spandex. Ultra-soft, breathable, everyday.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_cloudsoft",
+                "heading_cloudsoft",
+                "text_cloudsoft"
+              ]
+            },
+            "card_luxemodal": {
+              "type": "_card",
+              "name": "LuxeModal™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_luxemodal": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_luxemodal": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>LuxeModal™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_luxemodal": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Cotton Modal Spandex. Silky, lightweight stretch.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_luxemodal",
+                "heading_luxemodal",
+                "text_luxemodal"
+              ]
+            },
+            "card_airsoft": {
+              "type": "_card",
+              "name": "AirSoft™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_airsoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_airsoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>AirSoft™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_airsoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Micro Modal + Spandex French Terry. Brushed interior, lightweight warmth.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_airsoft",
+                "heading_airsoft",
+                "text_airsoft"
+              ]
+            },
+            "card_ecosoft": {
+              "type": "_card",
+              "name": "EcoSoft™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_ecosoft": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_ecosoft": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>EcoSoft™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_ecosoft": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Recycled Poly + Cotton + Spandex Terry. Soft, durable, eco.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_ecosoft",
+                "heading_ecosoft",
+                "text_ecosoft"
+              ]
+            },
+            "card_ecolite": {
+              "type": "_card",
+              "name": "EcoLite™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_ecolite": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_ecolite": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>EcoLite™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_ecolite": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Recycled Poly + Cotton + Spandex Jersey. Breathable, sustainable.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_ecolite",
+                "heading_ecolite",
+                "text_ecolite"
+              ]
+            },
+            "card_sculptstretch": {
+              "type": "_card",
+              "name": "SculptStretch™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_sculptstretch": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_sculptstretch": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>SculptStretch™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_sculptstretch": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Nylon Rayon Spandex Roma. Structured, smooth, strong recovery.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_sculptstretch",
+                "heading_sculptstretch",
+                "text_sculptstretch"
+              ]
+            },
+            "card_texturerib": {
+              "type": "_card",
+              "name": "TextureRib™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_texturerib": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_texturerib": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>TextureRib™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_texturerib": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>1x1 Rib Cotton Poly Spandex. Flexible, textured.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_texturerib",
+                "heading_texturerib",
+                "text_texturerib"
+              ]
+            },
+            "card_waverib": {
+              "type": "_card",
+              "name": "WaveRib™",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "aspect_ratio": "adapt",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "img_waverib": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "heading_waverib": {
+                  "type": "text",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "<p>WaveRib™</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "0.08em",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_waverib": {
+                  "type": "text",
+                  "name": "Description",
+                  "settings": {
+                    "text": "<p>Variegated Rib Cotton Poly Spandex. Textured rib, stylish.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.875rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "img_waverib",
+                "heading_waverib",
+                "text_waverib"
+              ]
+            }
+          },
+          "block_order": [
+            "card_cloudsoft",
+            "card_luxemodal",
+            "card_airsoft",
+            "card_ecosoft",
+            "card_ecolite",
+            "card_sculptstretch",
+            "card_texturerib",
+            "card_waverib"
+          ]
+        }
+      },
+      "name": "Our Fabrics",
+      "settings": {
+        "columns": 4,
+        "mobile_columns": "1",
+        "section_width": "page-width",
+        "columns_gap": 20,
+        "color_scheme": "scheme-1",
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "fabric_feature_sf": {
+      "type": "fabric-feature",
+      "name": "CloudSoft™ Feature",
+      "settings": {
+        "image": "shopify://shop_images/cotton-fabrics-header-square-Pique_SK-1929-2b.jpg",
+        "fabric_name": "ElevateKnit™ Ottoman",
+        "fabric_description": "(Cotton Poly Spandex Ottoman) • Subtle Structure• Textured Appearance• Durable Knit",
+        "collection": "cloudsoft",
+        "color_scheme": "scheme-2",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
     "wide_image_sf": {
       "type": "hero",
-      "blocks": {},
-      "block_order": [],
       "name": "Wide Image",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/Gemini_Generated_Image_2bmwhn2bmwhn2bmw.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -1156,23 +1863,39 @@
               "settings": {
                 "heading": "What fabrics do you use?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_1_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We use a range of proprietary fabric blends — CloudSoft™, LuxeModal™, AirSoft™, EcoSoft™, and more — each engineered for softness, breathability, and all-day comfort. Visit our Fabrics page to learn more about each one.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_1_text"]
+              "block_order": [
+                "faq_1_text"
+              ]
             },
             "faq_2": {
               "type": "_accordion-row",
@@ -1180,23 +1903,39 @@
               "settings": {
                 "heading": "How do I find my size?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_2_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Each product page includes a size guide with detailed measurements. Our pieces are generally true to size — if you're between sizes, we recommend sizing up for a relaxed fit or sizing down for a fitted look.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_2_text"]
+              "block_order": [
+                "faq_2_text"
+              ]
             },
             "faq_3": {
               "type": "_accordion-row",
@@ -1204,23 +1943,39 @@
               "settings": {
                 "heading": "What is your return policy?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_3_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We accept returns within 14 days of delivery. Items must be unworn, unwashed, and in original packaging. Sale items are final sale. To initiate a return, contact us at hello@secondform.in.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_3_text"]
+              "block_order": [
+                "faq_3_text"
+              ]
             },
             "faq_4": {
               "type": "_accordion-row",
@@ -1228,23 +1983,39 @@
               "settings": {
                 "heading": "Do you offer free shipping?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_4_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Yes — we offer free shipping on all orders above ₹2,499. Standard delivery takes 3–5 business days. Express options are available at checkout.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_4_text"]
+              "block_order": [
+                "faq_4_text"
+              ]
             },
             "faq_5": {
               "type": "_accordion-row",
@@ -1252,23 +2023,39 @@
               "settings": {
                 "heading": "Are your products sustainable?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_5_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Sustainability is a core part of what we do. Our EcoSoft™ and EcoLite™ fabrics are made from recycled materials. We're continuously working to reduce our environmental footprint across packaging, production, and supply chain.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_5_text"]
+              "block_order": [
+                "faq_5_text"
+              ]
             },
             "faq_6": {
               "type": "_accordion-row",
@@ -1276,47 +2063,86 @@
               "settings": {
                 "heading": "How do I care for my Second Form pieces?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_6_text": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Machine wash cold on a gentle cycle. Do not bleach. Tumble dry low or lay flat to dry. Avoid ironing directly on prints. Following these steps will keep your pieces looking and feeling their best.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
                     "type_preset": "paragraph",
                     "font": "var(--font-body--family)",
                     "font_size": "0.9375rem",
                     "line_height": "1.7",
-                    "alignment": "left",
-                    "color": "var(--color-foreground)"
-                  }
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
-              "block_order": ["faq_6_text"]
+              "block_order": [
+                "faq_6_text"
+              ]
             }
           },
-          "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"]
+          "block_order": [
+            "faq_1",
+            "faq_2",
+            "faq_3",
+            "faq_4",
+            "faq_5",
+            "faq_6"
+          ]
         }
       },
-      "block_order": ["faq_heading", "faq_accordion"],
+      "block_order": [
+        "faq_heading",
+        "faq_accordion"
+      ],
       "name": "FAQ",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 0,
         "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
         "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
         "padding-block-start": 80,
         "padding-block-end": 80
       }
     }
   },
   "order": [
-
     "hero_sf",
     "featured_products_css",
     "featured_products_sf",
