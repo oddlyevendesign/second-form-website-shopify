@@ -1,0 +1,18 @@
+/* ============================================================
+   Second Form — Custom Global Styles
+   ============================================================ */
+
+/* Product card image zoom on hover
+   Applies to all product cards (homepage, collection pages, etc.)
+   slideshow-slides overflow must be visible so card-gallery clips instead */
+product-card .card-gallery slideshow-slides {
+  overflow: visible;
+}
+
+product-card .card-gallery .product-media__image {
+  transition: transform 0.4s ease;
+}
+
+product-card:hover .card-gallery .product-media__image {
+  transform: scale(1.06);
+}
