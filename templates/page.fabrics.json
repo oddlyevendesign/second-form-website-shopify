@@ -1237,10 +1237,139 @@
         "padding-block-start": 48,
         "padding-block-end": 64
       }
+    },
+    "fabric_comparison_table": {
+      "type": "fabric-comparison-table",
+      "name": "Fabric Comparison Table",
+      "blocks": {
+        "fab_cloudsoft": {
+          "type": "fabric",
+          "settings": {
+            "name": "CloudSoft™",
+            "feature_1": "Pima Cotton + Modal + Spandex",
+            "feature_2": "Ultra-soft",
+            "feature_3": "High",
+            "feature_4": "4-way stretch",
+            "feature_5": "Everyday wear, all-day comfort"
+          }
+        },
+        "fab_luxemodal": {
+          "type": "fabric",
+          "settings": {
+            "name": "LuxeModal™",
+            "feature_1": "Cotton Modal Spandex",
+            "feature_2": "Silky smooth",
+            "feature_3": "Medium-high",
+            "feature_4": "Lightweight stretch",
+            "feature_5": "Loungewear, elevated basics"
+          }
+        },
+        "fab_airsoft": {
+          "type": "fabric",
+          "settings": {
+            "name": "AirSoft™",
+            "feature_1": "Micro Modal + Spandex French Terry",
+            "feature_2": "Brushed & cozy",
+            "feature_3": "Medium",
+            "feature_4": "2-way stretch",
+            "feature_5": "Layering, lightweight warmth"
+          }
+        },
+        "fab_ecosoft": {
+          "type": "fabric",
+          "settings": {
+            "name": "EcoSoft™",
+            "feature_1": "Recycled Poly + Cotton + Spandex Terry",
+            "feature_2": "Soft & plush",
+            "feature_3": "Medium",
+            "feature_4": "Good recovery",
+            "feature_5": "Sustainable comfort, travel"
+          }
+        },
+        "fab_ecolite": {
+          "type": "fabric",
+          "settings": {
+            "name": "EcoLite™",
+            "feature_1": "Recycled Poly + Cotton + Spandex Jersey",
+            "feature_2": "Smooth & light",
+            "feature_3": "High",
+            "feature_4": "4-way stretch",
+            "feature_5": "Active wear, sustainable everyday"
+          }
+        },
+        "fab_sculptstretch": {
+          "type": "fabric",
+          "settings": {
+            "name": "SculptStretch™",
+            "feature_1": "Nylon Rayon Spandex Roma",
+            "feature_2": "Smooth & structured",
+            "feature_3": "Low-medium",
+            "feature_4": "Strong recovery",
+            "feature_5": "Fitted silhouettes, sculpted pieces"
+          }
+        },
+        "fab_texturerib": {
+          "type": "fabric",
+          "settings": {
+            "name": "TextureRib™",
+            "feature_1": "1x1 Rib Cotton Poly Spandex",
+            "feature_2": "Textured & flexible",
+            "feature_3": "High",
+            "feature_4": "2-way stretch",
+            "feature_5": "Fitted tops, casual basics"
+          }
+        },
+        "fab_waverib": {
+          "type": "fabric",
+          "settings": {
+            "name": "WaveRib™",
+            "feature_1": "Variegated Rib Cotton Poly Spandex",
+            "feature_2": "Textured & stylish",
+            "feature_3": "High",
+            "feature_4": "2-way stretch",
+            "feature_5": "Statement pieces, textured looks"
+          }
+        },
+        "fab_elevateknit": {
+          "type": "fabric",
+          "settings": {
+            "name": "ElevateKnit™",
+            "feature_1": "Cotton Poly Spandex Ottoman",
+            "feature_2": "Structured & smooth",
+            "feature_3": "Medium",
+            "feature_4": "Moderate recovery",
+            "feature_5": "Polished basics, structured pieces"
+          }
+        }
+      },
+      "block_order": [
+        "fab_cloudsoft",
+        "fab_luxemodal",
+        "fab_airsoft",
+        "fab_ecosoft",
+        "fab_ecolite",
+        "fab_sculptstretch",
+        "fab_texturerib",
+        "fab_waverib",
+        "fab_elevateknit"
+      ],
+      "settings": {
+        "heading": "How They Compare",
+        "feature_1_label": "Composition",
+        "feature_2_label": "Softness",
+        "feature_3_label": "Breathability",
+        "feature_4_label": "Stretch & Recovery",
+        "feature_5_label": "Best For",
+        "color_scheme": "scheme-2",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
     }
   },
   "order": [
     "compare_fabrics_sf",
+    "fabric_comparison_table",
     "cf_cloudsoft",
     "cf_luxemodal",
     "cf_airsoft",

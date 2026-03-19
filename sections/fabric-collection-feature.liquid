@@ -2,7 +2,7 @@
 <style>
   .fcf__top {
     display: grid;
-    grid-template-columns: var(--fcf-image-width, 260px) 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 
@@ -89,7 +89,7 @@
 
   .fcf__product {
     flex-shrink: 0;
-    width: calc(var(--fcf-image-width, 260px) - 28px);
+    width: clamp(160px, 22%, 240px);
     text-decoration: none;
     color: inherit;
     scroll-snap-align: start;
@@ -137,8 +137,7 @@
 
   @media (max-width: 749px) {
     .fcf__top {
-      grid-template-columns: 160px 1fr;
-      --fcf-image-width: 160px;
+      grid-template-columns: 1fr 1fr;
     }
 
     .fcf__info {
@@ -155,7 +154,7 @@
     }
 
     .fcf__product {
-      width: 55vw;
+      width: 60vw;
     }
   }
 </style>
