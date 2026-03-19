@@ -1,0 +1,312 @@
+
+<style>
+  .fcf__top {
+    display: grid;
+    grid-template-columns: var(--fcf-image-width, 260px) 1fr;
+    align-items: start;
+  }
+
+  .fcf__media {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .fcf__media img,
+  .fcf__media .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .fcf__info {
+    padding: 24px 16px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .fcf__title {
+    font-family: var(--font-primary--family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-foreground-heading);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .fcf__desc {
+    font-family: var(--font-body--family);
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .fcf__desc p {
+    margin: 0 0 8px;
+  }
+
+  .fcf__desc p:last-child {
+    margin-bottom: 0;
+  }
+
+  .fcf__link {
+    display: inline-block;
+    font-family: var(--font-body--family);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-foreground-heading);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    margin-top: 4px;
+    align-self: flex-start;
+  }
+
+  .fcf__products-wrap {
+    overflow: hidden;
+    padding-top: 16px;
+  }
+
+  .fcf__products {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .fcf__products::-webkit-scrollbar {
+    display: none;
+  }
+
+  .fcf__product {
+    flex-shrink: 0;
+    width: calc(var(--fcf-image-width, 260px) - 28px);
+    text-decoration: none;
+    color: inherit;
+    scroll-snap-align: start;
+    display: block;
+  }
+
+  .fcf__product-image {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+  }
+
+  .fcf__product-image img,
+  .fcf__product-image .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .fcf__product:hover .fcf__product-image img {
+    transform: scale(1.06);
+  }
+
+  .fcf__product-info {
+    padding-top: 10px;
+  }
+
+  .fcf__product-title {
+    font-family: var(--font-body--family);
+    font-size: 0.9rem;
+    margin: 0 0 4px;
+    color: var(--color-foreground-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fcf__product-price {
+    font-family: var(--font-body--family);
+    font-size: 0.85rem;
+    color: var(--color-foreground);
+    margin: 0;
+  }
+
+  @media (max-width: 749px) {
+    .fcf__top {
+      grid-template-columns: 160px 1fr;
+      --fcf-image-width: 160px;
+    }
+
+    .fcf__info {
+      padding: 16px 12px 16px 14px;
+      gap: 8px;
+    }
+
+    .fcf__title {
+      font-size: 1rem;
+    }
+
+    .fcf__desc {
+      font-size: 0.8rem;
+    }
+
+    .fcf__product {
+      width: 55vw;
+    }
+  }
+</style>
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+
+  {%- comment -%} Top row: image left + info right {%- endcomment -%}
+  <div class="fcf__top">
+
+    <div class="fcf__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 600
+          | image_tag: loading: 'lazy', alt: section.settings.collection.title
+        }}
+      {%- elsif section.settings.collection != blank and section.settings.collection.featured_image != blank -%}
+        {{
+          section.settings.collection.featured_image
+          | image_url: width: 600
+          | image_tag: loading: 'lazy', alt: section.settings.collection.title
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+
+    <div class="fcf__info">
+      {%- if section.settings.collection != blank -%}
+        <p class="fcf__title">{{ section.settings.collection.title }}</p>
+        {%- if section.settings.collection.description != blank -%}
+          <div class="fcf__desc">{{ section.settings.collection.description }}</div>
+        {%- endif -%}
+        <a href="{{ section.settings.collection.url }}" class="fcf__link">Shop collection →</a>
+      {%- else -%}
+        <p class="fcf__title">Fabric Name</p>
+        <p class="fcf__desc">Select a collection to display fabric details here.</p>
+      {%- endif -%}
+    </div>
+
+  </div>
+
+  {%- comment -%} Products row: full-width scrollable {%- endcomment -%}
+  <div class="fcf__products-wrap">
+    <div class="fcf__products">
+      {%- if section.settings.collection != blank and section.settings.collection.products_count > 0 -%}
+        {%- for product in section.settings.collection.products limit: 10 -%}
+          <a href="{{ product.url }}" class="fcf__product">
+            <div class="fcf__product-image">
+              {%- if product.featured_image -%}
+                {{
+                  product.featured_image
+                  | image_url: width: 500
+                  | image_tag: loading: 'lazy', alt: product.title
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <div class="fcf__product-info">
+              <p class="fcf__product-title">{{ product.title }}</p>
+              <p class="fcf__product-price">{{ product.price | money }}</p>
+            </div>
+          </a>
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..5) -%}
+          <div class="fcf__product">
+            <div class="fcf__product-image">
+              {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="fcf__product-info">
+              <p class="fcf__product-title">Sample Product</p>
+              <p class="fcf__product-price">₹0.00</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Fabric Collection Feature",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Override image",
+      "info": "Optional. Replaces the collection's featured image."
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fabric Collection Feature",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}
