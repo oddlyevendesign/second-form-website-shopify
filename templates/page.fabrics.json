@@ -114,6 +114,7 @@
         "static-carousel-content": {
           "type": "_carousel-content",
           "name": "Fabric Cards",
+          "disabled": true,
           "static": true,
           "settings": {
             "inherit_color_scheme": true,
@@ -1147,293 +1148,13 @@
         "padding-block-end": 48
       }
     },
-    "cf_cloudsoft": {
-      "type": "fabric-collection-feature",
-      "name": "CloudSoft™",
-      "blocks": {
-        "cf_cloudsoft_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_cloudsoft_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_cloudsoft_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_cloudsoft_image",
-        "cf_cloudsoft_info",
-        "cf_cloudsoft_products"
-      ],
-      "settings": {
-        "collection": "cloudsoft",
-        "color_scheme": "scheme-1",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_luxemodal": {
-      "type": "fabric-collection-feature",
-      "name": "LuxeModal™",
-      "blocks": {
-        "cf_luxemodal_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_luxemodal_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_luxemodal_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_luxemodal_image",
-        "cf_luxemodal_info",
-        "cf_luxemodal_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_airsoft": {
-      "type": "fabric-collection-feature",
-      "name": "AirSoft™",
-      "blocks": {
-        "cf_airsoft_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_airsoft_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_airsoft_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_airsoft_image",
-        "cf_airsoft_info",
-        "cf_airsoft_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_ecosoft": {
-      "type": "fabric-collection-feature",
-      "name": "EcoSoft™",
-      "blocks": {
-        "cf_ecosoft_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_ecosoft_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_ecosoft_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_ecosoft_image",
-        "cf_ecosoft_info",
-        "cf_ecosoft_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_ecolite": {
-      "type": "fabric-collection-feature",
-      "name": "EcoLite™",
-      "blocks": {
-        "cf_ecolite_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_ecolite_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_ecolite_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_ecolite_image",
-        "cf_ecolite_info",
-        "cf_ecolite_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_sculptstretch": {
-      "type": "fabric-collection-feature",
-      "name": "SculptStretch™",
-      "blocks": {
-        "cf_sculptstretch_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_sculptstretch_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_sculptstretch_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_sculptstretch_image",
-        "cf_sculptstretch_info",
-        "cf_sculptstretch_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_texturerib": {
-      "type": "fabric-collection-feature",
-      "name": "TextureRib™",
-      "blocks": {
-        "cf_texturerib_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_texturerib_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_texturerib_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_texturerib_image",
-        "cf_texturerib_info",
-        "cf_texturerib_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_waverib": {
-      "type": "fabric-collection-feature",
-      "name": "WaveRib™",
-      "blocks": {
-        "cf_waverib_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_waverib_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_waverib_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_waverib_image",
-        "cf_waverib_info",
-        "cf_waverib_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "cf_elevateknit": {
-      "type": "fabric-collection-feature",
-      "name": "ElevateKnit™",
-      "blocks": {
-        "cf_elevateknit_image": {
-          "type": "image",
-          "settings": {}
-        },
-        "cf_elevateknit_info": {
-          "type": "info",
-          "settings": {}
-        },
-        "cf_elevateknit_products": {
-          "type": "products",
-          "settings": {
-            "products_limit": 10
-          }
-        }
-      },
-      "block_order": [
-        "cf_elevateknit_image",
-        "cf_elevateknit_info",
-        "cf_elevateknit_products"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "section_width": "page-width",
-        "padding-block-start": 48,
-        "padding-block-end": 64
-      }
-    },
     "fabric_comparison_table": {
       "type": "fabric-comparison-table",
-      "name": "Fabric Comparison Table",
       "blocks": {
         "fab_cloudsoft": {
           "type": "fabric",
           "settings": {
+            "image": "shopify://shop_images/Gemini_Generated_Image_dlwqjdlwqjdlwqjd_01f63526-b035-4446-aab3-8c49c95e0522.png",
             "name": "CloudSoft™",
             "feature_1": "Pima Cotton + Modal + Spandex",
             "feature_2": "Ultra-soft",
@@ -1445,6 +1166,7 @@
         "fab_luxemodal": {
           "type": "fabric",
           "settings": {
+            "image": "shopify://shop_images/cotton-fabrics-header-square-Pique_SK-1929-2b.jpg",
             "name": "LuxeModal™",
             "feature_1": "Cotton Modal Spandex",
             "feature_2": "Silky smooth",
@@ -1542,31 +1264,23 @@
         "fab_waverib",
         "fab_elevateknit"
       ],
+      "name": "Fabric Comparison Table",
       "settings": {
-        "heading": "How They Compare",
+        "heading": "",
         "feature_1_label": "Composition",
         "feature_2_label": "Softness",
         "feature_3_label": "Breathability",
         "feature_4_label": "Stretch & Recovery",
         "feature_5_label": "Best For",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "section_width": "page-width",
         "padding-block-start": 64,
-        "padding-block-end": 64
+        "padding-block-end": 80
       }
     }
   },
   "order": [
     "compare_fabrics_sf",
-    "fabric_comparison_table",
-    "cf_cloudsoft",
-    "cf_luxemodal",
-    "cf_airsoft",
-    "cf_ecosoft",
-    "cf_ecolite",
-    "cf_sculptstretch",
-    "cf_texturerib",
-    "cf_waverib",
-    "cf_elevateknit"
+    "fabric_comparison_table"
   ]
 }
