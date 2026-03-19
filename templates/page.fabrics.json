@@ -1,8 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "compare_fabrics_sf": {
       "type": "carousel",
-      "name": "Compare the Fabrics",
       "blocks": {
         "static-header": {
           "type": "group",
@@ -98,7 +106,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["heading_compare", "subheading_compare"]
+          "block_order": [
+            "heading_compare",
+            "subheading_compare"
+          ]
         },
         "static-carousel-content": {
           "type": "_carousel-content",
@@ -223,7 +234,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_cloudsoft", "heading_cloudsoft", "text_cloudsoft"]
+              "block_order": [
+                "img_cloudsoft",
+                "heading_cloudsoft",
+                "text_cloudsoft"
+              ]
             },
             "card_luxemodal": {
               "type": "_card",
@@ -329,7 +344,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_luxemodal", "heading_luxemodal", "text_luxemodal"]
+              "block_order": [
+                "img_luxemodal",
+                "heading_luxemodal",
+                "text_luxemodal"
+              ]
             },
             "card_airsoft": {
               "type": "_card",
@@ -435,7 +454,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_airsoft", "heading_airsoft", "text_airsoft"]
+              "block_order": [
+                "img_airsoft",
+                "heading_airsoft",
+                "text_airsoft"
+              ]
             },
             "card_ecosoft": {
               "type": "_card",
@@ -541,7 +564,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_ecosoft", "heading_ecosoft", "text_ecosoft"]
+              "block_order": [
+                "img_ecosoft",
+                "heading_ecosoft",
+                "text_ecosoft"
+              ]
             },
             "card_ecolite": {
               "type": "_card",
@@ -647,7 +674,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_ecolite", "heading_ecolite", "text_ecolite"]
+              "block_order": [
+                "img_ecolite",
+                "heading_ecolite",
+                "text_ecolite"
+              ]
             },
             "card_sculptstretch": {
               "type": "_card",
@@ -753,7 +784,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_sculptstretch", "heading_sculptstretch", "text_sculptstretch"]
+              "block_order": [
+                "img_sculptstretch",
+                "heading_sculptstretch",
+                "text_sculptstretch"
+              ]
             },
             "card_texturerib": {
               "type": "_card",
@@ -859,7 +894,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_texturerib", "heading_texturerib", "text_texturerib"]
+              "block_order": [
+                "img_texturerib",
+                "heading_texturerib",
+                "text_texturerib"
+              ]
             },
             "card_waverib": {
               "type": "_card",
@@ -965,7 +1004,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_waverib", "heading_waverib", "text_waverib"]
+              "block_order": [
+                "img_waverib",
+                "heading_waverib",
+                "text_waverib"
+              ]
             },
             "card_elevateknit": {
               "type": "_card",
@@ -1071,7 +1114,11 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["img_elevateknit", "heading_elevateknit", "text_elevateknit"]
+              "block_order": [
+                "img_elevateknit",
+                "heading_elevateknit",
+                "text_elevateknit"
+              ]
             }
           },
           "block_order": [
@@ -1087,7 +1134,7 @@
           ]
         }
       },
-      "block_order": ["static-header", "static-carousel-content"],
+      "name": "Compare the Fabrics",
       "settings": {
         "columns": 4,
         "mobile_columns": "1",
