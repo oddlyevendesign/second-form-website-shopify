@@ -109,7 +109,7 @@
               "name": "Shop Women",
               "settings": {
                 "label": "Shop Women",
-                "link": "shopify://collections/women",
+                "link": "shopify://collections/womenswear",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
@@ -124,7 +124,7 @@
               "name": "Shop Men",
               "settings": {
                 "label": "Shop Men",
-                "link": "shopify://collections/men",
+                "link": "shopify://collections/menswear",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
                 "width": "fit-content",
