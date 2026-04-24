@@ -47,7 +47,10 @@
           <div class="meta">
             <div>
               <div class="name">{{ product.title | upcase }}</div>
-              <div class="sub">{{ product.type }}</div>
+              <div class="sub">
+                {%- assign vt = product.variants.first.title -%}
+                {%- if vt != 'Default Title' -%}{{ vt }}{%- elsif product.type != blank -%}{{ product.type }}{%- endif -%}
+              </div>
             </div>
             <div class="price">{{ product.price | money }}</div>
           </div>
@@ -464,7 +467,10 @@
           <div class="meta">
             <div>
               <div class="name">{{ product.title | upcase }}</div>
-              <div class="sub">{{ product.type }}</div>
+              <div class="sub">
+                {%- assign vt = product.variants.first.title -%}
+                {%- if vt != 'Default Title' -%}{{ vt }}{%- elsif product.type != blank -%}{{ product.type }}{%- endif -%}
+              </div>
             </div>
             <div class="price">{{ product.price | money }}</div>
           </div>
