@@ -1,0 +1,50 @@
+{{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+
+{%- assign phrase_text = section.settings.phrase | default: 'LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE.' -%}
+{%- assign phrase_words = phrase_text | split: ' ' -%}
+
+<section class="lounge-phrase" id="sf-lounge-phrase">
+  <h2>
+    {%- for word in phrase_words -%}
+      <span class="w">{{ word }}</span>
+    {%- endfor -%}
+  </h2>
+</section>
+
+<script>
+(function () {
+  var phrase = document.getElementById('sf-lounge-phrase');
+  if (!phrase) return;
+  var words = phrase.querySelectorAll('.w');
+  function update() {
+    var r = phrase.getBoundingClientRect();
+    var vh = window.innerHeight;
+    var total = r.height + vh * 0.8;
+    var traveled = vh - r.top;
+    var p = Math.max(0, Math.min(1, traveled / total));
+    words.forEach(function (w, i) {
+      w.style.color = (p * 1.15 > i / words.length) ? 'var(--chocolate)' : 'var(--bone-2)';
+    });
+  }
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "SF: Brand Phrase",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "phrase",
+      "label": "Phrase text (all-caps, scroll-animated)",
+      "default": "LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE."
+    }
+  ],
+  "presets": [
+    { "name": "SF: Brand Phrase" }
+  ]
+}
+{% endschema %}

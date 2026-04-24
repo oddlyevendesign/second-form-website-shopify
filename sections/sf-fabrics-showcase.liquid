@@ -1,0 +1,308 @@
+{{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+
+<!-- ===== FABRICS — Desktop (7 tabs) ===== -->
+<section class="fabrics" id="sf-fabrics-section">
+  <span class="eyebrow" style="display:block;text-align:center;color:var(--chocolate);margin-bottom:12px;">OUR FABRICS</span>
+  <h2>OUR FABRICS</h2>
+  <div class="fabric-tabs">
+    <button class="fabric-tab active" data-fab="0">French Terry</button>
+    <button class="fabric-tab" data-fab="1">Ribbed Jersey</button>
+    <button class="fabric-tab" data-fab="2">Combed Pima</button>
+    <button class="fabric-tab" data-fab="3">Tumbled Linen</button>
+    <button class="fabric-tab" data-fab="4">Brushed Fleece</button>
+    <button class="fabric-tab" data-fab="5">Soft Modal</button>
+    <button class="fabric-tab" data-fab="6">Washed Canvas</button>
+  </div>
+  <div class="fabric-viewer">
+
+    <div class="fabric-panel active" data-fab="0">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="French Terry"
+          {% if section.settings.fab_1_image %}style="background-image:url('{{ section.settings.fab_1_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Second-Skin Softness</span>
+        <h3>ULTRA SOFT WITH EFFORTLESS BREATHABILITY</h3>
+        <p>Our signature French Terry is brushed for a plush hand-feel on the inside and a clean, structured drape on the outside — built to soften beautifully with every wash.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>72%</b><span>Organic Cotton</span></div>
+          <div class="fabric-prop"><b>260 GSM</b><span>Midweight</span></div>
+          <div class="fabric-prop"><b>PRE-SHRUNK</b><span>Finished</span></div>
+          <div class="fabric-prop"><b>CERTIFIED</b><span>GOTS</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="1">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Ribbed Jersey"
+          {% if section.settings.fab_2_image %}style="background-image:url('{{ section.settings.fab_2_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Fluid Movement</span>
+        <h3>4-WAY STRETCH THAT ADAPTS TO YOUR BODY</h3>
+        <p>A close-knit rib with a weighted, resilient feel. Sculpts softly, holds its shape, and moves with you — equal parts lounge and street.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>88%</b><span>Modal Cotton</span></div>
+          <div class="fabric-prop"><b>220 GSM</b><span>Lightweight</span></div>
+          <div class="fabric-prop"><b>Anti-pill</b><span>Treated</span></div>
+          <div class="fabric-prop"><b>Made in</b><span>India</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="2">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Combed Pima"
+          {% if section.settings.fab_3_image %}style="background-image:url('{{ section.settings.fab_3_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Everyday Essential</span>
+        <h3>MADE FOR DAILY WEAR WITH ALL-DAY EASE</h3>
+        <p>Long-staple Pima, combed twice for an unusually smooth surface. Cool to the touch, unbothered by wrinkles, and engineered to outlast trends.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>100%</b><span>Pima Cotton</span></div>
+          <div class="fabric-prop"><b>180 GSM</b><span>Breathable</span></div>
+          <div class="fabric-prop"><b>Machine</b><span>Washable</span></div>
+          <div class="fabric-prop"><b>Oeko-Tex</b><span>100</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="3">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Tumbled Linen"
+          {% if section.settings.fab_4_image %}style="background-image:url('{{ section.settings.fab_4_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Quiet Luxury</span>
+        <h3>AIRY, RELAXED, LIVED-IN FROM DAY ONE</h3>
+        <p>Stone-washed European flax with a crumpled, characterful drape. Cooler than cotton, lighter than it looks, and only better-looking with age.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>100%</b><span>European Flax</span></div>
+          <div class="fabric-prop"><b>160 GSM</b><span>Summer</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="4">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Brushed Fleece"
+          {% if section.settings.fab_5_image %}style="background-image:url('{{ section.settings.fab_5_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Warm &amp; Weightless</span>
+        <h3>INSULATED COMFORT, WITHOUT THE BULK</h3>
+        <p>Loft-spun fleece with a quick-dry inner face. The warmth of heavier knits without giving up drape or breathability.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>65%</b><span>Recycled Poly</span></div>
+          <div class="fabric-prop"><b>320 GSM</b><span>Heavy</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="5">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Soft Modal"
+          {% if section.settings.fab_6_image %}style="background-image:url('{{ section.settings.fab_6_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Second-Skin Softness</span>
+        <h3>SILKEN DRAPE WITH BREATHABLE STRUCTURE</h3>
+        <p>Botanical fibres spun into a featherweight jersey. Wears like water against the skin and settles into your body without clinging.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>95%</b><span>Modal</span></div>
+          <div class="fabric-prop"><b>170 GSM</b><span>Light</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fabric-panel" data-fab="6">
+      <div class="fabric-swatch">
+        <div class="inner" data-name="Washed Canvas"
+          {% if section.settings.fab_7_image %}style="background-image:url('{{ section.settings.fab_7_image | image_url: width: 600 }}')"{% endif %}></div>
+      </div>
+      <div class="fabric-info">
+        <span class="eyebrow">Built for Travel</span>
+        <h3>DURABLE STRUCTURE, BROKEN-IN FEEL</h3>
+        <p>Heavy-grain cotton canvas, enzyme-washed until it moves like it's been yours for years. Holds tailoring; forgives everything.</p>
+        <div class="fabric-props">
+          <div class="fabric-prop"><b>100%</b><span>Heavy Cotton</span></div>
+          <div class="fabric-prop"><b>340 GSM</b><span>Structured</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FABRICS — Mobile (7 branded tabs) ===== -->
+<section class="cs-fabrics" id="sf-cs-fabrics-section">
+  <h2 class="cs-fab-title">OUR FABRICS</h2>
+  <div class="cs-fab-tabs">
+    <button class="cs-fab-tab active" data-cs="0">CLOUDSOFT™</button>
+    <button class="cs-fab-tab" data-cs="1">LUXEMODAL™</button>
+    <button class="cs-fab-tab" data-cs="2">AIRSOFT™</button>
+    <button class="cs-fab-tab" data-cs="3">ECOSOFT™</button>
+    <button class="cs-fab-tab" data-cs="4">ECOLITE™</button>
+    <button class="cs-fab-tab" data-cs="5">SCULPTSTRETCH™</button>
+    <button class="cs-fab-tab" data-cs="6">TEXTURERIB™</button>
+  </div>
+
+  <div class="cs-fab-panel active" data-cs="0">
+    <div class="cs-cell cs-cell-tl"><h4>SECOND-SKIN SOFTNESS</h4><p>Ultra-soft with effortless breathability.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>AIRY COMFORT</h4><p>Soft &amp; comfortable, easy to wear fabric and suited for all climates.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">CLOUDSOFT&#10;&#8482;</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>FLUID MOVEMENT</h4><p>4-way stretch that adapts naturally to your body.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>EVERYDAY ESSENTIAL</h4><p>Made for daily wear with all-day ease.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="1">
+    <div class="cs-cell cs-cell-tl"><h4>SILK-LIKE TOUCH</h4><p>Smooth, polished softness with a refined hand feel.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>BALANCED BREATHABILITY</h4><p>Keeps you comfortable across changing moments.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_2_image %}style="background-image:url('{{ section.settings.cs_fab_2_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">SILK-LIKE LUXURY</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>LIGHT STRETCH</h4><p>Gentle flexibility that moves without effort.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>ELEVATED EASE</h4><p>Perfect for lounging or dressing up your basics.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="2">
+    <div class="cs-cell cs-cell-tl"><h4>FEATHER-LIGHT FEEL</h4><p>Barely-there weight for effortless summer layering.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>QUICK DRY</h4><p>Ready to wear again in a fraction of the time.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_3_image %}style="background-image:url('{{ section.settings.cs_fab_3_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">FEATHER-LIGHT AIR</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>MOISTURE WICKING</h4><p>Pulls sweat away to keep you cool under pressure.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>ALL-DAY COMFORT</h4><p>Designed to breathe wherever the day takes you.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="3">
+    <div class="cs-cell cs-cell-tl"><h4>PLANT-BASED FIBERS</h4><p>Spun from responsibly grown, low-impact crops.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>LOW-IMPACT</h4><p>Produced with a fraction of the water of conventional cotton.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_4_image %}style="background-image:url('{{ section.settings.cs_fab_4_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">PLANT-POWERED COMFORT</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>NATURALLY SOFT</h4><p>A plush hand-feel that gets better with every wash.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>WARDROBE STAPLE</h4><p>Made to outlast trends, not the planet.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="4">
+    <div class="cs-cell cs-cell-tl"><h4>LIGHTWEIGHT</h4><p>Airy, fluid drape for warmer months.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>RECYCLED BLEND</h4><p>Made from reclaimed plant fibers.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_5_image %}style="background-image:url('{{ section.settings.cs_fab_5_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">LIGHT &amp; LIVED-IN</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>BREATHABLE</h4><p>Open weave keeps the air moving.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>LIVED-IN LOOK</h4><p>A softer, relaxed aesthetic right out of the bag.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="5">
+    <div class="cs-cell cs-cell-tl"><h4>SUPPORTIVE STRETCH</h4><p>Holds you in without holding you back.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>SMOOTH SILHOUETTE</h4><p>A clean, sculpted line under everything.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_6_image %}style="background-image:url('{{ section.settings.cs_fab_6_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">HOLD &amp; RELEASE</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>RECOVERY</h4><p>Snaps back to shape, wear after wear.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>ALL-WAY FLEX</h4><p>Designed for movement in every direction.</p></div>
+  </div>
+
+  <div class="cs-fab-panel" data-cs="6">
+    <div class="cs-cell cs-cell-tl"><h4>TEXTURED HAND</h4><p>A tactile rib with dimensional depth.</p></div>
+    <div class="cs-cell cs-cell-tr"><h4>STRUCTURED STRETCH</h4><p>Holds its form through the day.</p></div>
+    <div class="cs-swatch-wrap">
+      <div class="cs-swatch"><div class="cs-swatch-inner">
+        <div class="cs-swatch-img" {% if section.settings.cs_fab_7_image %}style="background-image:url('{{ section.settings.cs_fab_7_image | image_url: width: 400 }}')"{% elsif section.settings.cs_fab_1_image %}style="background-image:url('{{ section.settings.cs_fab_1_image | image_url: width: 400 }}')"{% endif %}></div>
+        <div class="cs-swatch-ribbon">RIBBED &amp; READY</div>
+      </div></div>
+    </div>
+    <div class="cs-cell cs-cell-bl"><h4>BODY-SKIMMING</h4><p>Follows your shape without clinging.</p></div>
+    <div class="cs-cell cs-cell-br"><h4>ENDLESSLY LAYERABLE</h4><p>Pairs with everything in the wardrobe.</p></div>
+  </div>
+
+</section>
+
+<script>
+(function () {
+  /* Desktop fabric tabs */
+  var fabTabs = document.querySelectorAll('.fabric-tab');
+  var fabPanels = document.querySelectorAll('#sf-fabrics-section .fabric-panel');
+  fabTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var idx = tab.getAttribute('data-fab');
+      fabTabs.forEach(function (t) { t.classList.remove('active'); });
+      fabPanels.forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var panel = document.querySelector('#sf-fabrics-section .fabric-panel[data-fab="' + idx + '"]');
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* Mobile fabric tabs */
+  var csTabs = document.querySelectorAll('.cs-fab-tab');
+  var csPanels = document.querySelectorAll('#sf-cs-fabrics-section .cs-fab-panel');
+  csTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var idx = tab.getAttribute('data-cs');
+      csTabs.forEach(function (t) { t.classList.remove('active'); });
+      csPanels.forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      var panel = document.querySelector('#sf-cs-fabrics-section .cs-fab-panel[data-cs="' + idx + '"]');
+      if (panel) panel.classList.add('active');
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "SF: Fabrics",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Desktop swatches (generic fabric names)"
+    },
+    { "type": "image_picker", "id": "fab_1_image", "label": "French Terry swatch" },
+    { "type": "image_picker", "id": "fab_2_image", "label": "Ribbed Jersey swatch" },
+    { "type": "image_picker", "id": "fab_3_image", "label": "Combed Pima swatch" },
+    { "type": "image_picker", "id": "fab_4_image", "label": "Tumbled Linen swatch" },
+    { "type": "image_picker", "id": "fab_5_image", "label": "Brushed Fleece swatch" },
+    { "type": "image_picker", "id": "fab_6_image", "label": "Soft Modal swatch" },
+    { "type": "image_picker", "id": "fab_7_image", "label": "Washed Canvas swatch" },
+    {
+      "type": "header",
+      "content": "Mobile swatches (branded fabric names)"
+    },
+    { "type": "image_picker", "id": "cs_fab_1_image", "label": "CloudSoft™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_2_image", "label": "LuxeModal™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_3_image", "label": "AirSoft™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_4_image", "label": "EcoSoft™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_5_image", "label": "EcoLite™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_6_image", "label": "SculptStretch™ swatch" },
+    { "type": "image_picker", "id": "cs_fab_7_image", "label": "TextureRib™ swatch" }
+  ],
+  "presets": [
+    { "name": "SF: Fabrics" }
+  ]
+}
+{% endschema %}

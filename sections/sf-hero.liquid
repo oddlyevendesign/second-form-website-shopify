@@ -1,0 +1,76 @@
+{{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+
+<section class="hero">
+  <div class="hero-inner"
+    {% if section.settings.hero_image %}
+      style="background-image: url('{{ section.settings.hero_image | image_url: width: 2000 }}')"
+    {% endif %}
+  >
+    <div class="hero-content">
+      <h1>{{ section.settings.heading | default: 'MADE FOR SLOW MORNINGS, LONG DAYS, AND EVERYTHING IN BETWEEN.' | newline_to_br }}</h1>
+      <p class="tagline">{{ section.settings.tagline | default: 'Fashion that moves with you' }}</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="{{ section.settings.cta1_url | default: '/collections/women' }}" class="btn">{{ section.settings.cta1_label | default: 'Shop Women' }}</a>
+        <a href="{{ section.settings.cta2_url | default: '/collections/men' }}" class="btn btn-light">{{ section.settings.cta2_label | default: 'Shop Men' }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SF: Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Background image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading (new line = line break)",
+      "default": "MADE FOR SLOW\nMORNINGS, LONG DAYS,\nAND EVERYTHING IN\nBETWEEN."
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Fashion that moves with you"
+    },
+    {
+      "type": "header",
+      "content": "Primary button"
+    },
+    {
+      "type": "text",
+      "id": "cta1_label",
+      "label": "Label",
+      "default": "Shop Women"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "URL"
+    },
+    {
+      "type": "header",
+      "content": "Secondary button"
+    },
+    {
+      "type": "text",
+      "id": "cta2_label",
+      "label": "Label",
+      "default": "Shop Men"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "URL"
+    }
+  ],
+  "presets": [
+    { "name": "SF: Hero" }
+  ]
+}
+{% endschema %}

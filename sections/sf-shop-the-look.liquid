@@ -1,0 +1,138 @@
+{{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+
+<section style="padding: 24px 0;">
+  <div class="shop-the-look"
+    {% if section.settings.background_image %}
+      style="background-image: url('{{ section.settings.background_image | image_url: width: 1600 }}')"
+    {% endif %}
+  >
+    <div class="stl-head">
+      <h2>{{ section.settings.heading | default: 'SHOP THE LOOK' }}</h2>
+      <span class="eyebrow" style="color:var(--bone-2)">{{ section.settings.eyebrow | default: 'our faves, for you' }}</span>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- assign pin_side = block.settings.tag_side | default: 'left' -%}
+      <div class="stl-pin" style="left:{{ block.settings.pin_x | default: 42 }}%;top:{{ block.settings.pin_y | default: 66 }}%;" {{ block.shopify_attributes }}>
+        <div class="stl-dot"></div>
+        <div class="stl-tag stl-tag--{{ pin_side }}">
+          <div class="sw"
+            {% if block.settings.product_image %}
+              style="background-image: url('{{ block.settings.product_image | image_url: width: 100 }}')"
+            {% endif %}
+          ></div>
+          <div>
+            <div class="nm">{{ block.settings.product_name | default: 'Product Name' }}</div>
+            <div class="pr">{{ block.settings.product_price | default: 'Rs 3,250' }}</div>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SF: Shop the Look",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "SHOP THE LOOK"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "our faves, for you"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pin",
+      "name": "Product pin",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product thumbnail"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product name",
+          "default": "Knitted Pants"
+        },
+        {
+          "type": "text",
+          "id": "product_price",
+          "label": "Price",
+          "default": "Rs 3,250"
+        },
+        {
+          "type": "range",
+          "id": "pin_x",
+          "label": "Horizontal position (%)",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "default": 42
+        },
+        {
+          "type": "range",
+          "id": "pin_y",
+          "label": "Vertical position (%)",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "default": 66
+        },
+        {
+          "type": "select",
+          "id": "tag_side",
+          "label": "Tag opens toward",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "SF: Shop the Look",
+      "blocks": [
+        {
+          "type": "pin",
+          "settings": {
+            "product_name": "Knitted Pants",
+            "product_price": "Rs 3,250",
+            "pin_x": 42,
+            "pin_y": 66,
+            "tag_side": "left"
+          }
+        },
+        {
+          "type": "pin",
+          "settings": {
+            "product_name": "Knitted Top",
+            "product_price": "Rs 3,250",
+            "pin_x": 58,
+            "pin_y": 46,
+            "tag_side": "right"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,76 @@
+{{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+
+<section class="everyone-section">
+  <div class="everyone-inner"
+    {% if section.settings.background_image %}
+      style="background-image: url('{{ section.settings.background_image | image_url: width: 1600 }}')"
+    {% endif %}
+  >
+    <div>
+      <h2>{{ section.settings.heading | default: "THERE'S SOMETHING<br>FOR EVERYONE" | newline_to_br }}</h2>
+      <p>{{ section.settings.subheading | default: 'FIND YOUR SECOND SKIN' }}</p>
+      <div class="btns">
+        <a href="{{ section.settings.cta1_url | default: '/collections/women' }}" class="btn">{{ section.settings.cta1_label | default: 'Shop Women' }}</a>
+        <a href="{{ section.settings.cta2_url | default: '/collections/men' }}" class="btn">{{ section.settings.cta2_label | default: 'Shop Men' }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "SF: For Everyone",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading (new line = line break)",
+      "default": "THERE'S SOMETHING\nFOR EVERYONE"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "FIND YOUR SECOND SKIN"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "cta1_label",
+      "label": "Label",
+      "default": "Shop Women"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "URL"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "cta2_label",
+      "label": "Label",
+      "default": "Shop Men"
+    },
+    {
+      "type": "url",
+      "id": "cta2_url",
+      "label": "URL"
+    }
+  ],
+  "presets": [
+    { "name": "SF: For Everyone" }
+  ]
+}
+{% endschema %}

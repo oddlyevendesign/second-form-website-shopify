@@ -1,20 +1,202 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "sf_homepage": {
-      "type": "sf-homepage",
+    "sf_hero": {
+      "type": "sf-hero",
       "settings": {}
+    },
+    "sf_new_in": {
+      "type": "sf-new-in",
+      "settings": {
+        "collection_handle": "new-in",
+        "product_limit": 4,
+        "heading": "NEW IN",
+        "eyebrow": "The Essentials"
+      }
+    },
+    "sf_shop_the_look": {
+      "type": "sf-shop-the-look",
+      "settings": {},
+      "blocks": {
+        "stl_pin_1": {
+          "type": "pin",
+          "settings": {
+            "product_name": "Knitted Pants",
+            "product_price": "Rs 3,250",
+            "pin_x": 42,
+            "pin_y": 66,
+            "tag_side": "left"
+          }
+        },
+        "stl_pin_2": {
+          "type": "pin",
+          "settings": {
+            "product_name": "Knitted Top",
+            "product_price": "Rs 3,250",
+            "pin_x": 58,
+            "pin_y": 46,
+            "tag_side": "right"
+          }
+        }
+      },
+      "block_order": ["stl_pin_1", "stl_pin_2"]
+    },
+    "sf_lounge_phrase": {
+      "type": "sf-lounge-phrase",
+      "settings": {}
+    },
+    "sf_shop_by_category": {
+      "type": "sf-shop-by-category",
+      "settings": {
+        "heading": "SHOP BY CATEGORY",
+        "eyebrow": "we've got it all"
+      },
+      "blocks": {
+        "cat_1": {
+          "type": "category",
+          "settings": {
+            "label": "LOUNGING AT HOME"
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "label": "TRAVEL EDIT"
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "label": "DAILY ESSENTIALS"
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "label": "OUT & ABOUT"
+          }
+        }
+      },
+      "block_order": ["cat_1", "cat_2", "cat_3", "cat_4"]
+    },
+    "sf_everyone": {
+      "type": "sf-everyone",
+      "settings": {}
+    },
+    "sf_fabrics_showcase": {
+      "type": "sf-fabrics-showcase",
+      "settings": {}
+    },
+    "sf_most_loved": {
+      "type": "sf-most-loved",
+      "settings": {
+        "collection_handle": "bestsellers",
+        "product_limit": 4,
+        "heading": "MOST LOVED",
+        "eyebrow": "your favs"
+      }
+    },
+    "sf_testimonials": {
+      "type": "sf-testimonials",
+      "settings": {},
+      "blocks": {
+        "testi_1": {
+          "type": "testimonial",
+          "settings": {
+            "city": "BENGALURU",
+            "quote": "The quality is exceptional. Every piece feels luxurious and thoughtfully made. These have become my go-to pieces for work from home and beyond.",
+            "author": "Priya Sharma",
+            "link_label": "Shop the Co-ord Collection →",
+            "link_url": "/collections/sets"
+          }
+        },
+        "testi_2": {
+          "type": "testimonial",
+          "settings": {
+            "city": "MUMBAI",
+            "quote": "Finally found a brand that understands comfort without compromising style. The fabrics are soft and the fit is perfect. Worth every penny!",
+            "author": "Kabir Patel",
+            "link_label": "Shop the Lounge Collection →",
+            "link_url": "/collections/women"
+          }
+        },
+        "testi_3": {
+          "type": "testimonial",
+          "settings": {
+            "city": "DELHI",
+            "quote": "The sustainable approach and attention to detail make this brand stand out. These pieces last and only get better with time. Highly recommend!",
+            "author": "Rohan Kumar",
+            "link_label": "Shop the Hoodie Collection →",
+            "link_url": "/collections/recycled-collection"
+          }
+        },
+        "testi_4": {
+          "type": "testimonial",
+          "settings": {
+            "city": "PUNE",
+            "quote": "Love the minimalist aesthetic. Every piece is versatile and well-made. Perfect for my lifestyle — from meetings to coffee runs to relaxing at home.",
+            "author": "Aditya Singh",
+            "link_label": "Shop the Hybrid Collection →",
+            "link_url": "/collections/out-and-about"
+          }
+        }
+      },
+      "block_order": ["testi_1", "testi_2", "testi_3", "testi_4"]
+    },
+    "sf_faq": {
+      "type": "sf-faq",
+      "settings": {
+        "heading": "FREQUENTLY ASKED QUESTIONS"
+      },
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is your fabric sourcing philosophy?",
+            "answer": "We source long-staple cottons and botanical-origin fibres certified under GOTS and Oeko-Tex 100. Every roll is traced back to the mill."
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does sizing work?",
+            "answer": "Our fit is relaxed but not oversized. If you're between sizes, go up for lounge and down for hybrid silhouettes."
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the return policy?",
+            "answer": "Free returns within 15 days of delivery, on unworn pieces with tags intact."
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "Yes — we ship worldwide. Duties and taxes are calculated at checkout."
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I care for my Second Form pieces?",
+            "answer": "Cold machine wash inside-out on gentle cycle, line dry. Our fabrics soften beautifully with every wash."
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"]
     }
   },
   "order": [
-    "sf_homepage"
+    "sf_hero",
+    "sf_new_in",
+    "sf_shop_the_look",
+    "sf_lounge_phrase",
+    "sf_shop_by_category",
+    "sf_everyone",
+    "sf_fabrics_showcase",
+    "sf_most_loved",
+    "sf_testimonials",
+    "sf_faq"
   ]
 }
