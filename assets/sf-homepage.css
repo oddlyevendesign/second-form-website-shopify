@@ -62,7 +62,7 @@ section { position: relative; }
 
 /* Hero */
 .hero {
-  padding: calc(var(--header-height, 60px) + 40px) 32px 32px;
+  padding: 40px 32px 32px;
 }
 .hero-inner {
   position: relative;
@@ -650,7 +650,7 @@ section { position: relative; }
   .stl-head { top: 24px; left: 24px; }
   .stl-head h2 { font-size: 28px; }
   .shop-the-look { height: 460px; margin: 0 16px; }
-  .hero { padding: calc(var(--header-height, 60px) + 40px) 16px 16px; }
+  .hero { padding: 40px 16px 16px; }
   .everyone-section { padding: 16px; }
 
   /* CloudSoft fabrics mobile */
