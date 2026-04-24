@@ -84,7 +84,129 @@
     },
     "sf_fabrics_showcase": {
       "type": "sf-fabrics-showcase",
-      "settings": {}
+      "settings": {},
+      "blocks": {
+        "fab_cloudsoft": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "CloudSoft™",
+            "eyebrow": "Second-Skin Softness",
+            "heading": "ULTRA-SOFT WITH EFFORTLESS BREATHABILITY",
+            "description": "Pima Cotton blended with Modal and Spandex for a supremely soft, breathable everyday fabric. Airy comfort suited for all climates, with 4-way stretch that adapts naturally to your body.",
+            "prop1_value": "Pima Cotton",
+            "prop1_label": "Modal Spandex",
+            "prop2_value": "Ultra-Soft",
+            "prop2_label": "Everyday",
+            "prop3_value": "4-Way",
+            "prop3_label": "Stretch",
+            "prop4_value": "All-Climate",
+            "prop4_label": "Breathable"
+          }
+        },
+        "fab_luxemodal": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "LuxeModal™",
+            "eyebrow": "Silk-Like Luxury",
+            "heading": "SILKY SMOOTH WITH LIGHTWEIGHT STRETCH",
+            "description": "A refined Cotton Modal Spandex blend that drapes beautifully and feels elevated against the skin. Balanced breathability for comfort across changing moments.",
+            "prop1_value": "Cotton Modal",
+            "prop1_label": "Spandex",
+            "prop2_value": "Lightweight",
+            "prop2_label": "Fluid Drape",
+            "prop3_value": "Silk-Like",
+            "prop3_label": "Hand Feel",
+            "prop4_value": "Elevated",
+            "prop4_label": "Ease"
+          }
+        },
+        "fab_airsoft": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "AirSoft™",
+            "eyebrow": "Feather-Light Air",
+            "heading": "BRUSHED WARMTH WITHOUT THE WEIGHT",
+            "description": "Micro Modal French Terry with a brushed interior for lightweight warmth and all-day breathability. Quick-dry, moisture-wicking, and designed to breathe wherever the day takes you.",
+            "prop1_value": "Micro Modal",
+            "prop1_label": "Spandex",
+            "prop2_value": "French Terry",
+            "prop2_label": "Brushed Interior",
+            "prop3_value": "Quick Dry",
+            "prop3_label": "Moisture Wick",
+            "prop4_value": "Feather",
+            "prop4_label": "Light"
+          }
+        },
+        "fab_ecosoft": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "EcoSoft™",
+            "eyebrow": "Plant-Powered Comfort",
+            "heading": "SOFT, DURABLE, AND ECO-CONSCIOUS",
+            "description": "Recycled Poly, Cotton, and Spandex Terry — a responsible blend produced with a fraction of the water of conventional cotton. Softens beautifully with every wash.",
+            "prop1_value": "Recycled Poly",
+            "prop1_label": "Cotton Spandex",
+            "prop2_value": "Terry",
+            "prop2_label": "Construction",
+            "prop3_value": "Low-Impact",
+            "prop3_label": "Production",
+            "prop4_value": "Naturally",
+            "prop4_label": "Soft"
+          }
+        },
+        "fab_ecolite": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "EcoLite™",
+            "eyebrow": "Light & Lived-In",
+            "heading": "BREATHABLE, SUSTAINABLE, BUILT TO LAST",
+            "description": "Recycled Poly and Cotton Jersey with a fluid, airy drape for warmer days and conscious living. A softer, relaxed aesthetic right out of the bag.",
+            "prop1_value": "Recycled Poly",
+            "prop1_label": "Cotton Spandex",
+            "prop2_value": "Jersey",
+            "prop2_label": "Construction",
+            "prop3_value": "Airy",
+            "prop3_label": "Drape",
+            "prop4_value": "Sustainable",
+            "prop4_label": "Blend"
+          }
+        },
+        "fab_sculptstretch": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "SculptStretch™",
+            "eyebrow": "Hold & Release",
+            "heading": "STRUCTURED SUPPORT WITH SMOOTH RECOVERY",
+            "description": "Nylon Rayon Spandex Roma — a sculpting fabric with a clean silhouette and strong shape recovery. Holds you in without holding you back.",
+            "prop1_value": "Nylon Rayon",
+            "prop1_label": "Spandex",
+            "prop2_value": "Roma",
+            "prop2_label": "Construction",
+            "prop3_value": "Strong",
+            "prop3_label": "Recovery",
+            "prop4_value": "Smooth",
+            "prop4_label": "Silhouette"
+          }
+        },
+        "fab_texturerib": {
+          "type": "fabric",
+          "settings": {
+            "tab_label": "TextureRib™",
+            "eyebrow": "Ribbed & Ready",
+            "heading": "FLEXIBLE TEXTURE THAT HOLDS ITS SHAPE",
+            "description": "1×1 Rib Cotton Poly Spandex with a tactile, dimensional look that moves and layers beautifully. Body-skimming with structured stretch through the day.",
+            "prop1_value": "Cotton Poly",
+            "prop1_label": "Spandex",
+            "prop2_value": "1×1 Rib",
+            "prop2_label": "Construction",
+            "prop3_value": "Textured",
+            "prop3_label": "Hand Feel",
+            "prop4_value": "Body",
+            "prop4_label": "Skimming"
+          }
+        }
+      },
+      "block_order": ["fab_cloudsoft", "fab_luxemodal", "fab_airsoft", "fab_ecosoft", "fab_ecolite", "fab_sculptstretch", "fab_texturerib"]
     },
     "sf_most_loved": {
       "type": "sf-most-loved",
