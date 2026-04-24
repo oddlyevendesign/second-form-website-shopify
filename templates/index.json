@@ -100,7 +100,16 @@
             "prop3_value": "4-Way",
             "prop3_label": "Stretch",
             "prop4_value": "All-Climate",
-            "prop4_label": "Breathable"
+            "prop4_label": "Breathable",
+            "mobile_ribbon": "CLOUDSOFT™",
+            "cell_tl_title": "SECOND-SKIN SOFTNESS",
+            "cell_tl_text": "Ultra-soft with effortless breathability.",
+            "cell_tr_title": "AIRY COMFORT",
+            "cell_tr_text": "Soft & comfortable, easy to wear fabric and suited for all climates.",
+            "cell_bl_title": "FLUID MOVEMENT",
+            "cell_bl_text": "4-way stretch that adapts naturally to your body.",
+            "cell_br_title": "EVERYDAY ESSENTIAL",
+            "cell_br_text": "Made for daily wear with all-day ease."
           }
         },
         "fab_luxemodal": {
@@ -117,7 +126,16 @@
             "prop3_value": "Silk-Like",
             "prop3_label": "Hand Feel",
             "prop4_value": "Elevated",
-            "prop4_label": "Ease"
+            "prop4_label": "Ease",
+            "mobile_ribbon": "SILK-LIKE LUXURY",
+            "cell_tl_title": "SILK-LIKE TOUCH",
+            "cell_tl_text": "Smooth, polished softness with a refined hand feel.",
+            "cell_tr_title": "BALANCED BREATHABILITY",
+            "cell_tr_text": "Keeps you comfortable across changing moments.",
+            "cell_bl_title": "LIGHT STRETCH",
+            "cell_bl_text": "Gentle flexibility that moves without effort.",
+            "cell_br_title": "ELEVATED EASE",
+            "cell_br_text": "Perfect for lounging or dressing up your basics."
           }
         },
         "fab_airsoft": {
@@ -134,7 +152,16 @@
             "prop3_value": "Quick Dry",
             "prop3_label": "Moisture Wick",
             "prop4_value": "Feather",
-            "prop4_label": "Light"
+            "prop4_label": "Light",
+            "mobile_ribbon": "FEATHER-LIGHT AIR",
+            "cell_tl_title": "FEATHER-LIGHT FEEL",
+            "cell_tl_text": "Barely-there weight for effortless summer layering.",
+            "cell_tr_title": "QUICK DRY",
+            "cell_tr_text": "Ready to wear again in a fraction of the time.",
+            "cell_bl_title": "MOISTURE WICKING",
+            "cell_bl_text": "Pulls sweat away to keep you cool under pressure.",
+            "cell_br_title": "ALL-DAY COMFORT",
+            "cell_br_text": "Designed to breathe wherever the day takes you."
           }
         },
         "fab_ecosoft": {
@@ -151,7 +178,16 @@
             "prop3_value": "Low-Impact",
             "prop3_label": "Production",
             "prop4_value": "Naturally",
-            "prop4_label": "Soft"
+            "prop4_label": "Soft",
+            "mobile_ribbon": "PLANT-POWERED COMFORT",
+            "cell_tl_title": "PLANT-BASED FIBERS",
+            "cell_tl_text": "Spun from responsibly grown, low-impact crops.",
+            "cell_tr_title": "LOW-IMPACT",
+            "cell_tr_text": "Produced with a fraction of the water of conventional cotton.",
+            "cell_bl_title": "NATURALLY SOFT",
+            "cell_bl_text": "A plush hand-feel that gets better with every wash.",
+            "cell_br_title": "WARDROBE STAPLE",
+            "cell_br_text": "Made to outlast trends, not the planet."
           }
         },
         "fab_ecolite": {
@@ -168,7 +204,16 @@
             "prop3_value": "Airy",
             "prop3_label": "Drape",
             "prop4_value": "Sustainable",
-            "prop4_label": "Blend"
+            "prop4_label": "Blend",
+            "mobile_ribbon": "LIGHT & LIVED-IN",
+            "cell_tl_title": "LIGHTWEIGHT",
+            "cell_tl_text": "Airy, fluid drape for warmer months.",
+            "cell_tr_title": "RECYCLED BLEND",
+            "cell_tr_text": "Made from reclaimed plant fibers.",
+            "cell_bl_title": "BREATHABLE",
+            "cell_bl_text": "Open weave keeps the air moving.",
+            "cell_br_title": "LIVED-IN LOOK",
+            "cell_br_text": "A softer, relaxed aesthetic right out of the bag."
           }
         },
         "fab_sculptstretch": {
@@ -185,7 +230,16 @@
             "prop3_value": "Strong",
             "prop3_label": "Recovery",
             "prop4_value": "Smooth",
-            "prop4_label": "Silhouette"
+            "prop4_label": "Silhouette",
+            "mobile_ribbon": "HOLD & RELEASE",
+            "cell_tl_title": "SUPPORTIVE STRETCH",
+            "cell_tl_text": "Holds you in without holding you back.",
+            "cell_tr_title": "SMOOTH SILHOUETTE",
+            "cell_tr_text": "A clean, sculpted line under everything.",
+            "cell_bl_title": "RECOVERY",
+            "cell_bl_text": "Snaps back to shape, wear after wear.",
+            "cell_br_title": "ALL-WAY FLEX",
+            "cell_br_text": "Designed for movement in every direction."
           }
         },
         "fab_texturerib": {
@@ -202,7 +256,16 @@
             "prop3_value": "Textured",
             "prop3_label": "Hand Feel",
             "prop4_value": "Body",
-            "prop4_label": "Skimming"
+            "prop4_label": "Skimming",
+            "mobile_ribbon": "RIBBED & READY",
+            "cell_tl_title": "TEXTURED HAND",
+            "cell_tl_text": "A tactile rib with dimensional depth.",
+            "cell_tr_title": "STRUCTURED STRETCH",
+            "cell_tr_text": "Holds its form through the day.",
+            "cell_bl_title": "BODY-SKIMMING",
+            "cell_bl_text": "Follows your shape without clinging.",
+            "cell_br_title": "ENDLESSLY LAYERABLE",
+            "cell_br_text": "Pairs with everything in the wardrobe."
           }
         }
       },

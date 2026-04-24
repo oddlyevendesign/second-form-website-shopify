@@ -1,71 +1,121 @@
 {{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
 
-<section class="fabrics" id="sf-fabrics-{{ section.id }}">
-  <span class="eyebrow" style="display:block;text-align:center;color:var(--chocolate);margin-bottom:12px;">OUR FABRICS</span>
-  <h2>OUR FABRICS</h2>
-
-  <div class="fabric-tabs">
-    {%- for block in section.blocks -%}
-      <button class="fabric-tab{% if forloop.first %} active{% endif %}" data-fab="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
-        {{ block.settings.tab_label | default: 'Fabric' }}
-      </button>
-    {%- endfor -%}
-  </div>
-
-  <div class="fabric-viewer">
-    {%- for block in section.blocks -%}
-      <div class="fabric-panel{% if forloop.first %} active{% endif %}" data-fab="{{ forloop.index0 }}">
-        <div class="fabric-swatch">
-          <div class="inner" data-name="{{ block.settings.tab_label | escape }}"
-            {% if block.settings.image %}style="background-image:url('{{ block.settings.image | image_url: width: 600 }}')"{% endif %}>
+<!-- ===== DESKTOP layout ===== -->
+<div class="sf-fabrics-desktop">
+  <section class="fabrics" id="sf-fabrics-{{ section.id }}">
+    <span class="eyebrow" style="display:block;text-align:center;color:var(--chocolate);margin-bottom:12px;">OUR FABRICS</span>
+    <h2>OUR FABRICS</h2>
+    <div class="fabric-tabs">
+      {%- for block in section.blocks -%}
+        <button class="fabric-tab{% if forloop.first %} active{% endif %}" data-fab="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          {{ block.settings.tab_label | default: 'Fabric' }}
+        </button>
+      {%- endfor -%}
+    </div>
+    <div class="fabric-viewer">
+      {%- for block in section.blocks -%}
+        <div class="fabric-panel{% if forloop.first %} active{% endif %}" data-fab="{{ forloop.index0 }}">
+          <div class="fabric-swatch">
+            <div class="inner" data-name="{{ block.settings.tab_label | escape }}"
+              {% if block.settings.image %}style="background-image:url('{{ block.settings.image | image_url: width: 600 }}')"{% endif %}>
+            </div>
+          </div>
+          <div class="fabric-info">
+            {%- if block.settings.eyebrow != blank -%}<span class="eyebrow">{{ block.settings.eyebrow }}</span>{%- endif -%}
+            {%- if block.settings.heading != blank -%}<h3>{{ block.settings.heading }}</h3>{%- endif -%}
+            {%- if block.settings.description != blank -%}<p>{{ block.settings.description }}</p>{%- endif -%}
+            <div class="fabric-props">
+              {%- if block.settings.prop1_value != blank -%}<div class="fabric-prop"><b>{{ block.settings.prop1_value }}</b><span>{{ block.settings.prop1_label }}</span></div>{%- endif -%}
+              {%- if block.settings.prop2_value != blank -%}<div class="fabric-prop"><b>{{ block.settings.prop2_value }}</b><span>{{ block.settings.prop2_label }}</span></div>{%- endif -%}
+              {%- if block.settings.prop3_value != blank -%}<div class="fabric-prop"><b>{{ block.settings.prop3_value }}</b><span>{{ block.settings.prop3_label }}</span></div>{%- endif -%}
+              {%- if block.settings.prop4_value != blank -%}<div class="fabric-prop"><b>{{ block.settings.prop4_value }}</b><span>{{ block.settings.prop4_label }}</span></div>{%- endif -%}
+            </div>
           </div>
         </div>
-        <div class="fabric-info">
-          {%- if block.settings.eyebrow != blank -%}
-            <span class="eyebrow">{{ block.settings.eyebrow }}</span>
-          {%- endif -%}
-          {%- if block.settings.heading != blank -%}
-            <h3>{{ block.settings.heading }}</h3>
-          {%- endif -%}
-          {%- if block.settings.description != blank -%}
-            <p>{{ block.settings.description }}</p>
-          {%- endif -%}
-          <div class="fabric-props">
-            {%- if block.settings.prop1_value != blank -%}
-              <div class="fabric-prop"><b>{{ block.settings.prop1_value }}</b><span>{{ block.settings.prop1_label }}</span></div>
-            {%- endif -%}
-            {%- if block.settings.prop2_value != blank -%}
-              <div class="fabric-prop"><b>{{ block.settings.prop2_value }}</b><span>{{ block.settings.prop2_label }}</span></div>
-            {%- endif -%}
-            {%- if block.settings.prop3_value != blank -%}
-              <div class="fabric-prop"><b>{{ block.settings.prop3_value }}</b><span>{{ block.settings.prop3_label }}</span></div>
-            {%- endif -%}
-            {%- if block.settings.prop4_value != blank -%}
-              <div class="fabric-prop"><b>{{ block.settings.prop4_value }}</b><span>{{ block.settings.prop4_label }}</span></div>
-            {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+<!-- ===== MOBILE layout (4-cell grid) ===== -->
+<div class="sf-fabrics-mobile">
+  <section class="cs-fabrics" id="sf-cs-fabrics-{{ section.id }}">
+    <h2 class="cs-fab-title">OUR FABRICS</h2>
+    <div class="cs-fab-tabs">
+      {%- for block in section.blocks -%}
+        <button class="cs-fab-tab{% if forloop.first %} active{% endif %}" data-cs="{{ forloop.index0 }}">
+          {{ block.settings.tab_label | upcase | default: 'FABRIC' }}
+        </button>
+      {%- endfor -%}
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="cs-fab-panel{% if forloop.first %} active{% endif %}" data-cs="{{ forloop.index0 }}">
+        <div class="cs-cell cs-cell-tl">
+          <h4>{{ block.settings.cell_tl_title }}</h4>
+          <p>{{ block.settings.cell_tl_text }}</p>
+        </div>
+        <div class="cs-cell cs-cell-tr">
+          <h4>{{ block.settings.cell_tr_title }}</h4>
+          <p>{{ block.settings.cell_tr_text }}</p>
+        </div>
+        <div class="cs-swatch-wrap">
+          <div class="cs-swatch">
+            <div class="cs-swatch-inner">
+              <div class="cs-swatch-img"
+                {% if block.settings.image %}style="background-image:url('{{ block.settings.image | image_url: width: 400 }}')"{% endif %}>
+              </div>
+              <div class="cs-swatch-ribbon">{{ block.settings.mobile_ribbon | default: block.settings.tab_label }}</div>
+            </div>
           </div>
+        </div>
+        <div class="cs-cell cs-cell-bl">
+          <h4>{{ block.settings.cell_bl_title }}</h4>
+          <p>{{ block.settings.cell_bl_text }}</p>
+        </div>
+        <div class="cs-cell cs-cell-br">
+          <h4>{{ block.settings.cell_br_title }}</h4>
+          <p>{{ block.settings.cell_br_text }}</p>
         </div>
       </div>
     {%- endfor -%}
-  </div>
-</section>
+  </section>
+</div>
 
 <script>
 (function () {
-  var sec = document.getElementById('sf-fabrics-{{ section.id }}');
-  if (!sec) return;
-  var tabs = sec.querySelectorAll('.fabric-tab');
-  var panels = sec.querySelectorAll('.fabric-panel');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var idx = tab.getAttribute('data-fab');
-      tabs.forEach(function (t) { t.classList.remove('active'); });
-      panels.forEach(function (p) { p.classList.remove('active'); });
-      tab.classList.add('active');
-      var panel = sec.querySelector('.fabric-panel[data-fab="' + idx + '"]');
-      if (panel) panel.classList.add('active');
+  /* Desktop tabs */
+  var deskSec = document.getElementById('sf-fabrics-{{ section.id }}');
+  if (deskSec) {
+    var dTabs = deskSec.querySelectorAll('.fabric-tab');
+    var dPanels = deskSec.querySelectorAll('.fabric-panel');
+    dTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var idx = tab.getAttribute('data-fab');
+        dTabs.forEach(function (t) { t.classList.remove('active'); });
+        dPanels.forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        var panel = deskSec.querySelector('.fabric-panel[data-fab="' + idx + '"]');
+        if (panel) panel.classList.add('active');
+      });
     });
-  });
+  }
+
+  /* Mobile tabs */
+  var mobSec = document.getElementById('sf-cs-fabrics-{{ section.id }}');
+  if (mobSec) {
+    var mTabs = mobSec.querySelectorAll('.cs-fab-tab');
+    var mPanels = mobSec.querySelectorAll('.cs-fab-panel');
+    mTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var idx = tab.getAttribute('data-cs');
+        mTabs.forEach(function (t) { t.classList.remove('active'); });
+        mPanels.forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        var panel = mobSec.querySelector('.cs-fab-panel[data-cs="' + idx + '"]');
+        if (panel) panel.classList.add('active');
+      });
+    });
+  }
 })();
 </script>
 
@@ -80,7 +130,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Swatch image"
+          "label": "Swatch image (shared desktop + mobile)"
         },
         {
           "type": "text",
@@ -89,16 +139,18 @@
           "default": "CloudSoft™"
         },
         {
+          "type": "header",
+          "content": "Desktop content"
+        },
+        {
           "type": "text",
           "id": "eyebrow",
-          "label": "Eyebrow",
-          "default": "Second-Skin Softness"
+          "label": "Eyebrow"
         },
         {
           "type": "text",
           "id": "heading",
-          "label": "Heading",
-          "default": "ULTRA-SOFT WITH EFFORTLESS BREATHABILITY"
+          "label": "Heading"
         },
         {
           "type": "textarea",
@@ -106,20 +158,14 @@
           "label": "Description"
         },
         {
-          "type": "header",
-          "content": "Fabric stats (up to 4)"
-        },
-        {
           "type": "text",
           "id": "prop1_value",
-          "label": "Stat 1 value",
-          "default": "72%"
+          "label": "Stat 1 value"
         },
         {
           "type": "text",
           "id": "prop1_label",
-          "label": "Stat 1 label",
-          "default": "Organic Cotton"
+          "label": "Stat 1 label"
         },
         {
           "type": "text",
@@ -150,6 +196,56 @@
           "type": "text",
           "id": "prop4_label",
           "label": "Stat 4 label"
+        },
+        {
+          "type": "header",
+          "content": "Mobile content"
+        },
+        {
+          "type": "text",
+          "id": "mobile_ribbon",
+          "label": "Swatch ribbon text",
+          "info": "Short label on the swatch card (e.g. SILK-LIKE LUXURY)"
+        },
+        {
+          "type": "text",
+          "id": "cell_tl_title",
+          "label": "Top-left title"
+        },
+        {
+          "type": "textarea",
+          "id": "cell_tl_text",
+          "label": "Top-left text"
+        },
+        {
+          "type": "text",
+          "id": "cell_tr_title",
+          "label": "Top-right title"
+        },
+        {
+          "type": "textarea",
+          "id": "cell_tr_text",
+          "label": "Top-right text"
+        },
+        {
+          "type": "text",
+          "id": "cell_bl_title",
+          "label": "Bottom-left title"
+        },
+        {
+          "type": "textarea",
+          "id": "cell_bl_text",
+          "label": "Bottom-left text"
+        },
+        {
+          "type": "text",
+          "id": "cell_br_title",
+          "label": "Bottom-right title"
+        },
+        {
+          "type": "textarea",
+          "id": "cell_br_text",
+          "label": "Bottom-right text"
         }
       ]
     }

@@ -653,16 +653,39 @@ section { position: relative; }
   .hero { padding: 40px 16px 16px; }
   .everyone-section { padding: 16px; }
 
-  /* Fabric tabs — mobile scrollable */
-  .fabric-tabs {
+  /* CloudSoft fabrics mobile */
+  .cs-fabrics { padding: 48px 16px 64px; }
+  .cs-fab-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    padding: 0 16px 8px;
+    gap: 28px;
+    padding-bottom: 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
-  .fabric-tabs::-webkit-scrollbar { display: none; }
-  .fabric-tab { white-space: nowrap; flex-shrink: 0; }
+  .cs-fab-tabs::-webkit-scrollbar { display: none; }
+  .cs-fab-tab { white-space: nowrap; flex-shrink: 0; }
+  .cs-fab-panel.active {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+  .cs-cell { height: 200px; min-height: unset; overflow: hidden; box-sizing: border-box; }
+  .cs-swatch-wrap {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+    order: 1;
+  }
+  .cs-swatch { width: 300px; max-width: 95%; height: 279px; transform: none; border-radius: 12px; margin: 0 auto; }
+}
+
+/* Desktop: show desktop layout, hide mobile layout */
+.sf-fabrics-desktop { display: block; }
+.sf-fabrics-mobile { display: none; }
+
+@media (max-width: 900px) {
+  .sf-fabrics-desktop { display: none; }
+  .sf-fabrics-mobile { display: block; }
 }
