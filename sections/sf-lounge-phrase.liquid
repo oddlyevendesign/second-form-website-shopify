@@ -2,8 +2,20 @@
 
 {%- assign phrase_text = section.settings.phrase | default: 'LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE.' -%}
 {%- assign phrase_words = phrase_text | split: ' ' -%}
+{%- assign font_size = section.settings.font_size | default: 44 -%}
+{%- assign color_primary = section.settings.color_primary | default: '#460C13' -%}
+{%- assign color_secondary = section.settings.color_secondary | default: '#DFDACF' -%}
 
-<section class="lounge-phrase" id="sf-lounge-phrase">
+<style>
+  #sf-lounge-phrase-{{ section.id }} h2 { font-size: {{ font_size }}px; }
+  @media (max-width: 767px) {
+    #sf-lounge-phrase-{{ section.id }} h2 { font-size: 24px; }
+  }
+</style>
+
+<section class="lounge-phrase" id="sf-lounge-phrase-{{ section.id }}"
+  data-color-primary="{{ color_primary }}"
+  data-color-secondary="{{ color_secondary }}">
   <h2>
     {%- for word in phrase_words -%}
       <span class="w">{{ word }}</span>
@@ -13,9 +25,11 @@
 
 <script>
 (function () {
-  var phrase = document.getElementById('sf-lounge-phrase');
+  var phrase = document.getElementById('sf-lounge-phrase-{{ section.id }}');
   if (!phrase) return;
   var words = phrase.querySelectorAll('.w');
+  var colorPrimary = phrase.getAttribute('data-color-primary');
+  var colorSecondary = phrase.getAttribute('data-color-secondary');
   function update() {
     var r = phrase.getBoundingClientRect();
     var vh = window.innerHeight;
@@ -23,7 +37,7 @@
     var traveled = vh - r.top;
     var p = Math.max(0, Math.min(1, traveled / total));
     words.forEach(function (w, i) {
-      w.style.color = (p * 1.15 > i / words.length) ? 'var(--chocolate)' : 'var(--bone-2)';
+      w.style.color = (p * 1.15 > i / words.length) ? colorPrimary : colorSecondary;
     });
   }
   update();
@@ -41,6 +55,32 @@
       "id": "phrase",
       "label": "Phrase text (all-caps, scroll-animated)",
       "default": "LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE."
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size (desktop)",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "header",
+      "content": "Scroll animation colours"
+    },
+    {
+      "type": "color",
+      "id": "color_primary",
+      "label": "Highlighted word colour",
+      "default": "#460C13"
+    },
+    {
+      "type": "color",
+      "id": "color_secondary",
+      "label": "Dim word colour",
+      "default": "#DFDACF"
     }
   ],
   "presets": [
