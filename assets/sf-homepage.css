@@ -139,19 +139,19 @@ section { position: relative; }
 }
 .product-card:hover .img-wrap img { transform: scale(1.04); }
 .product-card .img-wrap .quick-add {
-  position: absolute; left: 16px; right: 16px; bottom: 16px;
-  background: rgba(255,255,255,0.95);
+  position: absolute; left: 16px; right: 16px; bottom: 12px;
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(8px);
-  padding: 10px;
+  padding: 5px 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--coffee);
   opacity: 0;
-  transform: translateY(8px);
-  transition: all 0.3s;
+  transform: translateY(6px);
+  transition: all 0.25s;
   font-family: 'Funnel Sans', sans-serif;
 }
 .product-card:hover .quick-add { opacity: 1; transform: translateY(0); }
