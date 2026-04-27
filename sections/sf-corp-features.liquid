@@ -1,0 +1,85 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
+
+<div class="corp-features">
+  <div class="corp-features__text">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="corp-eyebrow">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+    <h2 class="corp-features__heading" style="{% if section.settings.heading_size > 0 %}font-size:{{ section.settings.heading_size }}px;{% endif %}">
+      {{ section.settings.heading | default: 'BUILT AROUND FUNCTION' }}
+    </h2>
+    {%- if section.settings.body != blank -%}
+      <p class="corp-features__body">{{ section.settings.body }}</p>
+    {%- endif -%}
+    {%- if section.settings.cta_label != blank -%}
+      <a href="{{ section.settings.cta_url | default: '/pages/fabrics' }}" class="btn-outline" style="margin-top:24px;display:inline-block;">{{ section.settings.cta_label }}</a>
+    {%- endif -%}
+  </div>
+
+  <div class="corp-feat-grid">
+    {%- for block in section.blocks -%}
+      <div class="corp-feat-badge" {{ block.shopify_attributes }}>
+        {%- if block.settings.image -%}
+          <div class="corp-feat-badge__icon" style="width:40px;height:40px;">
+            <img src="{{ block.settings.image | image_url: width: 60 }}" alt="" width="28" height="28" style="object-fit:contain;width:28px;height:28px;">
+          </div>
+        {%- else -%}
+          <div class="corp-feat-badge__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+        {%- endif -%}
+        <span class="corp-feat-badge__label">{{ block.settings.label }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Features",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "FABRIC TECHNOLOGY" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "BUILT AROUND FUNCTION" },
+    { "type": "textarea", "id": "body", "label": "Body", "default": "Second Form is backed by our in-house manufacturing — every fabric is tested and certified before it leaves the mill." },
+    { "type": "text", "id": "cta_label", "label": "Link label" },
+    { "type": "url", "id": "cta_url", "label": "Link URL" },
+    { "type": "header", "content": "Style" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 20, "max": 80, "step": 2, "unit": "px", "default": 40 },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#F9F8F5" },
+    { "type": "color", "id": "custom_heading_color", "label": "Heading colour", "default": "#332925" },
+    { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature badge",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
+        { "type": "text", "id": "label", "label": "Label", "default": "Moisture Wicking" }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {
+      "name": "Corp: Features",
+      "blocks": [
+        { "type": "feature", "settings": { "label": "Moisture Wicking" } },
+        { "type": "feature", "settings": { "label": "Anti Microbial" } },
+        { "type": "feature", "settings": { "label": "Water Resistant" } },
+        { "type": "feature", "settings": { "label": "Thermo-Regulating" } },
+        { "type": "feature", "settings": { "label": "Easy-Care & Wrinkle Resistant" } },
+        { "type": "feature", "settings": { "label": "UV Protection" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

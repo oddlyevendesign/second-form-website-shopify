@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "sf_corp_hero": {
+      "type": "sf-corp-hero",
+      "settings": {
+        "eyebrow": "B2B & Corporate Gifting",
+        "heading": "CORPORATE ORDERS",
+        "subheading": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
+        "cta1_label": "Request a Proposal",
+        "cta2_label": "View Our Tiers",
+        "overlay_opacity": 45,
+        "heading_size": 64,
+        "color_scheme": "default"
+      }
+    },
+    "sf_corp_intro": {
+      "type": "sf-corp-intro",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": { "value": "500+", "label": "Corporate clients" }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": { "value": "50+", "label": "Countries shipped" }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": { "value": "12", "label": "Pieces minimum" }
+        }
+      },
+      "block_order": ["stat_1", "stat_2", "stat_3"],
+      "settings": {
+        "eyebrow": "WHO WE WORK WITH",
+        "heading": "Apparel Built Around Your Brand",
+        "body": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
+        "image_position": "right",
+        "heading_size": 42,
+        "color_scheme": "default"
+      }
+    },
+    "sf_corp_capabilities": {
+      "type": "sf-corp-capabilities",
+      "blocks": {
+        "cap_1": {
+          "type": "capability",
+          "settings": {
+            "title": "Fabric Selection",
+            "body": "Choose from CloudSoft™, LuxeModal™, EcoSoft™ and more — all GOTS and Oeko-Tex 100 certified."
+          }
+        },
+        "cap_2": {
+          "type": "capability",
+          "settings": {
+            "title": "Design Customization",
+            "body": "Modify silhouettes, cuts and finishes to match your brand identity and purpose."
+          }
+        },
+        "cap_3": {
+          "type": "capability",
+          "settings": {
+            "title": "Logo Branding",
+            "body": "Multiple placement and technique options — embroidery, screen print, woven labels and heat transfer."
+          }
+        },
+        "cap_4": {
+          "type": "capability",
+          "settings": {
+            "title": "Sizing Customization",
+            "body": "Inclusive size ranges, graded precisely to your requirements — XS through 4XL."
+          }
+        }
+      },
+      "block_order": ["cap_1", "cap_2", "cap_3", "cap_4"],
+      "settings": {
+        "eyebrow": "WHAT WE OFFER",
+        "heading": "Customization & Capabilities",
+        "heading_size": 42,
+        "color_scheme": "ivory"
+      }
+    },
+    "sf_corp_features": {
+      "type": "sf-corp-features",
+      "blocks": {
+        "feat_1": { "type": "feature", "settings": { "label": "Moisture Wicking" } },
+        "feat_2": { "type": "feature", "settings": { "label": "Anti Microbial" } },
+        "feat_3": { "type": "feature", "settings": { "label": "Water Resistant" } },
+        "feat_4": { "type": "feature", "settings": { "label": "Thermo-Regulating" } },
+        "feat_5": { "type": "feature", "settings": { "label": "Easy-Care & Wrinkle Resistant" } },
+        "feat_6": { "type": "feature", "settings": { "label": "UV Protection" } }
+      },
+      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6"],
+      "settings": {
+        "eyebrow": "FABRIC TECHNOLOGY",
+        "heading": "BUILT AROUND FUNCTION",
+        "body": "Second Form is backed by in-house manufacturing — every fabric is tested and certified before it leaves the mill.",
+        "cta_label": "Explore Our Fabrics",
+        "cta_url": "/pages/fabrics",
+        "heading_size": 40,
+        "color_scheme": "default"
+      }
+    },
+    "sf_corp_how": {
+      "type": "sf-corp-how-it-works",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Submit Inquiry",
+            "body": "Share your requirements, timeline, and budget through our proposal form."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Design & Sampling",
+            "body": "Our team creates samples aligned to your brand — reviewed and revised until perfect."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Approval & Production",
+            "body": "Once approved, production begins with full quality control at every stage."
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "title": "Delivery",
+            "body": "On-time delivery to your door — anywhere in India and worldwide."
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "settings": {
+        "eyebrow": "THE PROCESS",
+        "heading": "HOW IT WORKS",
+        "body": "A streamlined process from first inquiry to final delivery — with a dedicated account manager at every step.",
+        "heading_size": 48,
+        "color_scheme": "warm-dark"
+      }
+    },
+    "sf_corp_logos": {
+      "type": "sf-corp-logos",
+      "blocks": {
+        "logo_1": { "type": "logo", "settings": { "name": "Brand Partner 1" } },
+        "logo_2": { "type": "logo", "settings": { "name": "Brand Partner 2" } },
+        "logo_3": { "type": "logo", "settings": { "name": "Brand Partner 3" } },
+        "logo_4": { "type": "logo", "settings": { "name": "Brand Partner 4" } },
+        "logo_5": { "type": "logo", "settings": { "name": "Brand Partner 5" } }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5"],
+      "settings": {
+        "eyebrow": "TRUSTED BY",
+        "heading": "Built on Proven Manufacturing",
+        "body": "Trusted by leading brands across India and globally — backed by export-grade production standards.",
+        "heading_size": 42,
+        "color_scheme": "ivory"
+      }
+    },
+    "sf_corp_tiers": {
+      "type": "sf-corp-tiers",
+      "blocks": {
+        "tier_1": {
+          "type": "tier",
+          "settings": {
+            "name": "SF Classic",
+            "price": "₹500",
+            "price_sub": "per piece, starting from",
+            "description": "Premium essentials at scale. Ideal for teams and first-time corporate orders.",
+            "features_label": "Includes:",
+            "feature_1": "Min. 12 pieces per style",
+            "feature_2": "Logo embroidery or screen print",
+            "feature_3": "Standard delivery (21–28 days)",
+            "cta_label": "Get Started"
+          }
+        },
+        "tier_2": {
+          "type": "tier",
+          "settings": {
+            "featured": true,
+            "badge": "Most Popular",
+            "name": "SF Premium",
+            "price": "₹800",
+            "price_sub": "per piece, starting from",
+            "description": "Full customization with priority support — for brands that want every detail right.",
+            "features_label": "Includes:",
+            "feature_1": "Min. 50 pieces per style",
+            "feature_2": "Full design customization",
+            "feature_3": "Woven labels & custom packaging",
+            "feature_4": "Priority delivery (14–18 days)",
+            "feature_5": "Dedicated account manager",
+            "cta_label": "Get Started"
+          }
+        },
+        "tier_3": {
+          "type": "tier",
+          "settings": {
+            "name": "SF Plus",
+            "price": "Custom",
+            "price_sub": "pricing on request",
+            "description": "End-to-end brand-building — from fabric development to co-branded collections.",
+            "features_label": "Includes:",
+            "feature_1": "No minimum quantity",
+            "feature_2": "Proprietary fabric development",
+            "feature_3": "Co-branding & co-design",
+            "feature_4": "Global delivery",
+            "feature_5": "SLA-backed timelines",
+            "cta_label": "Talk to Us"
+          }
+        }
+      },
+      "block_order": ["tier_1", "tier_2", "tier_3"],
+      "settings": {
+        "eyebrow": "PRICING",
+        "heading": "OUR TIERS",
+        "heading_size": 48,
+        "color_scheme": "default"
+      }
+    },
+    "sf_corp_contact": {
+      "type": "sf-corp-contact",
+      "settings": {
+        "eyebrow": "GET IN TOUCH",
+        "heading": "REQUEST A PROPOSAL",
+        "subheading": "Tell us about your requirements and we'll get back to you within 1–2 business days.",
+        "submit_label": "Submit Proposal Request",
+        "success_message": "Thank you! We'll be in touch within 1–2 business days.",
+        "show_contact_info": true,
+        "contact_email": "corporate@secondform.co",
+        "contact_note": "We respond within 1–2 business days",
+        "heading_size": 42,
+        "color_scheme": "ivory"
+      }
+    },
+    "sf_corp_faq": {
+      "type": "sf-corp-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your MOQ?",
+            "answer": "Our minimum order quantity starts at 12 pieces per style for SF Classic, 50 pieces for SF Premium. SF Plus has no minimum."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "What is the typical timeline?",
+            "answer": "Standard orders take 21–28 days from approval. Priority orders (SF Premium and above) are delivered in 14–18 days."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you offer design customization?",
+            "answer": "Yes — we can modify silhouettes, add logo placements (embroidery, print, woven labels), custom packaging, and more."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can we see samples before placing an order?",
+            "answer": "Absolutely. We produce a physical sample for approval before any production run begins."
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "How is pricing structured?",
+            "answer": "Pricing depends on fabric, quantity, customization complexity and timeline. Request a proposal and we'll send a detailed quote within 48 hours."
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "Yes — we ship worldwide. Duties and taxes for international orders are calculated at checkout or included in your proposal quote."
+          }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "settings": {
+        "heading": "FREQUENTLY ASKED QUESTIONS",
+        "heading_size": 42,
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "sf_corp_hero",
+    "sf_corp_intro",
+    "sf_corp_capabilities",
+    "sf_corp_features",
+    "sf_corp_how",
+    "sf_corp_logos",
+    "sf_corp_tiers",
+    "sf_corp_contact",
+    "sf_corp_faq"
+  ]
+}

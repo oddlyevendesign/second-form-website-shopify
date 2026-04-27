@@ -1,0 +1,150 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
+
+<div class="corp-tiers" id="tiers">
+  <div class="corp-tiers__head">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="corp-eyebrow">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+    <h2 class="corp-h2" style="{% if section.settings.heading_size > 0 %}font-size:{{ section.settings.heading_size }}px;{% endif %}">
+      {{ section.settings.heading | default: 'OUR TIERS' }}
+    </h2>
+    {%- if section.settings.body != blank -%}
+      <p class="corp-body">{{ section.settings.body }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="corp-tier-grid">
+    {%- for block in section.blocks -%}
+      <div class="corp-tier-card{% if block.settings.featured %} featured{% endif %}" {{ block.shopify_attributes }}>
+        {%- if block.settings.badge != blank -%}
+          <span class="corp-tier-card__badge">{{ block.settings.badge }}</span>
+        {%- endif -%}
+        <div class="corp-tier-card__name">{{ block.settings.name }}</div>
+        <div class="corp-tier-card__price">{{ block.settings.price }}</div>
+        <div class="corp-tier-card__price-sub">{{ block.settings.price_sub | default: 'per piece, ex-GST' }}</div>
+        {%- if block.settings.description != blank -%}
+          <p class="corp-tier-card__desc">{{ block.settings.description }}</p>
+        {%- endif -%}
+        <div class="corp-tier-card__divider"></div>
+        {%- if block.settings.features_label != blank -%}
+          <div class="corp-tier-card__features-label">{{ block.settings.features_label }}</div>
+        {%- endif -%}
+        <ul class="corp-tier-card__features">
+          {%- for i in (1..6) -%}
+            {%- assign feat_key = 'feature_' | append: i -%}
+            {%- assign feat = block.settings[feat_key] -%}
+            {%- if feat != blank -%}
+              <li class="corp-tier-card__feature">{{ feat }}</li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+        {%- if block.settings.cta_label != blank -%}
+          <a href="{{ block.settings.cta_url | default: '#contact' }}" class="corp-tier-card__cta">{{ block.settings.cta_label }}</a>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Tiers",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "PRICING" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "OUR TIERS" },
+    { "type": "textarea", "id": "body", "label": "Body text" },
+    { "type": "header", "content": "Style" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 20, "max": 80, "step": 2, "unit": "px", "default": 48 },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#F9F8F5" },
+    { "type": "color", "id": "custom_heading_color", "label": "Heading colour", "default": "#332925" },
+    { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Pricing tier",
+      "settings": [
+        { "type": "checkbox", "id": "featured", "label": "Highlight as featured tier", "default": false },
+        { "type": "text", "id": "badge", "label": "Badge label (e.g. Most Popular)" },
+        { "type": "text", "id": "name", "label": "Tier name", "default": "SF Classic" },
+        { "type": "text", "id": "price", "label": "Starting price", "default": "₹500" },
+        { "type": "text", "id": "price_sub", "label": "Price qualifier", "default": "per piece, ex-GST" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Best for teams looking for premium essentials at scale." },
+        { "type": "text", "id": "features_label", "label": "Features list label", "default": "What's included:" },
+        { "type": "text", "id": "feature_1", "label": "Feature 1", "default": "Min. 12 pieces per style" },
+        { "type": "text", "id": "feature_2", "label": "Feature 2", "default": "Logo embroidery or print" },
+        { "type": "text", "id": "feature_3", "label": "Feature 3", "default": "Standard delivery (21–28 days)" },
+        { "type": "text", "id": "feature_4", "label": "Feature 4" },
+        { "type": "text", "id": "feature_5", "label": "Feature 5" },
+        { "type": "text", "id": "feature_6", "label": "Feature 6" },
+        { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Get Started" },
+        { "type": "url", "id": "cta_url", "label": "CTA URL" }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Corp: Tiers",
+      "blocks": [
+        {
+          "type": "tier",
+          "settings": {
+            "name": "SF Classic",
+            "price": "₹500",
+            "price_sub": "per piece, starting from",
+            "description": "Premium essentials at scale. Ideal for teams and first-time corporate orders.",
+            "features_label": "Best for:",
+            "feature_1": "Min. 12 pieces per style",
+            "feature_2": "Logo embroidery or screen print",
+            "feature_3": "Standard delivery (21–28 days)",
+            "cta_label": "Get Started"
+          }
+        },
+        {
+          "type": "tier",
+          "settings": {
+            "featured": true,
+            "badge": "Most Popular",
+            "name": "SF Premium",
+            "price": "₹800",
+            "price_sub": "per piece, starting from",
+            "description": "Full customization with priority support — for brands that want every detail right.",
+            "features_label": "Best for:",
+            "feature_1": "Min. 50 pieces per style",
+            "feature_2": "Full design customization",
+            "feature_3": "Woven labels & custom packaging",
+            "feature_4": "Priority delivery (14–18 days)",
+            "feature_5": "Dedicated account manager",
+            "cta_label": "Get Started"
+          }
+        },
+        {
+          "type": "tier",
+          "settings": {
+            "name": "SF Plus",
+            "price": "Custom",
+            "price_sub": "pricing on request",
+            "description": "End-to-end brand-building — from fabric development to co-branded collections.",
+            "features_label": "Best for:",
+            "feature_1": "No minimum quantity limits",
+            "feature_2": "Proprietary fabric development",
+            "feature_3": "Co-branding & co-design",
+            "feature_4": "Global delivery",
+            "feature_5": "SLA-backed timelines",
+            "cta_label": "Talk to Us"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

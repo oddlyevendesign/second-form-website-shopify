@@ -1,0 +1,72 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
+
+{%- assign overlay = section.settings.overlay_opacity | times: 0.01 -%}
+<section class="corp-hero">
+  {%- if section.settings.background_image -%}
+    <div class="corp-hero__bg" style="background-image:url('{{ section.settings.background_image | image_url: width: 1800 }}')"></div>
+  {%- endif -%}
+  <div class="corp-hero__overlay" style="background:rgba(0,0,0,{{ overlay }})"></div>
+  <div class="corp-hero__content">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="corp-hero__eyebrow">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+    <h1 class="corp-hero__heading" style="{% if section.settings.heading_size > 0 %}font-size:{{ section.settings.heading_size }}px;{% endif %}">
+      {{ section.settings.heading | default: 'CORPORATE ORDERS' }}
+    </h1>
+    {%- if section.settings.subheading != blank -%}
+      <p class="corp-hero__sub">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+    <div class="corp-hero__cta">
+      {%- if section.settings.cta1_label != blank -%}
+        <a href="{{ section.settings.cta1_url | default: '#contact' }}" class="btn">{{ section.settings.cta1_label }}</a>
+      {%- endif -%}
+      {%- if section.settings.cta2_label != blank -%}
+        <a href="{{ section.settings.cta2_url | default: '#tiers' }}" class="btn btn-light">{{ section.settings.cta2_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Corp: Hero",
+  "settings": [
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 80, "step": 5, "unit": "%", "default": 45 },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow text", "default": "B2B & Corporate Gifting" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "CORPORATE ORDERS" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Premium apparel and gifting, built around your brand." },
+    { "type": "header", "content": "Button 1" },
+    { "type": "text", "id": "cta1_label", "label": "Label", "default": "Request a Proposal" },
+    { "type": "url", "id": "cta1_url", "label": "URL" },
+    { "type": "header", "content": "Button 2" },
+    { "type": "text", "id": "cta2_label", "label": "Label", "default": "View Our Tiers" },
+    { "type": "url", "id": "cta2_url", "label": "URL" },
+    { "type": "header", "content": "Style" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 28, "max": 120, "step": 2, "unit": "px", "default": 64 },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#332925" },
+    { "type": "color", "id": "custom_heading_color", "label": "Heading colour", "default": "#ffffff" },
+    { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#DFDACF" }
+  ],
+  "presets": [
+    {
+      "name": "Corp: Hero",
+      "settings": {
+        "eyebrow": "B2B & Corporate Gifting",
+        "heading": "CORPORATE ORDERS",
+        "subheading": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
+        "cta1_label": "Request a Proposal",
+        "cta2_label": "View Our Tiers"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,79 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
+
+<div class="corp-faq">
+  <h2 class="corp-faq__heading" style="{% if section.settings.heading_size > 0 %}font-size:{{ section.settings.heading_size }}px;{% endif %}">
+    {{ section.settings.heading | default: 'FREQUENTLY ASKED QUESTIONS' }}
+  </h2>
+
+  <div class="corp-faq__list">
+    {%- for block in section.blocks -%}
+      <div class="corp-faq-item{% if forloop.first %} open{% endif %}" {{ block.shopify_attributes }}>
+        <div class="corp-faq-item__q">
+          <span>{{ block.settings.question }}</span>
+          <span class="corp-faq-icon">+</span>
+        </div>
+        <div class="corp-faq-item__a">
+          <div class="corp-faq-item__a-inner">{{ block.settings.answer }}</div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('.corp-faq-item');
+  items.forEach(function (item) {
+    item.querySelector('.corp-faq-item__q').addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      items.forEach(function (it) { it.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Corp: FAQ",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "FREQUENTLY ASKED QUESTIONS" },
+    { "type": "header", "content": "Style" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 20, "max": 80, "step": 2, "unit": "px", "default": 42 },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#F9F8F5" },
+    { "type": "color", "id": "custom_heading_color", "label": "Heading colour", "default": "#332925" },
+    { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "What is your MOQ?" },
+        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Our minimum order quantity is 12 pieces per style. For SF Plus, there is no minimum." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Corp: FAQ",
+      "blocks": [
+        { "type": "faq", "settings": { "question": "What is your MOQ?", "answer": "Our minimum order quantity starts at 12 pieces per style for SF Classic, 50 pieces for SF Premium. SF Plus has no minimum." } },
+        { "type": "faq", "settings": { "question": "What is the typical timeline?", "answer": "Standard orders take 21–28 days from approval. Priority orders (SF Premium and above) are delivered in 14–18 days." } },
+        { "type": "faq", "settings": { "question": "Do you offer design customization?", "answer": "Yes — we can modify silhouettes, add logo placements (embroidery, print, woven labels), custom packaging, and more." } },
+        { "type": "faq", "settings": { "question": "Can we see samples before placing an order?", "answer": "Absolutely. We produce a physical sample for approval before any production run begins." } },
+        { "type": "faq", "settings": { "question": "How is pricing structured?", "answer": "Pricing depends on fabric, quantity, customization complexity and timeline. Request a proposal and we'll send a detailed quote within 48 hours." } },
+        { "type": "faq", "settings": { "question": "Do you ship internationally?", "answer": "Yes — we ship worldwide. Duties and taxes for international orders are calculated at checkout or included in your proposal quote." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
