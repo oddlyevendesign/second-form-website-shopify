@@ -67,6 +67,9 @@
         "text_xwkN9M",
         "text_N4ejGV"
       ],
+      "custom_css": [
+        ".hero {padding: 0px;}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
