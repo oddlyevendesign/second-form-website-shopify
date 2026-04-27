@@ -1,4 +1,5 @@
 {{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
 
 {%- assign phrase_text = section.settings.phrase | default: 'LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE.' -%}
 {%- assign phrase_words = phrase_text | split: ' ' -%}
@@ -81,7 +82,17 @@
       "id": "color_secondary",
       "label": "Dim word colour",
       "default": "#DFDACF"
-    }
+    },
+    { "type": "header", "content": "Style" },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#F9F8F5" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 0, "max": 80, "step": 2, "unit": "px", "default": 0, "info": "0 = use section default" }
   ],
   "presets": [
     { "name": "SF: Brand Phrase" }

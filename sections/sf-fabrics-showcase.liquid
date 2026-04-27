@@ -1,4 +1,5 @@
 {{ 'sf-homepage.css' | asset_url | stylesheet_tag }}
+{% render 'sf-section-styles', section: section %}
 
 <!-- ===== DESKTOP layout ===== -->
 <div class="sf-fabrics-desktop">
@@ -122,6 +123,20 @@
 {% schema %}
 {
   "name": "SF: Fabrics",
+  "settings": [
+    { "type": "header", "content": "Style" },
+    { "type": "select", "id": "color_scheme", "label": "Colour scheme", "default": "default", "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "warm-dark", "label": "Warm Dark" },
+        { "value": "ivory", "label": "Ivory" },
+        { "value": "white", "label": "Pure White" },
+        { "value": "custom", "label": "Custom" }
+    ]},
+    { "type": "color", "id": "custom_bg", "label": "Background colour", "default": "#F9F8F5" },
+    { "type": "color", "id": "custom_heading_color", "label": "Heading colour", "default": "#332925" },
+    { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 0, "max": 80, "step": 2, "unit": "px", "default": 0, "info": "0 = use section default" }
+  ],
   "blocks": [
     {
       "type": "fabric",

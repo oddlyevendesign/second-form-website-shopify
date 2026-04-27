@@ -1,0 +1,39 @@
+{%- liquid
+  assign scheme = section.settings.color_scheme | default: 'default'
+  assign h_size = section.settings.heading_size | plus: 0
+-%}
+{%- if scheme != 'default' or h_size > 0 -%}
+<style>
+  {%- if scheme == 'warm-dark' -%}
+  #shopify-section-{{ section.id }} { background: #523F38 !important; }
+  #shopify-section-{{ section.id }} h1,
+  #shopify-section-{{ section.id }} h2,
+  #shopify-section-{{ section.id }} h3,
+  #shopify-section-{{ section.id }} h4 { color: #DFDACF !important; }
+  #shopify-section-{{ section.id }} p,
+  #shopify-section-{{ section.id }} .eyebrow { color: #c4bdb3 !important; }
+  {%- elsif scheme == 'ivory' -%}
+  #shopify-section-{{ section.id }} { background: #F9F8F5 !important; }
+  {%- elsif scheme == 'white' -%}
+  #shopify-section-{{ section.id }} { background: #ffffff !important; }
+  {%- elsif scheme == 'custom' -%}
+    {%- if section.settings.custom_bg != blank -%}
+  #shopify-section-{{ section.id }} { background: {{ section.settings.custom_bg }} !important; }
+    {%- endif -%}
+    {%- if section.settings.custom_heading_color != blank -%}
+  #shopify-section-{{ section.id }} h1,
+  #shopify-section-{{ section.id }} h2,
+  #shopify-section-{{ section.id }} h3,
+  #shopify-section-{{ section.id }} h4 { color: {{ section.settings.custom_heading_color }} !important; }
+    {%- endif -%}
+    {%- if section.settings.custom_text_color != blank -%}
+  #shopify-section-{{ section.id }} p,
+  #shopify-section-{{ section.id }} .eyebrow { color: {{ section.settings.custom_text_color }} !important; }
+    {%- endif -%}
+  {%- endif -%}
+  {%- if h_size > 0 -%}
+  #shopify-section-{{ section.id }} h1,
+  #shopify-section-{{ section.id }} h2 { font-size: {{ h_size }}px !important; }
+  {%- endif -%}
+</style>
+{%- endif -%}
