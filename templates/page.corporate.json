@@ -1,16 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "sf_corp_hero": {
-      "type": "sf-corp-hero",
+    "hero_DpcND3": {
+      "type": "hero",
+      "blocks": {
+        "text_xwkN9M": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>CORPORATE<br/>ORDERS</h1>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_N4ejGV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Employee experience programs, gifting, and internal branding at scale.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_xwkN9M",
+        "text_N4ejGV"
+      ],
+      "name": "t:names.hero",
       "settings": {
-        "eyebrow": "B2B & Corporate Gifting",
-        "heading": "CORPORATE ORDERS",
-        "subheading": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
-        "cta1_label": "Request a Proposal",
-        "cta2_label": "View Our Tiers",
-        "overlay_opacity": 45,
-        "heading_size": 64,
-        "color_scheme": "default"
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/ca6154_6d3ecd7a3deb4665a21153819cbe7872_mv2.avif",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "full-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-3",
+        "toggle_overlay": true,
+        "overlay_color": "#33292594",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "sf_lounge_phrase_B4biMA": {
+      "type": "sf-lounge-phrase",
+      "custom_css": [],
+      "name": "SF: Brand Phrase",
+      "settings": {
+        "phrase": "We work with teams to create apparel and gifting that feels aligned with your brand. designed to fit seamlessly into real work lives.",
+        "font_size": 44,
+        "color_primary": "#460c13",
+        "color_secondary": "#dfdacf",
+        "color_scheme": "default",
+        "custom_bg": "#332925",
+        "heading_size": 44
+      }
+    },
+    "collection_links_zHNF9g": {
+      "type": "collection-links",
+      "blocks": {
+        "link": {
+          "type": "_collection-link",
+          "static": true,
+          "settings": {
+            "show_count": true
+          },
+          "blocks": {
+            "title": {
+              "type": "_inline-collection-title",
+              "name": "t:names.title",
+              "static": true,
+              "settings": {
+                "font": "var(--font-subheading--family)",
+                "weight": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none"
+              },
+              "blocks": {}
+            },
+            "image": {
+              "type": "_image",
+              "static": true,
+              "settings": {
+                "height": "large",
+                "ratio": "square",
+                "border_radius": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "name": "t:names.collection_links_spotlight",
+      "settings": {
+        "collection_list": [],
+        "layout": "spotlight",
+        "section_width": "page-width",
+        "alignment": "left",
+        "image_position": "right",
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 40
       }
     },
     "sf_corp_intro": {
@@ -18,25 +168,43 @@
       "blocks": {
         "stat_1": {
           "type": "stat",
-          "settings": { "value": "500+", "label": "Corporate clients" }
+          "settings": {
+            "value": "500+",
+            "label": "Corporate clients"
+          }
         },
         "stat_2": {
           "type": "stat",
-          "settings": { "value": "50+", "label": "Countries shipped" }
+          "settings": {
+            "value": "50+",
+            "label": "Countries shipped"
+          }
         },
         "stat_3": {
           "type": "stat",
-          "settings": { "value": "12", "label": "Pieces minimum" }
+          "settings": {
+            "value": "12",
+            "label": "Pieces minimum"
+          }
         }
       },
-      "block_order": ["stat_1", "stat_2", "stat_3"],
+      "block_order": [
+        "stat_1",
+        "stat_2",
+        "stat_3"
+      ],
       "settings": {
+        "image_position": "right",
         "eyebrow": "WHO WE WORK WITH",
         "heading": "Apparel Built Around Your Brand",
         "body": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
-        "image_position": "right",
+        "cta_label": "",
+        "cta_url": "",
         "heading_size": 42,
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_capabilities": {
@@ -71,25 +239,71 @@
           }
         }
       },
-      "block_order": ["cap_1", "cap_2", "cap_3", "cap_4"],
+      "block_order": [
+        "cap_1",
+        "cap_2",
+        "cap_3",
+        "cap_4"
+      ],
       "settings": {
         "eyebrow": "WHAT WE OFFER",
         "heading": "Customization & Capabilities",
+        "body": "",
         "heading_size": 42,
-        "color_scheme": "ivory"
+        "color_scheme": "ivory",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_features": {
       "type": "sf-corp-features",
       "blocks": {
-        "feat_1": { "type": "feature", "settings": { "label": "Moisture Wicking" } },
-        "feat_2": { "type": "feature", "settings": { "label": "Anti Microbial" } },
-        "feat_3": { "type": "feature", "settings": { "label": "Water Resistant" } },
-        "feat_4": { "type": "feature", "settings": { "label": "Thermo-Regulating" } },
-        "feat_5": { "type": "feature", "settings": { "label": "Easy-Care & Wrinkle Resistant" } },
-        "feat_6": { "type": "feature", "settings": { "label": "UV Protection" } }
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "label": "Moisture Wicking"
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "label": "Anti Microbial"
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "label": "Water Resistant"
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "label": "Thermo-Regulating"
+          }
+        },
+        "feat_5": {
+          "type": "feature",
+          "settings": {
+            "label": "Easy-Care & Wrinkle Resistant"
+          }
+        },
+        "feat_6": {
+          "type": "feature",
+          "settings": {
+            "label": "UV Protection"
+          }
+        }
       },
-      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4", "feat_5", "feat_6"],
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6"
+      ],
       "settings": {
         "eyebrow": "FABRIC TECHNOLOGY",
         "heading": "BUILT AROUND FUNCTION",
@@ -97,7 +311,10 @@
         "cta_label": "Explore Our Fabrics",
         "cta_url": "/pages/fabrics",
         "heading_size": 40,
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_how": {
@@ -132,31 +349,78 @@
           }
         }
       },
-      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3",
+        "step_4"
+      ],
       "settings": {
         "eyebrow": "THE PROCESS",
         "heading": "HOW IT WORKS",
         "body": "A streamlined process from first inquiry to final delivery — with a dedicated account manager at every step.",
         "heading_size": 48,
-        "color_scheme": "warm-dark"
+        "color_scheme": "warm-dark",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_logos": {
       "type": "sf-corp-logos",
       "blocks": {
-        "logo_1": { "type": "logo", "settings": { "name": "Brand Partner 1" } },
-        "logo_2": { "type": "logo", "settings": { "name": "Brand Partner 2" } },
-        "logo_3": { "type": "logo", "settings": { "name": "Brand Partner 3" } },
-        "logo_4": { "type": "logo", "settings": { "name": "Brand Partner 4" } },
-        "logo_5": { "type": "logo", "settings": { "name": "Brand Partner 5" } }
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "name": "Brand Partner 1",
+            "link": ""
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "name": "Brand Partner 2",
+            "link": ""
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "name": "Brand Partner 3",
+            "link": ""
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "name": "Brand Partner 4",
+            "link": ""
+          }
+        },
+        "logo_5": {
+          "type": "logo",
+          "settings": {
+            "name": "Brand Partner 5",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5"],
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_5"
+      ],
       "settings": {
         "eyebrow": "TRUSTED BY",
         "heading": "Built on Proven Manufacturing",
         "body": "Trusted by leading brands across India and globally — backed by export-grade production standards.",
         "heading_size": 42,
-        "color_scheme": "ivory"
+        "color_scheme": "ivory",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_tiers": {
@@ -165,6 +429,8 @@
         "tier_1": {
           "type": "tier",
           "settings": {
+            "featured": false,
+            "badge": "",
             "name": "SF Classic",
             "price": "₹500",
             "price_sub": "per piece, starting from",
@@ -173,7 +439,11 @@
             "feature_1": "Min. 12 pieces per style",
             "feature_2": "Logo embroidery or screen print",
             "feature_3": "Standard delivery (21–28 days)",
-            "cta_label": "Get Started"
+            "feature_4": "",
+            "feature_5": "",
+            "feature_6": "",
+            "cta_label": "Get Started",
+            "cta_url": ""
           }
         },
         "tier_2": {
@@ -191,12 +461,16 @@
             "feature_3": "Woven labels & custom packaging",
             "feature_4": "Priority delivery (14–18 days)",
             "feature_5": "Dedicated account manager",
-            "cta_label": "Get Started"
+            "feature_6": "",
+            "cta_label": "Get Started",
+            "cta_url": ""
           }
         },
         "tier_3": {
           "type": "tier",
           "settings": {
+            "featured": false,
+            "badge": "",
             "name": "SF Plus",
             "price": "Custom",
             "price_sub": "pricing on request",
@@ -207,16 +481,26 @@
             "feature_3": "Co-branding & co-design",
             "feature_4": "Global delivery",
             "feature_5": "SLA-backed timelines",
-            "cta_label": "Talk to Us"
+            "feature_6": "",
+            "cta_label": "Talk to Us",
+            "cta_url": ""
           }
         }
       },
-      "block_order": ["tier_1", "tier_2", "tier_3"],
+      "block_order": [
+        "tier_1",
+        "tier_2",
+        "tier_3"
+      ],
       "settings": {
         "eyebrow": "PRICING",
         "heading": "OUR TIERS",
+        "body": "",
         "heading_size": 48,
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_contact": {
@@ -229,9 +513,13 @@
         "success_message": "Thank you! We'll be in touch within 1–2 business days.",
         "show_contact_info": true,
         "contact_email": "corporate@secondform.co",
+        "contact_phone": "",
         "contact_note": "We respond within 1–2 business days",
         "heading_size": 42,
-        "color_scheme": "ivory"
+        "color_scheme": "ivory",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_faq": {
@@ -280,16 +568,28 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
       "settings": {
         "heading": "FREQUENTLY ASKED QUESTIONS",
         "heading_size": 42,
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38"
       }
     }
   },
   "order": [
-    "sf_corp_hero",
+    "hero_DpcND3",
+    "sf_lounge_phrase_B4biMA",
+    "collection_links_zHNF9g",
     "sf_corp_intro",
     "sf_corp_capabilities",
     "sf_corp_features",
