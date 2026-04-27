@@ -105,7 +105,9 @@
     },
     "sf_lounge_phrase_B4biMA": {
       "type": "sf-lounge-phrase",
-      "custom_css": [],
+      "custom_css": [
+        ".lounge-phrase {background-color: #ffffff;}"
+      ],
       "name": "SF: Brand Phrase",
       "settings": {
         "phrase": "We work with teams to create apparel and gifting that feels aligned with your brand. designed to fit seamlessly into real work lives.",
@@ -113,7 +115,7 @@
         "color_primary": "#460c13",
         "color_secondary": "#dfdacf",
         "color_scheme": "default",
-        "custom_bg": "#332925",
+        "custom_bg": "#ffffff",
         "heading_size": 44
       }
     },
@@ -124,7 +126,7 @@
           "type": "_collection-link",
           "static": true,
           "settings": {
-            "show_count": true
+            "show_count": false
           },
           "blocks": {
             "title": {
@@ -132,11 +134,11 @@
               "name": "t:names.title",
               "static": true,
               "settings": {
-                "font": "var(--font-subheading--family)",
-                "weight": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none"
+                "font": "var(--font-heading--family)",
+                "weight": "600",
+                "line_height": "tight",
+                "letter_spacing": "tight",
+                "case": "uppercase"
               },
               "blocks": {}
             },
@@ -154,14 +156,21 @@
           "block_order": []
         }
       },
+      "custom_css": [],
       "name": "t:names.collection_links_spotlight",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "hoodies",
+          "tank-tops",
+          "matching-sets",
+          "pants",
+          "sweatshirts"
+        ],
         "layout": "spotlight",
         "section_width": "page-width",
         "alignment": "left",
         "image_position": "right",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "padding-block-start": 40,
         "padding-block-end": 40
       }
