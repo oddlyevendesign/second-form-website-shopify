@@ -156,7 +156,9 @@
           "block_order": []
         }
       },
-      "custom_css": [],
+      "custom_css": [
+        ".collection-links__container {font-size: 32px !important;}"
+      ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
         "collection_list": [
@@ -208,7 +210,7 @@
       "settings": {
         "image_position": "right",
         "eyebrow": "WHO WE WORK WITH",
-        "heading": "Apparel Built Around Your Brand",
+        "heading": "HOODIES",
         "body": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
         "cta_label": "",
         "cta_url": "",
