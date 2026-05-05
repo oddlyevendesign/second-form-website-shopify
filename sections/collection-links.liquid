@@ -36,20 +36,22 @@
     {% endif %}
   >
     <div class="collection-links__text-col">
-      {%- if section.settings.section_title != blank or section.settings.subtext != blank -%}
-        <div class="collection-links__header">
-          {%- if section.settings.section_title != blank -%}
-            <h2 class="cl-section-title" style="{% if section.settings.section_title_size > 0 %}font-size:{{ section.settings.section_title_size }}px;{% endif %}">
-              {{ section.settings.section_title }}
-            </h2>
-          {%- endif -%}
-          {%- if section.settings.subtext != blank -%}
-            <p class="cl-subtext" style="{% if section.settings.subtext_size > 0 %}font-size:{{ section.settings.subtext_size }}px;{% endif %}">
-              {{ section.settings.subtext }}
-            </p>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'heading' -%}
+          <div class="collection-links__header" {{ block.shopify_attributes }}>
+            {%- if block.settings.title != blank -%}
+              <h2 class="cl-section-title" style="{% if block.settings.title_size > 0 %}font-size:{{ block.settings.title_size }}px;{% endif %}">
+                {{ block.settings.title }}
+              </h2>
+            {%- endif -%}
+            {%- if block.settings.subtext != blank -%}
+              <p class="cl-subtext" style="{% if block.settings.subtext_size > 0 %}font-size:{{ block.settings.subtext_size }}px;{% endif %}">
+                {{ block.settings.subtext }}
+              </p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
 
       <div
         class="collection-links__container"
@@ -253,42 +255,6 @@
   },
   "settings": [
     {
-      "type": "header",
-      "content": "Section heading"
-    },
-    {
-      "type": "text",
-      "id": "section_title",
-      "label": "Section title",
-      "default": "PRODUCT CATEGORIES"
-    },
-    {
-      "type": "range",
-      "id": "section_title_size",
-      "label": "Title size",
-      "min": 20,
-      "max": 80,
-      "step": 2,
-      "unit": "px",
-      "default": 48
-    },
-    {
-      "type": "textarea",
-      "id": "subtext",
-      "label": "Subtext",
-      "default": "We have something for everyone."
-    },
-    {
-      "type": "range",
-      "id": "subtext_size",
-      "label": "Subtext size",
-      "min": 12,
-      "max": 24,
-      "step": 1,
-      "unit": "px",
-      "default": 14
-    },
-    {
       "type": "collection_list",
       "id": "collection_list",
       "label": "t:settings.collection_list"
@@ -395,6 +361,47 @@
       "step": 1,
       "unit": "px",
       "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Section heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "PRODUCT CATEGORIES"
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "label": "Title size",
+          "min": 20,
+          "max": 80,
+          "step": 2,
+          "unit": "px",
+          "default": 48
+        },
+        {
+          "type": "textarea",
+          "id": "subtext",
+          "label": "Subtext",
+          "default": "We have something for everyone."
+        },
+        {
+          "type": "range",
+          "id": "subtext_size",
+          "label": "Subtext size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "default": 14
+        }
+      ]
     }
   ],
   "presets": [

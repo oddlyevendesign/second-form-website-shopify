@@ -122,6 +122,15 @@
     "collection_links_zHNF9g": {
       "type": "collection-links",
       "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "PRODUCT CATEGORIES",
+            "title_size": 48,
+            "subtext": "We have something for everyone.",
+            "subtext_size": 14
+          }
+        },
         "link": {
           "type": "_collection-link",
           "static": true,
@@ -157,7 +166,7 @@
         }
       },
       "custom_css": [
-        ".collection-links__container {font-size: 42px !important; padding-left: 40px; padding-right: 40px;}"
+        ".collection-links__text-col {padding-left: 40px; padding-right: 40px;} .collection-links__container {font-size: 42px !important;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
