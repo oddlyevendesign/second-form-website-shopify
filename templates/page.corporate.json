@@ -157,7 +157,7 @@
         }
       },
       "custom_css": [
-        ".collection-links__container {font-size: 32px !important;}"
+        ".collection-links__container {font-size: 32px !important; padding-left: 40px; padding-right: 40px;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
