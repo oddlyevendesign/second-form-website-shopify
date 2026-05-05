@@ -1,8 +1,255 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "sf_hero": {
-      "type": "sf-hero",
-      "settings": {}
+    "hero_gFUXFA": {
+      "type": "hero",
+      "blocks": {
+        "group_LzFGMW": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "flex-end",
+            "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 18,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_xjwkx4": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 6,
+                "width": "custom",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_fPYPNx": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>MADE FOR SLOW MORNINGS, LONG DAYS, AND EVERYTHING IN<br/>BETWEEN.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h1",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground-heading)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_a8g3qy": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<p>Fashion that moves with you</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-accent--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "spacer_tNJenm": {
+                  "type": "spacer",
+                  "name": "t:names.spacer",
+                  "settings": {
+                    "size": "percent",
+                    "percent_size": 100,
+                    "pixel_size": 120,
+                    "custom_mobile_size": false,
+                    "size_mobile": "percent",
+                    "percent_size_mobile": 100,
+                    "pixel_size_mobile": 120
+                  },
+                  "blocks": {}
+                },
+                "button_4xqdmY": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop now",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "custom",
+                    "custom_width": 30,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_fPYPNx",
+                "text_a8g3qy",
+                "spacer_tNJenm",
+                "button_4xqdmY"
+              ]
+            },
+            "text_RnXYy8": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_xjwkx4",
+            "text_RnXYy8"
+          ]
+        }
+      },
+      "block_order": [
+        "group_LzFGMW"
+      ],
+      "custom_css": [],
+      "name": "t:names.hero_bottom_aligned",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/Minimalist_Summer_Rest.png",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "full-screen",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-1",
+        "toggle_overlay": true,
+        "overlay_color": "#dfdacf80",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
     },
     "sf_new_in": {
       "type": "sf-new-in",
@@ -10,12 +257,17 @@
         "collection_handle": "new-in",
         "product_limit": 4,
         "heading": "NEW IN",
-        "eyebrow": "The Essentials"
+        "eyebrow": "The Essentials",
+        "view_all_label": "View All",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 42
       }
     },
     "sf_shop_the_look": {
       "type": "sf-shop-the-look",
-      "settings": {},
       "blocks": {
         "stl_pin_1": {
           "type": "pin",
@@ -38,53 +290,100 @@
           }
         }
       },
-      "block_order": ["stl_pin_1", "stl_pin_2"]
+      "block_order": [
+        "stl_pin_1",
+        "stl_pin_2"
+      ],
+      "settings": {
+        "heading": "SHOP THE LOOK",
+        "eyebrow": "our faves, for you",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 42
+      }
     },
     "sf_lounge_phrase": {
       "type": "sf-lounge-phrase",
-      "settings": {}
+      "settings": {
+        "phrase": "LOUNGE AND HYBRID WEAR THAT MOVES WITH YOUR LIFE, FROM HOME TO ERRANDS, WORK TO TRAVEL, WITHOUT EVER ASKING YOU TO CHOOSE BETWEEN COMFORT AND STYLE.",
+        "font_size": 44,
+        "color_primary": "#460c13",
+        "color_secondary": "#dfdacf",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "heading_size": 44
+      }
     },
     "sf_shop_by_category": {
       "type": "sf-shop-by-category",
-      "settings": {
-        "heading": "SHOP BY CATEGORY",
-        "eyebrow": "we've got it all"
-      },
       "blocks": {
         "cat_1": {
           "type": "category",
           "settings": {
-            "label": "LOUNGING AT HOME"
+            "label": "LOUNGING AT HOME",
+            "url": ""
           }
         },
         "cat_2": {
           "type": "category",
           "settings": {
-            "label": "TRAVEL EDIT"
+            "label": "TRAVEL EDIT",
+            "url": ""
           }
         },
         "cat_3": {
           "type": "category",
           "settings": {
-            "label": "DAILY ESSENTIALS"
+            "label": "DAILY ESSENTIALS",
+            "url": ""
           }
         },
         "cat_4": {
           "type": "category",
           "settings": {
-            "label": "OUT & ABOUT"
+            "label": "OUT & ABOUT",
+            "url": ""
           }
         }
       },
-      "block_order": ["cat_1", "cat_2", "cat_3", "cat_4"]
+      "block_order": [
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4"
+      ],
+      "settings": {
+        "heading": "SHOP BY CATEGORY",
+        "eyebrow": "we've got it all",
+        "view_all_label": "View All",
+        "view_all_url": "",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 42
+      }
     },
     "sf_everyone": {
       "type": "sf-everyone",
-      "settings": {}
+      "settings": {
+        "heading": "THERE'S SOMETHING\nFOR EVERYONE",
+        "subheading": "FIND YOUR SECOND SKIN",
+        "cta1_label": "Shop Women",
+        "cta1_url": "",
+        "cta2_label": "Shop Men",
+        "cta2_url": "",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 80
+      }
     },
     "sf_fabrics_showcase": {
       "type": "sf-fabrics-showcase",
-      "settings": {},
       "blocks": {
         "fab_cloudsoft": {
           "type": "fabric",
@@ -101,15 +400,15 @@
             "prop3_label": "Stretch",
             "prop4_value": "All-Climate",
             "prop4_label": "Breathable",
-            "mobile_ribbon": "CLOUDSOFT™",
-            "cell_tl_title": "SECOND-SKIN SOFTNESS",
-            "cell_tl_text": "Ultra-soft with effortless breathability.",
-            "cell_tr_title": "AIRY COMFORT",
-            "cell_tr_text": "Soft & comfortable, easy to wear fabric and suited for all climates.",
-            "cell_bl_title": "FLUID MOVEMENT",
-            "cell_bl_text": "4-way stretch that adapts naturally to your body.",
-            "cell_br_title": "EVERYDAY ESSENTIAL",
-            "cell_br_text": "Made for daily wear with all-day ease."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_luxemodal": {
@@ -127,15 +426,15 @@
             "prop3_label": "Hand Feel",
             "prop4_value": "Elevated",
             "prop4_label": "Ease",
-            "mobile_ribbon": "SILK-LIKE LUXURY",
-            "cell_tl_title": "SILK-LIKE TOUCH",
-            "cell_tl_text": "Smooth, polished softness with a refined hand feel.",
-            "cell_tr_title": "BALANCED BREATHABILITY",
-            "cell_tr_text": "Keeps you comfortable across changing moments.",
-            "cell_bl_title": "LIGHT STRETCH",
-            "cell_bl_text": "Gentle flexibility that moves without effort.",
-            "cell_br_title": "ELEVATED EASE",
-            "cell_br_text": "Perfect for lounging or dressing up your basics."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_airsoft": {
@@ -153,15 +452,15 @@
             "prop3_label": "Moisture Wick",
             "prop4_value": "Feather",
             "prop4_label": "Light",
-            "mobile_ribbon": "FEATHER-LIGHT AIR",
-            "cell_tl_title": "FEATHER-LIGHT FEEL",
-            "cell_tl_text": "Barely-there weight for effortless summer layering.",
-            "cell_tr_title": "QUICK DRY",
-            "cell_tr_text": "Ready to wear again in a fraction of the time.",
-            "cell_bl_title": "MOISTURE WICKING",
-            "cell_bl_text": "Pulls sweat away to keep you cool under pressure.",
-            "cell_br_title": "ALL-DAY COMFORT",
-            "cell_br_text": "Designed to breathe wherever the day takes you."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_ecosoft": {
@@ -179,15 +478,15 @@
             "prop3_label": "Production",
             "prop4_value": "Naturally",
             "prop4_label": "Soft",
-            "mobile_ribbon": "PLANT-POWERED COMFORT",
-            "cell_tl_title": "PLANT-BASED FIBERS",
-            "cell_tl_text": "Spun from responsibly grown, low-impact crops.",
-            "cell_tr_title": "LOW-IMPACT",
-            "cell_tr_text": "Produced with a fraction of the water of conventional cotton.",
-            "cell_bl_title": "NATURALLY SOFT",
-            "cell_bl_text": "A plush hand-feel that gets better with every wash.",
-            "cell_br_title": "WARDROBE STAPLE",
-            "cell_br_text": "Made to outlast trends, not the planet."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_ecolite": {
@@ -205,15 +504,15 @@
             "prop3_label": "Drape",
             "prop4_value": "Sustainable",
             "prop4_label": "Blend",
-            "mobile_ribbon": "LIGHT & LIVED-IN",
-            "cell_tl_title": "LIGHTWEIGHT",
-            "cell_tl_text": "Airy, fluid drape for warmer months.",
-            "cell_tr_title": "RECYCLED BLEND",
-            "cell_tr_text": "Made from reclaimed plant fibers.",
-            "cell_bl_title": "BREATHABLE",
-            "cell_bl_text": "Open weave keeps the air moving.",
-            "cell_br_title": "LIVED-IN LOOK",
-            "cell_br_text": "A softer, relaxed aesthetic right out of the bag."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_sculptstretch": {
@@ -231,15 +530,15 @@
             "prop3_label": "Recovery",
             "prop4_value": "Smooth",
             "prop4_label": "Silhouette",
-            "mobile_ribbon": "HOLD & RELEASE",
-            "cell_tl_title": "SUPPORTIVE STRETCH",
-            "cell_tl_text": "Holds you in without holding you back.",
-            "cell_tr_title": "SMOOTH SILHOUETTE",
-            "cell_tr_text": "A clean, sculpted line under everything.",
-            "cell_bl_title": "RECOVERY",
-            "cell_bl_text": "Snaps back to shape, wear after wear.",
-            "cell_br_title": "ALL-WAY FLEX",
-            "cell_br_text": "Designed for movement in every direction."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         },
         "fab_texturerib": {
@@ -257,19 +556,34 @@
             "prop3_label": "Hand Feel",
             "prop4_value": "Body",
             "prop4_label": "Skimming",
-            "mobile_ribbon": "RIBBED & READY",
-            "cell_tl_title": "TEXTURED HAND",
-            "cell_tl_text": "A tactile rib with dimensional depth.",
-            "cell_tr_title": "STRUCTURED STRETCH",
-            "cell_tr_text": "Holds its form through the day.",
-            "cell_bl_title": "BODY-SKIMMING",
-            "cell_bl_text": "Follows your shape without clinging.",
-            "cell_br_title": "ENDLESSLY LAYERABLE",
-            "cell_br_text": "Pairs with everything in the wardrobe."
+            "mobile_ribbon": "",
+            "cell_tl_title": "",
+            "cell_tl_text": "",
+            "cell_tr_title": "",
+            "cell_tr_text": "",
+            "cell_bl_title": "",
+            "cell_bl_text": "",
+            "cell_br_title": "",
+            "cell_br_text": ""
           }
         }
       },
-      "block_order": ["fab_cloudsoft", "fab_luxemodal", "fab_airsoft", "fab_ecosoft", "fab_ecolite", "fab_sculptstretch", "fab_texturerib"]
+      "block_order": [
+        "fab_cloudsoft",
+        "fab_luxemodal",
+        "fab_airsoft",
+        "fab_ecosoft",
+        "fab_ecolite",
+        "fab_sculptstretch",
+        "fab_texturerib"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 52
+      }
     },
     "sf_most_loved": {
       "type": "sf-most-loved",
@@ -277,12 +591,17 @@
         "collection_handle": "bestsellers",
         "product_limit": 4,
         "heading": "MOST LOVED",
-        "eyebrow": "your favs"
+        "eyebrow": "your favs",
+        "view_all_label": "View All",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 42
       }
     },
     "sf_testimonials": {
       "type": "sf-testimonials",
-      "settings": {},
       "blocks": {
         "testi_1": {
           "type": "testimonial",
@@ -325,13 +644,24 @@
           }
         }
       },
-      "block_order": ["testi_1", "testi_2", "testi_3", "testi_4"]
+      "block_order": [
+        "testi_1",
+        "testi_2",
+        "testi_3",
+        "testi_4"
+      ],
+      "settings": {
+        "eyebrow": "CUSTOMER STORIES",
+        "heading": "WHAT OUR CUSTOMERS SAY",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 48
+      }
     },
     "sf_faq": {
       "type": "sf-faq",
-      "settings": {
-        "heading": "FREQUENTLY ASKED QUESTIONS"
-      },
       "blocks": {
         "faq_1": {
           "type": "faq_item",
@@ -369,11 +699,25 @@
           }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5"]
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {
+        "heading": "FREQUENTLY ASKED QUESTIONS",
+        "color_scheme": "default",
+        "custom_bg": "#f9f8f5",
+        "custom_heading_color": "#332925",
+        "custom_text_color": "#523f38",
+        "heading_size": 40
+      }
     }
   },
   "order": [
-    "sf_hero",
+    "hero_gFUXFA",
     "sf_new_in",
     "sf_shop_the_look",
     "sf_lounge_phrase",
