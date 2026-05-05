@@ -35,26 +35,43 @@
       reverse
     {% endif %}
   >
-    <div
-      class="collection-links__container"
-      ref="container"
-    >
-      {% for collection in collection_list limit: limit %}
-        {% liquid
-          assign current = false
+    <div class="collection-links__text-col">
+      {%- if section.settings.section_title != blank or section.settings.subtext != blank -%}
+        <div class="collection-links__header">
+          {%- if section.settings.section_title != blank -%}
+            <h2 class="cl-section-title" style="{% if section.settings.section_title_size > 0 %}font-size:{{ section.settings.section_title_size }}px;{% endif %}">
+              {{ section.settings.section_title }}
+            </h2>
+          {%- endif -%}
+          {%- if section.settings.subtext != blank -%}
+            <p class="cl-subtext" style="{% if section.settings.subtext_size > 0 %}font-size:{{ section.settings.subtext_size }}px;{% endif %}">
+              {{ section.settings.subtext }}
+            </p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
 
-          if collection.id == active_collection.id
-            assign current = true
-          endif
-        %}
-        {% content_for 'block',
-          type: '_collection-link',
-          id: 'link',
-          closest.collection: collection,
-          index: forloop.index0,
-          current: current
-        %}
-      {% endfor %}
+      <div
+        class="collection-links__container"
+        ref="container"
+      >
+        {% for collection in collection_list limit: limit %}
+          {% liquid
+            assign current = false
+
+            if collection.id == active_collection.id
+              assign current = true
+            endif
+          %}
+          {% content_for 'block',
+            type: '_collection-link',
+            id: 'link',
+            closest.collection: collection,
+            index: forloop.index0,
+            current: current
+          %}
+        {% endfor %}
+      </div>
     </div>
 
     {% case section.settings.layout %}
@@ -161,6 +178,14 @@
       }
     }
 
+    .collection-links__text-col {
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      align-items: var(--alignment);
+    }
+
     &[layout='text'] {
       grid-gap: 0;
       grid-template-areas: 'text';
@@ -172,6 +197,30 @@
         justify-content: var(--alignment);
       }
     }
+  }
+
+  .collection-links__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cl-section-title {
+    font-family: var(--font-heading--family, 'Funnel Display', serif);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-foreground);
+    margin: 0;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
+  .cl-subtext {
+    font-family: var(--font-body--family, 'Funnel Sans', sans-serif);
+    color: var(--color-foreground-muted, var(--color-foreground));
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.65;
   }
 
   .collection-links__container {
@@ -203,6 +252,42 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "header",
+      "content": "Section heading"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "PRODUCT CATEGORIES"
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "We have something for everyone."
+    },
+    {
+      "type": "range",
+      "id": "subtext_size",
+      "label": "Subtext size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
     {
       "type": "collection_list",
       "id": "collection_list",
