@@ -176,8 +176,12 @@
 
   .collection-links__container {
     display: flex;
-    gap: var(--gap-md);
+    gap: 12px;
     flex-direction: column;
+  }
+
+  collection-links-component[layout='spotlight'] .collection-links__container .text-block {
+    font-size: 42px;
   }
 
   .collection-links__images {
