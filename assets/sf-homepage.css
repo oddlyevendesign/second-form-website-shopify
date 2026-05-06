@@ -150,13 +150,17 @@ section { position: relative; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--coffee);
-  transform: translateY(calc(100% + 4px));
-  transition: transform 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
   font-family: 'Funnel Sans', sans-serif;
   cursor: pointer;
   overflow: hidden;
 }
-.product-card:hover .sf-quick-add { transform: translateY(0); }
+.product-card:hover .sf-quick-add {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* Quick add inner elements — default: only label visible */
 .sf-quick-add .sf-qa-default { display: flex; align-items: center; }
