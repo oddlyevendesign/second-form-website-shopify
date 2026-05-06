@@ -646,21 +646,6 @@
         "padding-block-end": 48
       }
     },
-    "sf_new_in": {
-      "type": "sf-new-in",
-      "settings": {
-        "collection_handle": "new-in",
-        "product_limit": 4,
-        "heading": "NEW IN",
-        "eyebrow": "The Essentials",
-        "view_all_label": "View All",
-        "color_scheme": "default",
-        "custom_bg": "#f9f8f5",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38",
-        "heading_size": 42
-      }
-    },
     "sf_shop_the_look": {
       "type": "sf-shop-the-look",
       "blocks": {
@@ -1114,7 +1099,6 @@
   "order": [
     "hero_gFUXFA",
     "product_list_r4Awwc",
-    "sf_new_in",
     "sf_shop_the_look",
     "sf_lounge_phrase",
     "sf_shop_by_category",
