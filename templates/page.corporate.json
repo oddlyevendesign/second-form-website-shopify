@@ -544,7 +544,7 @@
         }
       },
       "custom_css": [
-        ".cl-img-stack__item {width: 70%;}",
+        ".cl-img-stack__item {width: 80%; height: 400px;}",
         "collection-links-component {padding-left: 40px;}",
         ".collection-links__container {gap: 0px !important;}",
         ".text-block > *:first-child {font-size: 32px;}",
@@ -570,8 +570,8 @@
         "alignment": "left",
         "image_position": "right",
         "color_scheme": "",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "padding-block-start": 64,
+        "padding-block-end": 64
       }
     },
     "sf_corp_intro": {
