@@ -551,7 +551,7 @@
         ".cl-img-stack {justify-content: right;}",
         ".collection-links__count {display: none;}",
         ".custom-typography,.custom-typography > * {line-height: 36px;}",
-        ".cl-section-title {font-weight: 800; color: #1C1917;}"
+        ".cl-section-title {font-weight: 800; color: #1c1917;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
@@ -605,6 +605,7 @@
         "stat_2",
         "stat_3"
       ],
+      "disabled": true,
       "settings": {
         "image_position": "right",
         "eyebrow": "WHO WE WORK WITH",
@@ -663,7 +664,7 @@
         "body": "",
         "heading_size": 42,
         "color_scheme": "ivory",
-        "custom_bg": "#f9f8f5",
+        "custom_bg": "#ffffff",
         "custom_heading_color": "#332925",
         "custom_text_color": "#523f38"
       }
