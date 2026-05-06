@@ -23,7 +23,7 @@
             <div class="sf-quick-add"
               data-single-id="{{ product.variants.first.id }}"
               {%- if product.variants.size > 1 -%}data-has-variants="true"{%- endif -%}>
-              <span class="sf-qa-default">QUICK ADD +</span>
+              <span class="sf-qa-default">QUICK ADD</span>
               {%- if product.variants.size > 1 -%}
                 <div class="sf-qa-picker">
                   {%- for variant in product.variants -%}

@@ -139,8 +139,8 @@ section { position: relative; }
 }
 .product-card:hover .img-wrap img { transform: scale(1.04); }
 .product-card .img-wrap .sf-quick-add {
-  position: absolute; left: 0; right: 0; bottom: 0;
-  height: 48px;
+  position: absolute; left: 4px; right: 4px; bottom: 4px;
+  height: 44px;
   background: #ffffff;
   display: flex;
   align-items: center;
@@ -150,7 +150,7 @@ section { position: relative; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--coffee);
-  transform: translateY(100%);
+  transform: translateY(calc(100% + 4px));
   transition: transform 0.3s ease;
   font-family: 'Funnel Sans', sans-serif;
   cursor: pointer;
