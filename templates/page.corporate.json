@@ -520,11 +520,11 @@
               "name": "t:names.title",
               "static": true,
               "settings": {
-                "font": "var(--font-subheading--family)",
-                "weight": "",
-                "line_height": "normal",
+                "font": "var(--font-heading--family)",
+                "weight": "600",
+                "line_height": "tight",
                 "letter_spacing": "normal",
-                "case": "none"
+                "case": "uppercase"
               },
               "blocks": {}
             },
@@ -542,6 +542,9 @@
           "block_order": []
         }
       },
+      "custom_css": [
+        ".cl-img-stack__item {width: 70%;}"
+      ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
         "section_title": "PRODUCT CATEGORIES",
