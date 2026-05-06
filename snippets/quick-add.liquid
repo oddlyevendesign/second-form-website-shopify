@@ -9,8 +9,8 @@
 
 {% liquid
   assign product_form_id = 'QuickAdd-ProductForm-' | append: product.id | append: '-' | append: block.id
-  assign add_to_cart_text = 'actions.add' | t
-  assign choose_options_text = 'actions.choose' | t
+  assign add_to_cart_text = 'QUICK ADD'
+  assign choose_options_text = 'QUICK ADD'
   assign color_scheme = color_scheme | default: settings.quick_add_color_scheme
 
   # Logic to determine which variant to use (matching swatch selection logic from product-card)
@@ -78,7 +78,7 @@
         add_to_cart_text: add_to_cart_text,
         class: 'button quick-add__button quick-add__button--add add-to-cart-button',
         can_add_to_cart: can_add_to_cart,
-        icon_only_on_mobile: true,
+        icon_only_on_mobile: false,
         product: product
       %}
 
@@ -305,5 +305,65 @@
         transition-timing-function: var(--ease-out-quad);
       }
     }
+  }
+
+  /* SF Override: full-width white rectangle button */
+  .quick-add__button {
+    left: 4px !important;
+    right: 4px !important;
+    bottom: 4px !important;
+    width: auto !important;
+    height: 44px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    justify-content: center !important;
+  }
+
+  .quick-add__button:hover {
+    scale: 1 !important;
+  }
+
+  .quick-add__button .add-to-cart-icon {
+    display: none !important;
+  }
+
+  .quick-add__button .add-to-cart-text {
+    background: transparent !important;
+    border-radius: 0 !important;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .quick-add__button .add-to-cart-text__content {
+    grid-template-columns: 1fr !important;
+
+    span span {
+      opacity: 1 !important;
+      filter: none !important;
+      translate: none !important;
+      padding-right: 0 !important;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #332925;
+      font-family: 'Funnel Sans', sans-serif;
+    }
+  }
+
+  .quick-add__button.quick-add__button--choose .add-to-cart-text__content {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #332925;
+    font-family: 'Funnel Sans', sans-serif;
+  }
+
+  .quick-add__product-form-component .shopify-product-form {
+    justify-content: center !important;
+    align-items: center !important;
   }
 {% endstylesheet %}
