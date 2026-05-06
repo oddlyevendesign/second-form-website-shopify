@@ -74,44 +74,48 @@
       </div>
     </div>
 
-    {% case section.settings.layout %}
-      {% when 'spotlight' %}
-        {% capture slides %}
-          {% for collection in collection_list limit: limit %}
-          {% liquid
-            assign current = false
-
-            if collection.id == active_collection.id
-              assign current = true
-            endif
-          %}
-
-          {% capture slide %}
-            {% # theme-check-disable UniqueStaticBlockId %}
-            {% content_for 'block',
-              type: '_collection-link',
-              id: 'link',
-              closest.collection: collection,
-              index: forloop.index0,
-              current: current,
-              image_only: true
-            %}
-            {% # theme-check-enable UniqueStaticBlockId %}
-          {% endcapture %}
-
-          {% render 'slideshow-slide', children: slide, index: forloop.index0 %}
+    {% if section.settings.layout == 'spotlight' %}
+      <div class="cl-img-stack">
+        {% for collection in collection_list limit: limit %}
+          {%- assign placeholder_variant = forloop.index0 | modulo: 4 | plus: 1 -%}
+          {%- assign placeholder_name = 'collection-apparel-' | append: placeholder_variant -%}
+          <div class="cl-img-stack__item{% if forloop.first %} is-active{% endif %}">
+            {% if collection.featured_image %}
+              <img
+                src="{{ collection.featured_image | image_url: width: 900 }}"
+                alt="{{ collection.title | escape }}"
+                loading="{{ forloop.first | ternary: 'eager', 'lazy' }}"
+                width="900"
+              >
+            {% else %}
+              {{ placeholder_name | placeholder_svg_tag }}
+            {% endif %}
+          </div>
         {% endfor %}
-      {% endcapture %}
-
-        {% render 'slideshow',
-          slides: slides,
-          slide_count: collection_list.size,
-          class: 'collection-links__images',
-          ref: 'slideshow'
-        %}
-    {% endcase %}
+      </div>
+    {% endif %}
   </collection-links-component>
 </div>
+
+<script>
+(function () {
+  var sectionEl = document.querySelector('[data-testid="collection-links-{{ section.id }}"]');
+  if (!sectionEl) return;
+
+  var comp  = sectionEl.querySelector('collection-links-component');
+  var links = Array.from(comp ? comp.querySelectorAll('.collection-links__link') : []);
+  var items = Array.from(comp ? comp.querySelectorAll('.cl-img-stack__item') : []);
+
+  if (!links.length || !items.length) return;
+
+  links.forEach(function (link, i) {
+    link.addEventListener('pointerenter', function () {
+      items.forEach(function (item) { item.classList.remove('is-active'); });
+      if (items[i]) items[i].classList.add('is-active');
+    });
+  });
+})();
+</script>
 
 {% # theme-check-disable ValidBlockTarget %}
 {% stylesheet %}
@@ -244,23 +248,45 @@
     }
   }
 
-  /* Spotlight: stack all slides and crossfade between them on hover */
-  collection-links-component[layout='spotlight'] .collection-links__images slideshow-component {
+  /* Spotlight: custom image stack */
+  .cl-img-stack {
+    grid-area: image;
     display: grid;
-    overflow: visible;
+    align-self: stretch;
   }
 
-  collection-links-component[layout='spotlight'] .collection-links__images slideshow-slide {
+  .cl-img-stack__item {
     grid-row: 1;
     grid-column: 1;
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.4s ease;
     pointer-events: none;
   }
 
-  collection-links-component[layout='spotlight'] .collection-links__images slideshow-slide[aria-hidden='false'] {
+  .cl-img-stack__item.is-active {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .cl-img-stack__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media screen and (max-width: 749px) {
+    .cl-img-stack {
+      display: block;
+    }
+
+    .cl-img-stack__item {
+      display: none;
+    }
+
+    .cl-img-stack__item.is-active {
+      display: block;
+    }
   }
 {% endstylesheet %}
 
