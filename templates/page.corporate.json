@@ -543,7 +543,10 @@
         }
       },
       "custom_css": [
-        ".cl-img-stack__item {width: 70%;}"
+        ".cl-img-stack__item {width: 70%;}",
+        "collection-links-component {padding-left: 40px;}",
+        ".collection-links__container {gap: 0px !important;}",
+        ".text-block>*:first-child {font-size: 32px;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
