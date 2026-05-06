@@ -20,7 +20,22 @@
             {%- if product.featured_image -%}
               <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy" width="600" height="697">
             {%- endif -%}
-            <div class="sf-quick-add">QUICK ADD +</div>
+            <div class="sf-quick-add"
+              data-single-id="{{ product.variants.first.id }}"
+              {%- if product.variants.size > 1 -%}data-has-variants="true"{%- endif -%}>
+              <span class="sf-qa-default">QUICK ADD +</span>
+              {%- if product.variants.size > 1 -%}
+                <div class="sf-qa-picker">
+                  {%- for variant in product.variants -%}
+                    <span class="sf-qa-opt{% unless variant.available %} sf-qa-opt--sold{% endunless %}"
+                      data-id="{{ variant.id }}"
+                      data-available="{{ variant.available }}">{{ variant.title }}</span>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+              <span class="sf-qa-loading"><span></span><span></span><span></span></span>
+              <span class="sf-qa-added">ADDED ✓</span>
+            </div>
           </div>
           <div class="meta">
             <div>
@@ -52,21 +67,86 @@
 
 <script>
 (function () {
-  if (window._sfRevealInit) return;
-  window._sfRevealInit = true;
-  function init() {
-    if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
-        });
-      }, { threshold: 0.1 });
-      document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
-    } else {
-      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  /* ---------- Reveal on scroll ---------- */
+  if (!window._sfRevealInit) {
+    window._sfRevealInit = true;
+    function initReveal() {
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
     }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initReveal); } else { initReveal(); }
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+
+  /* ---------- Quick Add ---------- */
+  function addToCart(variantId, qaEl) {
+    qaEl.classList.remove('sf-qa--picking');
+    qaEl.classList.add('sf-qa--loading');
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: parseInt(variantId, 10), quantity: 1 })
+    })
+    .then(function (r) {
+      if (!r.ok) throw new Error('cart error');
+      return r.json();
+    })
+    .then(function () {
+      qaEl.classList.remove('sf-qa--loading');
+      qaEl.classList.add('sf-qa--added');
+      /* update any cart count bubbles the theme renders */
+      fetch('/cart.js')
+        .then(function (r) { return r.json(); })
+        .then(function (cart) {
+          document.querySelectorAll('[data-cart-count], .cart-count, .js-cart-count').forEach(function (el) {
+            el.textContent = cart.item_count;
+            el.setAttribute('data-cart-count', cart.item_count);
+          });
+        });
+      setTimeout(function () { qaEl.classList.remove('sf-qa--added'); }, 2200);
+    })
+    .catch(function () {
+      qaEl.classList.remove('sf-qa--loading');
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var qa = e.target.closest('.sf-quick-add');
+    if (!qa) return;
+    e.preventDefault();
+    e.stopPropagation();
+
+    /* clicking a size option */
+    var opt = e.target.closest('.sf-qa-opt');
+    if (opt) {
+      if (opt.dataset.available === 'false') return;
+      addToCart(opt.dataset.id, qa);
+      return;
+    }
+
+    /* clicking the main button */
+    if (qa.dataset.hasVariants) {
+      qa.classList.toggle('sf-qa--picking');
+    } else {
+      addToCart(qa.dataset.singleId, qa);
+    }
+  });
+
+  /* close picker when clicking outside */
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.sf-quick-add')) {
+      document.querySelectorAll('.sf-quick-add.sf-qa--picking').forEach(function (el) {
+        el.classList.remove('sf-qa--picking');
+      });
+    }
+  });
 })();
 </script>
 

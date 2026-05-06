@@ -153,8 +153,61 @@ section { position: relative; }
   transform: translateY(calc(100% + 16px));
   transition: transform 0.3s ease;
   font-family: 'Funnel Sans', sans-serif;
+  cursor: pointer;
+  overflow: hidden;
 }
 .product-card:hover .sf-quick-add { transform: translateY(0); }
+
+/* Quick add inner elements — default: only label visible */
+.sf-quick-add .sf-qa-default { display: flex; align-items: center; }
+.sf-quick-add .sf-qa-picker  { display: none; flex-wrap: wrap; gap: 4px; padding: 6px 8px; align-items: center; justify-content: center; width: 100%; }
+.sf-quick-add .sf-qa-loading { display: none; align-items: center; justify-content: center; gap: 4px; }
+.sf-quick-add .sf-qa-added   { display: none; align-items: center; gap: 6px; color: var(--chocolate); }
+
+/* Picking state — show size grid */
+.sf-quick-add.sf-qa--picking { height: auto; min-height: 48px; overflow: visible; }
+.sf-quick-add.sf-qa--picking .sf-qa-default { display: none; }
+.sf-quick-add.sf-qa--picking .sf-qa-picker  { display: flex; }
+
+/* Loading state */
+.sf-quick-add.sf-qa--loading .sf-qa-default { display: none; }
+.sf-quick-add.sf-qa--loading .sf-qa-loading { display: flex; }
+
+/* Added state */
+.sf-quick-add.sf-qa--added .sf-qa-default { display: none; }
+.sf-quick-add.sf-qa--added .sf-qa-added   { display: flex; }
+
+/* Size option chips */
+.sf-qa-opt {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  background: #fff;
+  color: var(--coffee);
+  font-family: 'Funnel Sans', sans-serif;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sf-qa-opt:hover { background: var(--coffee); color: #fff; }
+.sf-qa-opt.sf-qa-opt--sold { opacity: 0.35; cursor: not-allowed; text-decoration: line-through; }
+
+/* Loading dots */
+.sf-qa-loading span {
+  width: 5px; height: 5px;
+  background: var(--coffee);
+  border-radius: 50%;
+  animation: sf-qa-dot 0.8s infinite ease-in-out both;
+}
+.sf-qa-loading span:nth-child(1) { animation-delay: -0.3s; }
+.sf-qa-loading span:nth-child(2) { animation-delay: -0.15s; }
+@keyframes sf-qa-dot {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
 .product-card .meta { display: flex; justify-content: space-between; align-items: flex-start; }
 .product-card .meta .name {
   font-family: 'Funnel Display', serif;
