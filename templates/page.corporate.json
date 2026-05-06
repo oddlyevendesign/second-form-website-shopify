@@ -330,7 +330,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>CO-ORD SETS</p>",
+                    "text": "<p><a href=\"/collections/coordinated-sets\" title=\"Coordinated Sets\">CO-ORD SETS</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -356,7 +356,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>HOODIES/SWEATSHIRTS</p>",
+                    "text": "<p><a href=\"/collections/hoodies\" title=\"Hoodies\">HOODIES/SWEATSHIRTS</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -382,7 +382,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>POLOS</p>",
+                    "text": "<p><a href=\"/collections/jackets\" title=\"Jackets\">POLOS</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
