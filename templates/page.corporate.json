@@ -545,12 +545,13 @@
       },
       "custom_css": [
         ".cl-img-stack__item {width: 80%; height: 400px;}",
-        "collection-links-component {padding-left: 40px;}",
+        "collection-links-component {padding-left: 80px; padding-right: 0px;}",
         ".collection-links__container {gap: 0px !important;}",
         ".text-block > *:first-child {font-size: 32px;}",
         ".cl-img-stack {justify-content: right;}",
         ".collection-links__count {display: none;}",
-        ".custom-typography,.custom-typography > * {line-height: 36px;}"
+        ".custom-typography,.custom-typography > * {line-height: 36px;}",
+        ".cl-section-title {font-weight: 800; color: #1C1917;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
