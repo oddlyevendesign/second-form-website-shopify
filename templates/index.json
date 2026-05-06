@@ -625,7 +625,7 @@
           ]
         }
       },
-      "name": "t:names.products_carousel",
+      "name": "New In: Category",
       "settings": {
         "collection": "featured-products",
         "layout_type": "carousel",
