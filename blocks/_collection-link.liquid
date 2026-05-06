@@ -111,9 +111,11 @@
     [layout='spotlight'] & {
       /* Spotlight layout: dimmed by default */
       opacity: var(--disabled-opacity);
+      transition: opacity 0.2s ease, color 0.2s ease;
 
       &[aria-current='true'] {
         opacity: 1;
+        color: #1C1917;
       }
     }
 

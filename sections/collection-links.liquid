@@ -243,6 +243,25 @@
       }
     }
   }
+
+  /* Spotlight: stack all slides and crossfade between them on hover */
+  collection-links-component[layout='spotlight'] .collection-links__images slideshow-component {
+    display: grid;
+    overflow: visible;
+  }
+
+  collection-links-component[layout='spotlight'] .collection-links__images slideshow-slide {
+    grid-row: 1;
+    grid-column: 1;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  collection-links-component[layout='spotlight'] .collection-links__images slideshow-slide[aria-hidden='false'] {
+    opacity: 1;
+    pointer-events: auto;
+  }
 {% endstylesheet %}
 
 {% schema %}
