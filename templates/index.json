@@ -528,7 +528,7 @@
                     "corner_radius": 0,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
-                    "padding-inline-start": 0,
+                    "padding-inline-start": 8,
                     "padding-inline-end": 0
                   },
                   "blocks": {}
@@ -552,7 +552,7 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 8
                   },
                   "blocks": {}
                 }
