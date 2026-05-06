@@ -472,6 +472,7 @@
         "group_QPXXQm",
         "image_CNhDQm"
       ],
+      "disabled": true,
       "custom_css": [
         ".section-content-wrapper.section-content-wrapper {padding-right: 40px; padding-left: 40px;}",
         ".image-block {justify-content: right;}"
@@ -547,7 +548,9 @@
         "collection-links-component {padding-left: 40px;}",
         ".collection-links__container {gap: 0px !important;}",
         ".text-block > *:first-child {font-size: 32px;}",
-        ".cl-img-stack{justify-content: right;}"
+        ".cl-img-stack {justify-content: right;}",
+        ".collection-links__count {display: none;}",
+        ".custom-typography,.custom-typography > * {line-height: 36px;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
