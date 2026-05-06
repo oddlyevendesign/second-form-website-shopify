@@ -119,62 +119,93 @@
         "heading_size": 44
       }
     },
-    "collection_links_zHNF9g": {
-      "type": "collection-links",
+    "section_RCMwfx": {
+      "type": "section",
       "blocks": {
-        "link": {
-          "type": "_collection-link",
-          "static": true,
+        "text_FpkExa": {
+          "type": "text",
+          "name": "t:names.text",
           "settings": {
-            "show_count": false
+            "text": "<p>PRODUCT CATEGORIES</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "3rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "blocks": {
-            "title": {
-              "type": "_inline-collection-title",
-              "name": "t:names.title",
-              "static": true,
-              "settings": {
-                "font": "var(--font-heading--family)",
-                "weight": "600",
-                "line_height": "tight",
-                "letter_spacing": "tight",
-                "case": "uppercase"
-              },
-              "blocks": {}
-            },
-            "image": {
-              "type": "_image",
-              "static": true,
-              "settings": {
-                "height": "large",
-                "ratio": "square",
-                "border_radius": 0
-              },
-              "blocks": {}
-            }
+          "blocks": {}
+        },
+        "text_3faVDt": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
-          "block_order": []
+          "blocks": {}
         }
       },
-      "custom_css": [
-        ".collection-links__container {font-size: 42px !important; padding-left: 40px; padding-right: 40px;}"
+      "block_order": [
+        "text_FpkExa",
+        "text_3faVDt"
       ],
-      "name": "t:names.collection_links_spotlight",
+      "name": "t:names.custom_section",
       "settings": {
-        "collection_list": [
-          "hoodies",
-          "tank-tops",
-          "matching-sets",
-          "pants",
-          "sweatshirts"
-        ],
-        "layout": "spotlight",
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
         "section_width": "page-width",
-        "alignment": "left",
-        "image_position": "right",
-        "color_scheme": "scheme-1",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "section_height": "medium",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "sf_corp_intro": {
@@ -603,7 +634,7 @@
   "order": [
     "hero_DpcND3",
     "sf_lounge_phrase_B4biMA",
-    "collection_links_zHNF9g",
+    "section_RCMwfx",
     "sf_corp_intro",
     "sf_corp_capabilities",
     "sf_corp_features",
