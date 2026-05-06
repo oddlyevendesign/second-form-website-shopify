@@ -382,7 +382,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><a href=\"/collections/jackets\" title=\"Jackets\">POLOS</a></p>",
+                    "text": "<p><a href=\"/collections/cloudsoft\" title=\"CloudSoft\">POLOS</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
