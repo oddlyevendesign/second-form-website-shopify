@@ -476,7 +476,7 @@
         ".section-content-wrapper.section-content-wrapper {padding-right: 40px; padding-left: 40px;}",
         ".image-block {justify-content: right;}"
       ],
-      "name": "t:names.custom_section",
+      "name": "Product Category Hover",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
