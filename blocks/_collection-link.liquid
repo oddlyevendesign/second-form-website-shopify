@@ -48,12 +48,21 @@
   <a
     href="{{ closest.collection.url }}"
     class="collection-links__image"
-    size="{{ section.settings.image_height }}"
     {% if onboarding %}
       data-placeholder="true"
     {% endif %}
   >
-    {{ image_block }}
+    {% if onboarding == false and closest.collection.featured_image %}
+      <img
+        src="{{ closest.collection.featured_image | image_url: width: 800 }}"
+        alt="{{ closest.collection.title | escape }}"
+        loading="{{ loading | default: 'lazy' }}"
+        width="800"
+        height="{{ closest.collection.featured_image.height | times: 800 | divided_by: closest.collection.featured_image.width }}"
+      >
+    {% else %}
+      {{ image_block }}
+    {% endif %}
   </a>
 {% else %}
   <a
@@ -143,6 +152,12 @@
     font-size: 0.5em;
     opacity: var(--disabled-opacity);
     font-weight: var(--font-paragraph--weight);
+  }
+
+  .collection-links__image img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .collection-links__image {
