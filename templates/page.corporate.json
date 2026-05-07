@@ -579,28 +579,28 @@
       "type": "sf-corp-capabilities",
       "blocks": {
         "cap_1": {
-          "type": "corp-capability-card",
+          "type": "capability",
           "settings": {
             "title": "Fabric Selection",
             "body": "Choose from CloudSoft™, LuxeModal™, EcoSoft™ and more — all GOTS and Oeko-Tex 100 certified."
           }
         },
         "cap_2": {
-          "type": "corp-capability-card",
+          "type": "capability",
           "settings": {
             "title": "Design Customization",
             "body": "Modify silhouettes, cuts and finishes to match your brand identity and purpose."
           }
         },
         "cap_3": {
-          "type": "corp-capability-card",
+          "type": "capability",
           "settings": {
             "title": "Logo Branding",
             "body": "Multiple placement and technique options — embroidery, screen print, woven labels and heat transfer."
           }
         },
         "cap_4": {
-          "type": "corp-capability-card",
+          "type": "capability",
           "settings": {
             "title": "Sizing Customization",
             "body": "Inclusive size ranges, graded precisely to your requirements — XS through 4XL."
@@ -739,10 +739,105 @@
             "spacer_VcUrKa",
             "text_3RYqXV"
           ]
+        },
+        "group_4tLXrH": {
+          "type": "group",
+          "name": "Capability Card",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "corp_capability_card_VnUxqq": {
+              "type": "corp-capability-card",
+              "name": "Corp: Capability card",
+              "settings": {
+                "title": "FABRIC SELECTION",
+                "body": "Choose from premium materials"
+              },
+              "blocks": {}
+            },
+            "corp_capability_card_L4zEVY": {
+              "type": "corp-capability-card",
+              "name": "Corp: Capability card",
+              "settings": {
+                "title": "DESIGN CUSTOMIZATION",
+                "body": "Modify styles to your needs"
+              },
+              "blocks": {}
+            },
+            "corp_capability_card_wtnkdd": {
+              "type": "corp-capability-card",
+              "name": "Corp: Capability card",
+              "settings": {
+                "title": "LOGO BRANDING & PLACEMENTS",
+                "body": "Multiple branding options"
+              },
+              "blocks": {}
+            },
+            "corp_capability_card_NBLXJ4": {
+              "type": "corp-capability-card",
+              "name": "Corp: Capability card",
+              "settings": {
+                "title": "SIZING CUSTOMIZATION",
+                "body": "Inclusive size ranges"
+              },
+              "blocks": {}
+            },
+            "corp_capability_card_wPx9WJ": {
+              "type": "corp-capability-card",
+              "name": "Corp: Capability card",
+              "settings": {
+                "title": "PACKAGING FOR GIFTING",
+                "body": "Premium presentation"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "corp_capability_card_VnUxqq",
+            "corp_capability_card_L4zEVY",
+            "corp_capability_card_wtnkdd",
+            "corp_capability_card_NBLXJ4",
+            "corp_capability_card_wPx9WJ"
+          ]
         }
       },
       "block_order": [
-        "group_mJY9mK"
+        "group_mJY9mK",
+        "group_4tLXrH"
       ],
       "custom_css": [
         "h6,.h6.h6,.text-block.h6 > *,.text-block.h6 :is(h1, h2, h3, h4, h5, h6) {color: #aea59c !important; letter-spacing: 1.2px;}"
@@ -756,11 +851,11 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
+        "gap": 56,
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -772,45 +867,45 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-start": 80,
+        "padding-block-end": 80
       }
     },
     "sf_corp_features": {
       "type": "sf-corp-features",
       "blocks": {
         "feat_1": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "Moisture Wicking"
           }
         },
         "feat_2": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "Anti Microbial"
           }
         },
         "feat_3": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "Water Resistant"
           }
         },
         "feat_4": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "Thermo-Regulating"
           }
         },
         "feat_5": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "Easy-Care & Wrinkle Resistant"
           }
         },
         "feat_6": {
-          "type": "corp-feature-badge",
+          "type": "feature",
           "settings": {
             "label": "UV Protection"
           }
@@ -841,28 +936,28 @@
       "type": "sf-corp-how-it-works",
       "blocks": {
         "step_1": {
-          "type": "corp-step",
+          "type": "step",
           "settings": {
             "title": "Submit Inquiry",
             "body": "Share your requirements, timeline, and budget through our proposal form."
           }
         },
         "step_2": {
-          "type": "corp-step",
+          "type": "step",
           "settings": {
             "title": "Design & Sampling",
             "body": "Our team creates samples aligned to your brand — reviewed and revised until perfect."
           }
         },
         "step_3": {
-          "type": "corp-step",
+          "type": "step",
           "settings": {
             "title": "Approval & Production",
             "body": "Once approved, production begins with full quality control at every stage."
           }
         },
         "step_4": {
-          "type": "corp-step",
+          "type": "step",
           "settings": {
             "title": "Delivery",
             "body": "On-time delivery to your door — anywhere in India and worldwide."
@@ -947,7 +1042,7 @@
       "type": "sf-corp-tiers",
       "blocks": {
         "tier_1": {
-          "type": "corp-pricing-tier",
+          "type": "tier",
           "settings": {
             "featured": false,
             "badge": "",
@@ -967,7 +1062,7 @@
           }
         },
         "tier_2": {
-          "type": "corp-pricing-tier",
+          "type": "tier",
           "settings": {
             "featured": true,
             "badge": "Most Popular",
@@ -987,7 +1082,7 @@
           }
         },
         "tier_3": {
-          "type": "corp-pricing-tier",
+          "type": "tier",
           "settings": {
             "featured": false,
             "badge": "",
@@ -1046,42 +1141,42 @@
       "type": "sf-corp-faq",
       "blocks": {
         "faq_1": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "What is your MOQ?",
             "answer": "Our minimum order quantity starts at 12 pieces per style for SF Classic, 50 pieces for SF Premium. SF Plus has no minimum."
           }
         },
         "faq_2": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "What is the typical timeline?",
             "answer": "Standard orders take 21–28 days from approval. Priority orders (SF Premium and above) are delivered in 14–18 days."
           }
         },
         "faq_3": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "Do you offer design customization?",
             "answer": "Yes — we can modify silhouettes, add logo placements (embroidery, print, woven labels), custom packaging, and more."
           }
         },
         "faq_4": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "Can we see samples before placing an order?",
             "answer": "Absolutely. We produce a physical sample for approval before any production run begins."
           }
         },
         "faq_5": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "How is pricing structured?",
             "answer": "Pricing depends on fabric, quantity, customization complexity and timeline. Request a proposal and we'll send a detailed quote within 48 hours."
           }
         },
         "faq_6": {
-          "type": "corp-faq-item",
+          "type": "faq",
           "settings": {
             "question": "Do you ship internationally?",
             "answer": "Yes — we ship worldwide. Duties and taxes for international orders are calculated at checkout or included in your proposal quote."
