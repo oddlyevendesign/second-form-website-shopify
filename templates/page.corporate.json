@@ -1663,84 +1663,271 @@
         "custom_text_color": "#523f38"
       }
     },
-    "sf_corp_tiers": {
-      "type": "sf-corp-tiers",
+    "section_RafxJP": {
+      "type": "section",
       "blocks": {
-        "tier_1": {
-          "type": "tier",
+        "group_XqRCtk": {
+          "type": "group",
+          "name": "PC - Heading",
           "settings": {
-            "featured": false,
-            "badge": "",
-            "name": "SF Classic",
-            "price": "₹500",
-            "price_sub": "per piece, starting from",
-            "description": "Premium essentials at scale. Ideal for teams and first-time corporate orders.",
-            "features_label": "Includes:",
-            "feature_1": "Min. 12 pieces per style",
-            "feature_2": "Logo embroidery or screen print",
-            "feature_3": "Standard delivery (21–28 days)",
-            "feature_4": "",
-            "feature_5": "",
-            "feature_6": "",
-            "cta_label": "Get Started",
-            "cta_url": ""
-          }
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_QwpXQf": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>PRICING</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_faCkhw": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>OUR TIERS</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "3rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_Lj4DgN": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Tiers to match your needs for your team.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_QwpXQf",
+            "text_faCkhw",
+            "text_Lj4DgN"
+          ]
         },
-        "tier_2": {
-          "type": "tier",
+        "group_7iqqQp": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "featured": true,
-            "badge": "Most Popular",
-            "name": "SF Premium",
-            "price": "₹800",
-            "price_sub": "per piece, starting from",
-            "description": "Full customization with priority support — for brands that want every detail right.",
-            "features_label": "Includes:",
-            "feature_1": "Min. 50 pieces per style",
-            "feature_2": "Full design customization",
-            "feature_3": "Woven labels & custom packaging",
-            "feature_4": "Priority delivery (14–18 days)",
-            "feature_5": "Dedicated account manager",
-            "feature_6": "",
-            "cta_label": "Get Started",
-            "cta_url": ""
-          }
-        },
-        "tier_3": {
-          "type": "tier",
-          "settings": {
-            "featured": false,
-            "badge": "",
-            "name": "SF Plus",
-            "price": "Custom",
-            "price_sub": "pricing on request",
-            "description": "End-to-end brand-building — from fabric development to co-branded collections.",
-            "features_label": "Includes:",
-            "feature_1": "No minimum quantity",
-            "feature_2": "Proprietary fabric development",
-            "feature_3": "Co-branding & co-design",
-            "feature_4": "Global delivery",
-            "feature_5": "SLA-backed timelines",
-            "feature_6": "",
-            "cta_label": "Talk to Us",
-            "cta_url": ""
-          }
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "corp_step_THJyNn": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>SF CLASSIC</p>",
+                "body": "<p>Starts at <strong>₹299</strong>. </p><p><strong>Best for:</strong> large-scale corporate gifting and onboarding kits<br/></p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "100%",
+                "custom_height": 200
+              },
+              "blocks": {}
+            },
+            "corp_step_mYq87U": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>SF PREMIUM</p>",
+                "body": "<p>Starts at<strong> ₹499 </strong></p><p><strong>Best for:</strong> team uniforms, offsite merchandise, employee experience programs<br/></p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "fit-content",
+                "custom_height": 200
+              },
+              "blocks": {}
+            },
+            "corp_step_NztFjE": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>SF SIGNATURE</p>",
+                "body": "<p>Starts at<strong> ₹899</strong></p><p><strong>Best for:</strong> leadership gifting, boutique hospitality, premium branded sets</p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "100%",
+                "custom_height": 200
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "corp_step_THJyNn",
+            "corp_step_mYq87U",
+            "corp_step_NztFjE"
+          ]
         }
       },
       "block_order": [
-        "tier_1",
-        "tier_2",
-        "tier_3"
+        "group_XqRCtk",
+        "group_7iqqQp"
       ],
+      "custom_css": [
+        "h6,.h6.h6,.text-block.h6 > *,.text-block.h6 :is(h1, h2, h3, h4, h5, h6) {color: #aea59c !important; letter-spacing: 1.2px;}",
+        ".link {}"
+      ],
+      "name": "How it Works",
       "settings": {
-        "eyebrow": "PRICING",
-        "heading": "OUR TIERS",
-        "body": "",
-        "heading_size": 48,
-        "color_scheme": "default",
-        "custom_bg": "#f9f8f5",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38"
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 56,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-3",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 80,
+        "padding-block-end": 100
       }
     },
     "sf_corp_contact": {
@@ -1835,7 +2022,7 @@
     "section_Ch3zEV",
     "section_tcxxfE",
     "sf_corp_logos",
-    "sf_corp_tiers",
+    "section_RafxJP",
     "sf_corp_contact",
     "sf_corp_faq"
   ]
