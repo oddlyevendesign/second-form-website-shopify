@@ -12,7 +12,7 @@
     </div>
   {%- endif -%}
   <div class="corp-how-step__title">{{ block.settings.title }}</div>
-  <p class="corp-how-step__body">{{ block.settings.body }}</p>
+  <div class="corp-how-step__body">{{ block.settings.body }}</div>
 </div>
 
 {% schema %}
@@ -21,8 +21,8 @@
   "tag": null,
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Step icon (optional)" },
-    { "type": "text", "id": "title", "label": "Title", "default": "Submit Inquiry" },
-    { "type": "textarea", "id": "body", "label": "Description", "default": "Share your requirements, timeline, and budget through our proposal form." },
+    { "type": "richtext", "id": "title", "label": "Title", "default": "<p>Submit Inquiry</p>" },
+    { "type": "richtext", "id": "body", "label": "Description", "default": "<p>Share your requirements, timeline, and budget through our proposal form.</p>" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",

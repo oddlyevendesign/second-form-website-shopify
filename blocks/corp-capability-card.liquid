@@ -15,7 +15,7 @@
     </div>
   {%- endif -%}
   <div class="corp-cap-card__title">{{ block.settings.title }}</div>
-  <p class="corp-cap-card__body">{{ block.settings.body }}</p>
+  <div class="corp-cap-card__body">{{ block.settings.body }}</div>
 </div>
 
 {% schema %}
@@ -24,8 +24,8 @@
   "tag": null,
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
-    { "type": "text", "id": "title", "label": "Title", "default": "Fabric Selection" },
-    { "type": "textarea", "id": "body", "label": "Description", "default": "Choose from premium materials — cotton, modal, recycled polyester and more." },
+    { "type": "richtext", "id": "title", "label": "Title", "default": "<p>Fabric Selection</p>" },
+    { "type": "richtext", "id": "body", "label": "Description", "default": "<p>Choose from premium materials — cotton, modal, recycled polyester and more.</p>" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",

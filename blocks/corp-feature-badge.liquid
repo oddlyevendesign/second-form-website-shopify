@@ -14,7 +14,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
     </div>
   {%- endif -%}
-  <span class="corp-feat-badge__label">{{ block.settings.label }}</span>
+  <div class="corp-feat-badge__label">{{ block.settings.label }}</div>
 </div>
 
 {% schema %}
@@ -23,7 +23,7 @@
   "tag": null,
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
-    { "type": "text", "id": "label", "label": "Label", "default": "Moisture Wicking" },
+    { "type": "richtext", "id": "label", "label": "Label", "default": "<p>Moisture Wicking</p>" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",
