@@ -575,55 +575,6 @@
         "padding-block-end": 64
       }
     },
-    "sf_corp_capabilities": {
-      "type": "sf-corp-capabilities",
-      "blocks": {
-        "cap_1": {
-          "type": "capability",
-          "settings": {
-            "title": "Fabric Selection",
-            "body": "Choose from CloudSoft™, LuxeModal™, EcoSoft™ and more — all GOTS and Oeko-Tex 100 certified."
-          }
-        },
-        "cap_2": {
-          "type": "capability",
-          "settings": {
-            "title": "Design Customization",
-            "body": "Modify silhouettes, cuts and finishes to match your brand identity and purpose."
-          }
-        },
-        "cap_3": {
-          "type": "capability",
-          "settings": {
-            "title": "Logo Branding",
-            "body": "Multiple placement and technique options — embroidery, screen print, woven labels and heat transfer."
-          }
-        },
-        "cap_4": {
-          "type": "capability",
-          "settings": {
-            "title": "Sizing Customization",
-            "body": "Inclusive size ranges, graded precisely to your requirements — XS through 4XL."
-          }
-        }
-      },
-      "block_order": [
-        "cap_1",
-        "cap_2",
-        "cap_3",
-        "cap_4"
-      ],
-      "settings": {
-        "eyebrow": "WHAT WE OFFER",
-        "heading": "Customization & Capabilities",
-        "body": "",
-        "heading_size": 42,
-        "color_scheme": "ivory",
-        "custom_bg": "#ffffff",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38"
-      }
-    },
     "section_KTB6pA": {
       "type": "section",
       "blocks": {
@@ -1011,28 +962,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "button_rcCLEB": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "EXPLORE OUR FABRICS",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "text_pPieTG",
             "text_ARkPYy",
-            "text_ARbk8d",
-            "button_rcCLEB"
+            "text_ARbk8d"
           ]
         },
         "group_bWam97": {
@@ -1298,7 +1233,8 @@
         "group_bWam97"
       ],
       "custom_css": [
-        "h6,.h6.h6,.text-block.h6 > *,.text-block.h6 :is(h1, h2, h3, h4, h5, h6) {color: #aea59c !important; letter-spacing: 1.2px;}"
+        "h6,.h6.h6,.text-block.h6 > *,.text-block.h6 :is(h1, h2, h3, h4, h5, h6) {color: #aea59c !important; letter-spacing: 1.2px;}",
+        ".link {}"
       ],
       "name": "Built Around Function",
       "settings": {
@@ -1313,7 +1249,7 @@
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
+        "color_scheme": "scheme-3",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -1327,67 +1263,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 80,
         "padding-block-end": 100
-      }
-    },
-    "sf_corp_features": {
-      "type": "sf-corp-features",
-      "blocks": {
-        "feat_1": {
-          "type": "feature",
-          "settings": {
-            "label": "Moisture Wicking"
-          }
-        },
-        "feat_2": {
-          "type": "feature",
-          "settings": {
-            "label": "Anti Microbial"
-          }
-        },
-        "feat_3": {
-          "type": "feature",
-          "settings": {
-            "label": "Water Resistant"
-          }
-        },
-        "feat_4": {
-          "type": "feature",
-          "settings": {
-            "label": "Thermo-Regulating"
-          }
-        },
-        "feat_5": {
-          "type": "feature",
-          "settings": {
-            "label": "Easy-Care & Wrinkle Resistant"
-          }
-        },
-        "feat_6": {
-          "type": "feature",
-          "settings": {
-            "label": "UV Protection"
-          }
-        }
-      },
-      "block_order": [
-        "feat_1",
-        "feat_2",
-        "feat_3",
-        "feat_4",
-        "feat_5",
-        "feat_6"
-      ],
-      "settings": {
-        "eyebrow": "FABRIC TECHNOLOGY",
-        "heading": "BUILT AROUND FUNCTION",
-        "body": "Second Form is backed by in-house manufacturing — every fabric is tested and certified before it leaves the mill.",
-        "cta_label": "Explore Our Fabrics",
-        "cta_url": "/pages/fabrics",
-        "heading_size": 40,
-        "color_scheme": "default",
-        "custom_bg": "#f9f8f5",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38"
       }
     },
     "sf_corp_how": {
@@ -1664,10 +1539,8 @@
     "sf_lounge_phrase_B4biMA",
     "section_RCMwfx",
     "collection_links_hJT8qb",
-    "sf_corp_capabilities",
     "section_KTB6pA",
     "section_Ch3zEV",
-    "sf_corp_features",
     "sf_corp_how",
     "sf_corp_logos",
     "sf_corp_tiers",
