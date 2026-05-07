@@ -22,6 +22,9 @@ export class ProductHotspotComponent extends Component {
   connectedCallback() {
     super.connectedCallback();
 
+    // In the theme editor, skip all interactive setup — let Shopify own block selection
+    if (window.Shopify?.designMode) return;
+
     // Set up initial event listeners based on current breakpoint
     this.#handleBreakpointChange();
 
@@ -260,6 +263,7 @@ export class ProductHotspotComponent extends Component {
    * @returns {void}
    */
   handleHotspotClick = (e) => {
+    if (window.Shopify?.designMode) return;
     // Check if it's a touch device (tablets) or mobile breakpoint
     if (isMobileBreakpoint() || isTouchDevice()) {
       e.preventDefault();

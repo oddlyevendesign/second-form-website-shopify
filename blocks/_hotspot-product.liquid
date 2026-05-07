@@ -27,6 +27,15 @@
     on:click="/handleHotspotClick"
     style="anchor-name: --hotspot-trigger-{{ block.id }};"
   ></button>
+  {%- if request.design_mode -%}
+    <div class="hotspot-editor-label{% if hotspot_product == blank %} hotspot-editor-label--empty{% endif %}">
+      {%- if hotspot_product == blank -%}
+        + Connect product
+      {%- else -%}
+        {{ hotspot_product.title | truncate: 24 }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
   <dialog
     class="hotspot-dialog"
     ref="dialog"
