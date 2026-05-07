@@ -97,7 +97,7 @@
         "settings": {
           "background": "#f9f8f5",
           "foreground_heading": "#332925",
-          "foreground": "#aea59c",
+          "foreground": "#523f38cf",
           "primary": "#523f38",
           "primary_hover": "#332925",
           "border": "#dfdacf",
@@ -125,7 +125,7 @@
           "variant_hover_text_color": "#332925",
           "variant_hover_border_color": "#aea59c",
           "selected_variant_background_color": "#332925",
-          "selected_variant_text_color": "#f9f8f5",
+          "selected_variant_text_color": "#523f38",
           "selected_variant_border_color": "#332925",
           "selected_variant_hover_background_color": "#523f38",
           "selected_variant_hover_text_color": "#f9f8f5",
