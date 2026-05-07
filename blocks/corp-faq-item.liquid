@@ -4,10 +4,10 @@
 {%- if _w == 'custom' -%}{%- assign _w = block.settings.custom_width | append: '%' -%}{%- endif -%}
 {%- assign _h = block.settings.height -%}
 {%- if _h == 'custom' -%}{%- assign _h = block.settings.custom_height | append: 'px' -%}{%- endif -%}
-<div class="corp-faq-item" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};">
+<div class="corp-faq-item" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};background:{{ block.settings.container_color }};border:1px solid {{ block.settings.stroke_color }};color:{{ block.settings.text_color }};--corp-icon-color:{{ block.settings.icon_color }};">
   <div class="corp-faq-item__q">
     <div class="corp-faq-item__q-text">{{ block.settings.question }}</div>
-    <span class="corp-faq-icon">+</span>
+    <span class="corp-faq-icon" style="color:var(--corp-icon-color);">+</span>
   </div>
   <div class="corp-faq-item__a">
     <div class="corp-faq-item__a-inner">{{ block.settings.answer }}</div>
@@ -21,6 +21,11 @@
   "settings": [
     { "type": "richtext", "id": "question", "label": "Question", "default": "<p>What is your MOQ?</p>" },
     { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>Our minimum order quantity is 12 pieces per style. For SF Plus, there is no minimum.</p>" },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "icon_color", "label": "Icon colour (+ toggle)", "default": "#1C1917" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#1C1917" },
+    { "type": "color", "id": "container_color", "label": "Container background", "default": "#FFFFFF" },
+    { "type": "color", "id": "stroke_color", "label": "Container stroke", "default": "#E8E0D8" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",

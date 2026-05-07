@@ -4,7 +4,7 @@
 {%- if _w == 'custom' -%}{%- assign _w = block.settings.custom_width | append: '%' -%}{%- endif -%}
 {%- assign _h = block.settings.height -%}
 {%- if _h == 'custom' -%}{%- assign _h = block.settings.custom_height | append: 'px' -%}{%- endif -%}
-<div class="corp-tier-card{% if block.settings.featured %} featured{% endif %}" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};">
+<div class="corp-tier-card{% if block.settings.featured %} featured{% endif %}" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};background:{{ block.settings.container_color }};border:1px solid {{ block.settings.stroke_color }};color:{{ block.settings.text_color }};">
   {%- if block.settings.badge != blank -%}
     <span class="corp-tier-card__badge">{{ block.settings.badge }}</span>
   {%- endif -%}
@@ -52,6 +52,10 @@
     { "type": "text", "id": "feature_6", "label": "Feature 6" },
     { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Get Started" },
     { "type": "url", "id": "cta_url", "label": "CTA URL" },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#1C1917" },
+    { "type": "color", "id": "container_color", "label": "Container background", "default": "#FFFFFF" },
+    { "type": "color", "id": "stroke_color", "label": "Container stroke", "default": "#E8E0D8" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",

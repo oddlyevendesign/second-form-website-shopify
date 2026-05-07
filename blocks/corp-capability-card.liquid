@@ -4,13 +4,13 @@
 {%- if _w == 'custom' -%}{%- assign _w = block.settings.custom_width | append: '%' -%}{%- endif -%}
 {%- assign _h = block.settings.height -%}
 {%- if _h == 'custom' -%}{%- assign _h = block.settings.custom_height | append: 'px' -%}{%- endif -%}
-<div class="corp-cap-card" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};">
+<div class="corp-cap-card" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};background:{{ block.settings.container_color }};border:1px solid {{ block.settings.stroke_color }};color:{{ block.settings.text_color }};--corp-icon-color:{{ block.settings.icon_color }};--corp-icon-bg:{{ block.settings.icon_bg }};">
   {%- if block.settings.image -%}
-    <div class="corp-cap-card__icon" style="background:transparent;width:56px;height:56px;">
+    <div class="corp-cap-card__icon" style="background:var(--corp-icon-bg);width:56px;height:56px;">
       <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="40" height="40" style="object-fit:contain;width:40px;height:40px;">
     </div>
   {%- else -%}
-    <div class="corp-cap-card__icon">
+    <div class="corp-cap-card__icon" style="background:var(--corp-icon-bg);color:var(--corp-icon-color);">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
     </div>
   {%- endif -%}
@@ -26,6 +26,12 @@
     { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
     { "type": "richtext", "id": "title", "label": "Title", "default": "<p>Fabric Selection</p>" },
     { "type": "richtext", "id": "body", "label": "Description", "default": "<p>Choose from premium materials — cotton, modal, recycled polyester and more.</p>" },
+    { "type": "header", "content": "Colours" },
+    { "type": "color", "id": "icon_color", "label": "Icon colour", "default": "#1C1917" },
+    { "type": "color", "id": "icon_bg", "label": "Icon background", "default": "#F5F0EB" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#1C1917" },
+    { "type": "color", "id": "container_color", "label": "Container background", "default": "#FFFFFF" },
+    { "type": "color", "id": "stroke_color", "label": "Container stroke", "default": "#E8E0D8" },
     { "type": "header", "content": "Layout" },
     {
       "type": "select", "id": "width", "label": "Width",
