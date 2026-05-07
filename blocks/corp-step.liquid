@@ -1,6 +1,8 @@
 {{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
 
-<div class="corp-how-step" {{ block.shopify_attributes }}>
+{%- assign _w = block.settings.width -%}
+{%- if _w == 'custom' -%}{%- assign _w = block.settings.custom_width | append: '%' -%}{%- endif -%}
+<div class="corp-how-step" {{ block.shopify_attributes }} style="width:{{ _w }};">
   <span class="corp-how-step__num"></span>
   {%- if block.settings.image -%}
     <div style="margin-bottom:16px;width:48px;height:48px;">
@@ -18,7 +20,22 @@
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Step icon (optional)" },
     { "type": "text", "id": "title", "label": "Title", "default": "Submit Inquiry" },
-    { "type": "textarea", "id": "body", "label": "Description", "default": "Share your requirements, timeline, and budget through our proposal form." }
+    { "type": "textarea", "id": "body", "label": "Description", "default": "Share your requirements, timeline, and budget through our proposal form." },
+    { "type": "header", "content": "Layout" },
+    {
+      "type": "select", "id": "width", "label": "Width",
+      "options": [
+        { "value": "fit-content", "label": "Fit" },
+        { "value": "100%", "label": "Fill" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "100%"
+    },
+    {
+      "type": "range", "id": "custom_width", "label": "Custom width",
+      "min": 10, "max": 100, "step": 5, "unit": "%", "default": 50,
+      "visible_if": "{{ block.settings.width == 'custom' }}"
+    }
   ],
   "presets": [
     { "name": "Corp: Step", "category": "Corporate" }
