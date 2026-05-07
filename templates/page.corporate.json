@@ -575,51 +575,6 @@
         "padding-block-end": 64
       }
     },
-    "sf_corp_intro": {
-      "type": "sf-corp-intro",
-      "blocks": {
-        "stat_1": {
-          "type": "stat",
-          "settings": {
-            "value": "500+",
-            "label": "Corporate clients"
-          }
-        },
-        "stat_2": {
-          "type": "stat",
-          "settings": {
-            "value": "50+",
-            "label": "Countries shipped"
-          }
-        },
-        "stat_3": {
-          "type": "stat",
-          "settings": {
-            "value": "12",
-            "label": "Pieces minimum"
-          }
-        }
-      },
-      "block_order": [
-        "stat_1",
-        "stat_2",
-        "stat_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_position": "right",
-        "eyebrow": "WHO WE WORK WITH",
-        "heading": "HOODIES",
-        "body": "We work with teams to create apparel and gifting that feels aligned with your brand — designed to fit seamlessly into real work lives.",
-        "cta_label": "",
-        "cta_url": "",
-        "heading_size": 42,
-        "color_scheme": "default",
-        "custom_bg": "#f9f8f5",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38"
-      }
-    },
     "sf_corp_capabilities": {
       "type": "sf-corp-capabilities",
       "blocks": {
@@ -667,6 +622,170 @@
         "custom_bg": "#ffffff",
         "custom_heading_color": "#332925",
         "custom_text_color": "#523f38"
+      }
+    },
+    "section_KTB6pA": {
+      "type": "section",
+      "blocks": {
+        "group_mJY9mK": {
+          "type": "group",
+          "name": "PC - Heading",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 4,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_ijhkW6": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>WHAT WE OFFER</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_3RYqXV": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>CUSTOMIZATIONS & CAPABILITIES</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "3rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_CKJqPC": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Find what you're looking for.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_ijhkW6",
+            "text_3RYqXV",
+            "text_CKJqPC"
+          ]
+        }
+      },
+      "block_order": [
+        "group_mJY9mK"
+      ],
+      "custom_css": [
+        "h6 {color: #AEA59C !important;}"
+      ],
+      "name": "Customizations & Capabilities",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "sf_corp_features": {
@@ -1004,8 +1123,8 @@
     "sf_lounge_phrase_B4biMA",
     "section_RCMwfx",
     "collection_links_hJT8qb",
-    "sf_corp_intro",
     "sf_corp_capabilities",
+    "section_KTB6pA",
     "sf_corp_features",
     "sf_corp_how",
     "sf_corp_logos",
