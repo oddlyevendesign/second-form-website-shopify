@@ -1,0 +1,27 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+
+<div class="corp-cap-card" {{ block.shopify_attributes }}>
+  {%- if block.settings.image -%}
+    <div class="corp-cap-card__icon" style="background:transparent;width:56px;height:56px;">
+      <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="40" height="40" style="object-fit:contain;width:40px;height:40px;">
+    </div>
+  {%- else -%}
+    <div class="corp-cap-card__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+    </div>
+  {%- endif -%}
+  <div class="corp-cap-card__title">{{ block.settings.title }}</div>
+  <p class="corp-cap-card__body">{{ block.settings.body }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Capability card",
+  "tag": null,
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Fabric Selection" },
+    { "type": "textarea", "id": "body", "label": "Description", "default": "Choose from premium materials — cotton, modal, recycled polyester and more." }
+  ]
+}
+{% endschema %}

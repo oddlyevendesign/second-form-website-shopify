@@ -7,23 +7,14 @@
   </h2>
 
   <div class="corp-faq__list">
-    {%- for block in section.blocks -%}
-      <div class="corp-faq-item{% if forloop.first %} open{% endif %}" {{ block.shopify_attributes }}>
-        <div class="corp-faq-item__q">
-          <span>{{ block.settings.question }}</span>
-          <span class="corp-faq-icon">+</span>
-        </div>
-        <div class="corp-faq-item__a">
-          <div class="corp-faq-item__a-inner">{{ block.settings.answer }}</div>
-        </div>
-      </div>
-    {%- endfor -%}
+    {% content_for 'blocks' %}
   </div>
 </div>
 
 <script>
 (function () {
   var items = document.querySelectorAll('.corp-faq-item');
+  if (items[0]) items[0].classList.add('open');
   items.forEach(function (item) {
     item.querySelector('.corp-faq-item__q').addEventListener('click', function () {
       var isOpen = item.classList.contains('open');
@@ -53,14 +44,7 @@
     { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
   ],
   "blocks": [
-    {
-      "type": "faq",
-      "name": "FAQ item",
-      "settings": [
-        { "type": "text", "id": "question", "label": "Question", "default": "What is your MOQ?" },
-        { "type": "textarea", "id": "answer", "label": "Answer", "default": "Our minimum order quantity is 12 pieces per style. For SF Plus, there is no minimum." }
-      ]
-    }
+    { "type": "corp-faq-item" }
   ],
   "presets": [
     {

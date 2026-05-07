@@ -1,0 +1,25 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+
+<div class="corp-feat-badge" {{ block.shopify_attributes }}>
+  {%- if block.settings.image -%}
+    <div class="corp-feat-badge__icon" style="width:40px;height:40px;">
+      <img src="{{ block.settings.image | image_url: width: 60 }}" alt="" width="28" height="28" style="object-fit:contain;width:28px;height:28px;">
+    </div>
+  {%- else -%}
+    <div class="corp-feat-badge__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    </div>
+  {%- endif -%}
+  <span class="corp-feat-badge__label">{{ block.settings.label }}</span>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Feature badge",
+  "tag": null,
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
+    { "type": "text", "id": "label", "label": "Label", "default": "Moisture Wicking" }
+  ]
+}
+{% endschema %}

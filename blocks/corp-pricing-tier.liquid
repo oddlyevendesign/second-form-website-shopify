@@ -1,0 +1,53 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+
+<div class="corp-tier-card{% if block.settings.featured %} featured{% endif %}" {{ block.shopify_attributes }}>
+  {%- if block.settings.badge != blank -%}
+    <span class="corp-tier-card__badge">{{ block.settings.badge }}</span>
+  {%- endif -%}
+  <div class="corp-tier-card__name">{{ block.settings.name }}</div>
+  <div class="corp-tier-card__price">{{ block.settings.price }}</div>
+  <div class="corp-tier-card__price-sub">{{ block.settings.price_sub | default: 'per piece, ex-GST' }}</div>
+  {%- if block.settings.description != blank -%}
+    <p class="corp-tier-card__desc">{{ block.settings.description }}</p>
+  {%- endif -%}
+  <div class="corp-tier-card__divider"></div>
+  {%- if block.settings.features_label != blank -%}
+    <div class="corp-tier-card__features-label">{{ block.settings.features_label }}</div>
+  {%- endif -%}
+  <ul class="corp-tier-card__features">
+    {%- for i in (1..6) -%}
+      {%- assign feat_key = 'feature_' | append: i -%}
+      {%- assign feat = block.settings[feat_key] -%}
+      {%- if feat != blank -%}
+        <li class="corp-tier-card__feature">{{ feat }}</li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+  {%- if block.settings.cta_label != blank -%}
+    <a href="{{ block.settings.cta_url | default: '#contact' }}" class="corp-tier-card__cta">{{ block.settings.cta_label }}</a>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Pricing tier",
+  "tag": null,
+  "settings": [
+    { "type": "checkbox", "id": "featured", "label": "Highlight as featured tier", "default": false },
+    { "type": "text", "id": "badge", "label": "Badge label (e.g. Most Popular)" },
+    { "type": "text", "id": "name", "label": "Tier name", "default": "SF Classic" },
+    { "type": "text", "id": "price", "label": "Starting price", "default": "₹500" },
+    { "type": "text", "id": "price_sub", "label": "Price qualifier", "default": "per piece, ex-GST" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Best for teams looking for premium essentials at scale." },
+    { "type": "text", "id": "features_label", "label": "Features list label", "default": "What's included:" },
+    { "type": "text", "id": "feature_1", "label": "Feature 1", "default": "Min. 12 pieces per style" },
+    { "type": "text", "id": "feature_2", "label": "Feature 2", "default": "Logo embroidery or print" },
+    { "type": "text", "id": "feature_3", "label": "Feature 3", "default": "Standard delivery (21–28 days)" },
+    { "type": "text", "id": "feature_4", "label": "Feature 4" },
+    { "type": "text", "id": "feature_5", "label": "Feature 5" },
+    { "type": "text", "id": "feature_6", "label": "Feature 6" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Get Started" },
+    { "type": "url", "id": "cta_url", "label": "CTA URL" }
+  ]
+}
+{% endschema %}

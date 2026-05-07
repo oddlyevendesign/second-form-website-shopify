@@ -579,28 +579,28 @@
       "type": "sf-corp-capabilities",
       "blocks": {
         "cap_1": {
-          "type": "capability",
+          "type": "corp-capability-card",
           "settings": {
             "title": "Fabric Selection",
             "body": "Choose from CloudSoft™, LuxeModal™, EcoSoft™ and more — all GOTS and Oeko-Tex 100 certified."
           }
         },
         "cap_2": {
-          "type": "capability",
+          "type": "corp-capability-card",
           "settings": {
             "title": "Design Customization",
             "body": "Modify silhouettes, cuts and finishes to match your brand identity and purpose."
           }
         },
         "cap_3": {
-          "type": "capability",
+          "type": "corp-capability-card",
           "settings": {
             "title": "Logo Branding",
             "body": "Multiple placement and technique options — embroidery, screen print, woven labels and heat transfer."
           }
         },
         "cap_4": {
-          "type": "capability",
+          "type": "corp-capability-card",
           "settings": {
             "title": "Sizing Customization",
             "body": "Inclusive size ranges, graded precisely to your requirements — XS through 4XL."
@@ -780,37 +780,37 @@
       "type": "sf-corp-features",
       "blocks": {
         "feat_1": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "Moisture Wicking"
           }
         },
         "feat_2": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "Anti Microbial"
           }
         },
         "feat_3": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "Water Resistant"
           }
         },
         "feat_4": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "Thermo-Regulating"
           }
         },
         "feat_5": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "Easy-Care & Wrinkle Resistant"
           }
         },
         "feat_6": {
-          "type": "feature",
+          "type": "corp-feature-badge",
           "settings": {
             "label": "UV Protection"
           }
@@ -841,28 +841,28 @@
       "type": "sf-corp-how-it-works",
       "blocks": {
         "step_1": {
-          "type": "step",
+          "type": "corp-step",
           "settings": {
             "title": "Submit Inquiry",
             "body": "Share your requirements, timeline, and budget through our proposal form."
           }
         },
         "step_2": {
-          "type": "step",
+          "type": "corp-step",
           "settings": {
             "title": "Design & Sampling",
             "body": "Our team creates samples aligned to your brand — reviewed and revised until perfect."
           }
         },
         "step_3": {
-          "type": "step",
+          "type": "corp-step",
           "settings": {
             "title": "Approval & Production",
             "body": "Once approved, production begins with full quality control at every stage."
           }
         },
         "step_4": {
-          "type": "step",
+          "type": "corp-step",
           "settings": {
             "title": "Delivery",
             "body": "On-time delivery to your door — anywhere in India and worldwide."
@@ -947,7 +947,7 @@
       "type": "sf-corp-tiers",
       "blocks": {
         "tier_1": {
-          "type": "tier",
+          "type": "corp-pricing-tier",
           "settings": {
             "featured": false,
             "badge": "",
@@ -967,7 +967,7 @@
           }
         },
         "tier_2": {
-          "type": "tier",
+          "type": "corp-pricing-tier",
           "settings": {
             "featured": true,
             "badge": "Most Popular",
@@ -987,7 +987,7 @@
           }
         },
         "tier_3": {
-          "type": "tier",
+          "type": "corp-pricing-tier",
           "settings": {
             "featured": false,
             "badge": "",
@@ -1046,42 +1046,42 @@
       "type": "sf-corp-faq",
       "blocks": {
         "faq_1": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "What is your MOQ?",
             "answer": "Our minimum order quantity starts at 12 pieces per style for SF Classic, 50 pieces for SF Premium. SF Plus has no minimum."
           }
         },
         "faq_2": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "What is the typical timeline?",
             "answer": "Standard orders take 21–28 days from approval. Priority orders (SF Premium and above) are delivered in 14–18 days."
           }
         },
         "faq_3": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "Do you offer design customization?",
             "answer": "Yes — we can modify silhouettes, add logo placements (embroidery, print, woven labels), custom packaging, and more."
           }
         },
         "faq_4": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "Can we see samples before placing an order?",
             "answer": "Absolutely. We produce a physical sample for approval before any production run begins."
           }
         },
         "faq_5": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "How is pricing structured?",
             "answer": "Pricing depends on fabric, quantity, customization complexity and timeline. Request a proposal and we'll send a detailed quote within 48 hours."
           }
         },
         "faq_6": {
-          "type": "faq",
+          "type": "corp-faq-item",
           "settings": {
             "question": "Do you ship internationally?",
             "answer": "Yes — we ship worldwide. Duties and taxes for international orders are calculated at checkout or included in your proposal quote."

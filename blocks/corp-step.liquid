@@ -1,0 +1,24 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+
+<div class="corp-how-step" {{ block.shopify_attributes }}>
+  <span class="corp-how-step__num"></span>
+  {%- if block.settings.image -%}
+    <div style="margin-bottom:16px;width:48px;height:48px;">
+      <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="48" height="48" style="object-fit:contain;">
+    </div>
+  {%- endif -%}
+  <div class="corp-how-step__title">{{ block.settings.title }}</div>
+  <p class="corp-how-step__body">{{ block.settings.body }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: Step",
+  "tag": null,
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Step icon (optional)" },
+    { "type": "text", "id": "title", "label": "Title", "default": "Submit Inquiry" },
+    { "type": "textarea", "id": "body", "label": "Description", "default": "Share your requirements, timeline, and budget through our proposal form." }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+{{ 'sf-corporate.css' | asset_url | stylesheet_tag }}
+
+<div class="corp-faq-item" {{ block.shopify_attributes }}>
+  <div class="corp-faq-item__q">
+    <span>{{ block.settings.question }}</span>
+    <span class="corp-faq-icon">+</span>
+  </div>
+  <div class="corp-faq-item__a">
+    <div class="corp-faq-item__a-inner">{{ block.settings.answer }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Corp: FAQ item",
+  "tag": null,
+  "settings": [
+    { "type": "text", "id": "question", "label": "Question", "default": "What is your MOQ?" },
+    { "type": "textarea", "id": "answer", "label": "Answer", "default": "Our minimum order quantity is 12 pieces per style. For SF Plus, there is no minimum." }
+  ]
+}
+{% endschema %}

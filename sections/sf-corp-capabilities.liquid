@@ -15,21 +15,7 @@
   </div>
 
   <div class="corp-cap-grid">
-    {%- for block in section.blocks -%}
-      <div class="corp-cap-card" {{ block.shopify_attributes }}>
-        {%- if block.settings.image -%}
-          <div class="corp-cap-card__icon" style="background:transparent;width:56px;height:56px;">
-            <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="40" height="40" style="object-fit:contain;width:40px;height:40px;">
-          </div>
-        {%- else -%}
-          <div class="corp-cap-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-        {%- endif -%}
-        <div class="corp-cap-card__title">{{ block.settings.title }}</div>
-        <p class="corp-cap-card__body">{{ block.settings.body }}</p>
-      </div>
-    {%- endfor -%}
+    {% content_for 'blocks' %}
   </div>
 </div>
 
@@ -54,17 +40,9 @@
     { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
   ],
   "blocks": [
-    {
-      "type": "capability",
-      "name": "Capability card",
-      "settings": [
-        { "type": "image_picker", "id": "image", "label": "Icon image (optional)" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Fabric Selection" },
-        { "type": "textarea", "id": "body", "label": "Description", "default": "Choose from premium materials — cotton, modal, recycled polyester and more." }
-      ]
-    }
+    { "type": "corp-capability-card" },
+    { "type": "corp-feature-badge" }
   ],
-  "max_blocks": 6,
   "presets": [
     {
       "name": "Corp: Capabilities",

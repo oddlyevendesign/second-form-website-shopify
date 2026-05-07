@@ -17,19 +17,14 @@
   </div>
 
   <div class="corp-how-steps">
-    {%- for block in section.blocks -%}
-      <div class="corp-how-step" {{ block.shopify_attributes }}>
-        <span class="corp-how-step__num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-        {%- if block.settings.image -%}
-          <div style="margin-bottom:16px;width:48px;height:48px;">
-            <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="48" height="48" style="object-fit:contain;">
-          </div>
-        {%- endif -%}
-        <div class="corp-how-step__title">{{ block.settings.title }}</div>
-        <p class="corp-how-step__body">{{ block.settings.body }}</p>
-      </div>
-    {%- endfor -%}
+    {% content_for 'blocks' %}
   </div>
+
+  <style>
+    .corp-how-steps { counter-reset: corp-step; }
+    .corp-how-step__num { counter-increment: corp-step; }
+    .corp-how-step__num::before { content: counter(corp-step, decimal-leading-zero); }
+  </style>
 </div>
 
 {% schema %}
@@ -53,17 +48,8 @@
     { "type": "color", "id": "custom_text_color", "label": "Body text colour", "default": "#523F38" }
   ],
   "blocks": [
-    {
-      "type": "step",
-      "name": "Step",
-      "settings": [
-        { "type": "image_picker", "id": "image", "label": "Step icon (optional)" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Submit Inquiry" },
-        { "type": "textarea", "id": "body", "label": "Description", "default": "Share your requirements, timeline, and budget through our proposal form." }
-      ]
-    }
+    { "type": "corp-step" }
   ],
-  "max_blocks": 6,
   "presets": [
     {
       "name": "Corp: How It Works",
