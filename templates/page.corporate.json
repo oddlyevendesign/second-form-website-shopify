@@ -784,8 +784,8 @@
               "type": "corp-capability-card",
               "name": "Corp: Capability card",
               "settings": {
-                "title": "FABRIC SELECTION",
-                "body": "Choose from premium materials",
+                "title": "<p>FABRIC SELECTION</p>",
+                "body": "<p>Choose from premium materials</p>",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "fit-content",
@@ -797,8 +797,8 @@
               "type": "corp-capability-card",
               "name": "Corp: Capability card",
               "settings": {
-                "title": "DESIGN CUSTOMIZATION",
-                "body": "Modify styles to your needs",
+                "title": "<p>DESIGN CUSTOMIZATION</p>",
+                "body": "<p>Modify styles to your needs</p>",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "fit-content",
@@ -810,8 +810,8 @@
               "type": "corp-capability-card",
               "name": "Corp: Capability card",
               "settings": {
-                "title": "LOGO BRANDING & PLACEMENTS",
-                "body": "Multiple branding options",
+                "title": "<p>LOGO BRANDING & PLACEMENTS</p>",
+                "body": "<p>Multiple branding options</p>",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "fit-content",
@@ -823,8 +823,8 @@
               "type": "corp-capability-card",
               "name": "Corp: Capability card",
               "settings": {
-                "title": "SIZING CUSTOMIZATION",
-                "body": "Inclusive size ranges",
+                "title": "<p>SIZING CUSTOMIZATION</p>",
+                "body": "<p>Inclusive size ranges</p>",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "100%",
@@ -836,8 +836,8 @@
               "type": "corp-capability-card",
               "name": "Corp: Capability card",
               "settings": {
-                "title": "PACKAGING FOR GIFTING",
-                "body": "Premium presentation",
+                "title": "<p>PACKAGING FOR GIFTING</p>",
+                "body": "<p>Premium presentation</p>",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "100%",
@@ -1119,11 +1119,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "UV PROTECTION",
+                    "label": "<p>UV<br/>PROTECTION</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 },
@@ -1131,11 +1131,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "WATER RESISTANT",
+                    "label": "<p>WATER RESISTANT</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 }
@@ -1189,11 +1189,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "Moisture Wicking",
+                    "label": "<p>Moisture Wicking</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 },
@@ -1201,11 +1201,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "Moisture Wicking",
+                    "label": "<p>Thermo-Regulating</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 }
@@ -1259,11 +1259,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "ANTI MICROBIAL",
+                    "label": "<p>ANTI<br/>MICROBIAL</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 },
@@ -1271,11 +1271,11 @@
                   "type": "corp-feature-badge",
                   "name": "Corp: Feature badge",
                   "settings": {
-                    "label": "Moisture Wicking",
+                    "label": "<p>Easy-Care & Wrinkle Resistant</p>",
                     "width": "100%",
                     "custom_width": 50,
-                    "height": "fit-content",
-                    "custom_height": 200
+                    "height": "custom",
+                    "custom_height": 160
                   },
                   "blocks": {}
                 }
