@@ -551,13 +551,13 @@
         ".cl-img-stack {justify-content: right;}",
         ".collection-links__count {display: none;}",
         ".custom-typography,.custom-typography > * {line-height: 36px;}",
-        ".cl-section-title {font-weight: 800; color: #1c1917;}"
+        ".cl-section-title {font-weight: 800; color: #332925;}"
       ],
       "name": "t:names.collection_links_spotlight",
       "settings": {
         "section_title": "PRODUCT CATEGORIES",
         "section_title_size": 40,
-        "subtext": "We have something for everyone.",
+        "subtext": "Built for teams that take quality seriously",
         "subtext_size": 14,
         "collection_list": [
           "tees",
@@ -737,9 +737,14 @@
               "settings": {
                 "title": "<p>FABRIC SELECTION</p>",
                 "body": "<p>Choose from premium materials</p>",
+                "icon_color": "#1c1917",
+                "icon_bg": "#f5f0eb",
+                "text_color": "#1c1917",
+                "container_color": "#ffffff",
+                "stroke_color": "#e8e0d8",
                 "width": "100%",
                 "custom_width": 50,
-                "height": "fit-content",
+                "height": "100%",
                 "custom_height": 200
               },
               "blocks": {}
@@ -749,7 +754,12 @@
               "name": "Corp: Capability card",
               "settings": {
                 "title": "<p>DESIGN CUSTOMIZATION</p>",
-                "body": "<p>Modify styles to your needs</p>",
+                "body": "<p>Design customization: Select from catalog styles with logo and colorway options</p>",
+                "icon_color": "#1c1917",
+                "icon_bg": "#f5f0eb",
+                "text_color": "#1c1917",
+                "container_color": "#ffffff",
+                "stroke_color": "#e8e0d8",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "fit-content",
@@ -763,9 +773,14 @@
               "settings": {
                 "title": "<p>LOGO BRANDING & PLACEMENTS</p>",
                 "body": "<p>Multiple branding options</p>",
+                "icon_color": "#1c1917",
+                "icon_bg": "#f5f0eb",
+                "text_color": "#1c1917",
+                "container_color": "#ffffff",
+                "stroke_color": "#e8e0d8",
                 "width": "100%",
                 "custom_width": 50,
-                "height": "fit-content",
+                "height": "100%",
                 "custom_height": 200
               },
               "blocks": {}
@@ -776,6 +791,11 @@
               "settings": {
                 "title": "<p>SIZING CUSTOMIZATION</p>",
                 "body": "<p>Inclusive size ranges</p>",
+                "icon_color": "#1c1917",
+                "icon_bg": "#f5f0eb",
+                "text_color": "#1c1917",
+                "container_color": "#ffffff",
+                "stroke_color": "#e8e0d8",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "100%",
@@ -789,6 +809,11 @@
               "settings": {
                 "title": "<p>PACKAGING FOR GIFTING</p>",
                 "body": "<p>Premium presentation</p>",
+                "icon_color": "#1c1917",
+                "icon_bg": "#f5f0eb",
+                "text_color": "#1c1917",
+                "container_color": "#ffffff",
+                "stroke_color": "#e8e0d8",
                 "width": "100%",
                 "custom_width": 50,
                 "height": "100%",
@@ -1055,6 +1080,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>UV<br/>PROTECTION</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1067,6 +1097,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>WATER RESISTANT</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1125,6 +1160,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>Moisture Wicking</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1137,6 +1177,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>Thermo-Regulating</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1195,6 +1240,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>ANTI<br/>MICROBIAL</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1207,6 +1257,11 @@
                   "name": "Corp: Feature badge",
                   "settings": {
                     "label": "<p>Easy-Care & Wrinkle Resistant</p>",
+                    "icon_color": "#1c1917",
+                    "icon_bg": "#f5f0eb",
+                    "text_color": "#1c1917",
+                    "container_color": "#ffffff",
+                    "stroke_color": "#e8e0d8",
                     "width": "100%",
                     "custom_width": 50,
                     "height": "custom",
@@ -1265,53 +1320,290 @@
         "padding-block-end": 100
       }
     },
-    "sf_corp_how": {
-      "type": "sf-corp-how-it-works",
+    "section_tcxxfE": {
+      "type": "section",
       "blocks": {
-        "step_1": {
-          "type": "step",
+        "group_qxki6B": {
+          "type": "group",
+          "name": "PC - Heading",
           "settings": {
-            "title": "Submit Inquiry",
-            "body": "Share your requirements, timeline, and budget through our proposal form."
-          }
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 40
+          },
+          "blocks": {
+            "text_6eagiX": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>PROCESS</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h6",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_Minrtz": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>HOW IT WORKS</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "3rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_JNWa7H": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>End-to-end support — from idea to execution.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_6eagiX",
+            "text_Minrtz",
+            "text_JNWa7H"
+          ]
         },
-        "step_2": {
-          "type": "step",
+        "group_LeiM4J": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "title": "Design & Sampling",
-            "body": "Our team creates samples aligned to your brand — reviewed and revised until perfect."
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "title": "Approval & Production",
-            "body": "Once approved, production begins with full quality control at every stage."
-          }
-        },
-        "step_4": {
-          "type": "step",
-          "settings": {
-            "title": "Delivery",
-            "body": "On-time delivery to your door — anywhere in India and worldwide."
-          }
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "corp_step_FaNQnr": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>SUBMIT INQUIRY</p>",
+                "body": "<p>Share your requirements, timeline, and budget through our proposal form.</p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "100%",
+                "custom_height": 200
+              },
+              "blocks": {}
+            },
+            "corp_step_Ny9Qty": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>DESIGN & SAMPLING</p>",
+                "body": "<p>Share your requirements, timeline, and budget through our proposal form.</p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "100%",
+                "custom_height": 200
+              },
+              "blocks": {}
+            },
+            "corp_step_h6wf9H": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>APPROVAL & PRODUCTION</p>",
+                "body": "<p>Share your requirements, timeline, and budget through our proposal form.</p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "fit-content",
+                "custom_height": 200
+              },
+              "blocks": {}
+            },
+            "corp_step_KLr9yx": {
+              "type": "corp-step",
+              "name": "Corp: Step",
+              "settings": {
+                "title": "<p>DELIVERY</p>",
+                "body": "<p>Share your requirements, timeline, and budget through our proposal form.</p>",
+                "icon_color": "#1C1917",
+                "icon_bg": "#F5F0EB",
+                "text_color": "#1C1917",
+                "container_color": "#FFFFFF",
+                "stroke_color": "#E8E0D8",
+                "width": "100%",
+                "custom_width": 50,
+                "height": "100%",
+                "custom_height": 200
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "corp_step_FaNQnr",
+            "corp_step_Ny9Qty",
+            "corp_step_h6wf9H",
+            "corp_step_KLr9yx"
+          ]
         }
       },
       "block_order": [
-        "step_1",
-        "step_2",
-        "step_3",
-        "step_4"
+        "group_qxki6B",
+        "group_LeiM4J"
       ],
+      "custom_css": [
+        "h6,.h6.h6,.text-block.h6 > *,.text-block.h6 :is(h1, h2, h3, h4, h5, h6) {color: #aea59c !important; letter-spacing: 1.2px;}",
+        ".link {}"
+      ],
+      "name": "How it Works",
       "settings": {
-        "eyebrow": "THE PROCESS",
-        "heading": "HOW IT WORKS",
-        "body": "A streamlined process from first inquiry to final delivery — with a dedicated account manager at every step.",
-        "heading_size": 48,
-        "color_scheme": "warm-dark",
-        "custom_bg": "#f9f8f5",
-        "custom_heading_color": "#332925",
-        "custom_text_color": "#523f38"
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 56,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 80,
+        "padding-block-end": 100
       }
     },
     "sf_corp_logos": {
@@ -1363,7 +1655,7 @@
       "settings": {
         "eyebrow": "TRUSTED BY",
         "heading": "Built on Proven Manufacturing",
-        "body": "Trusted by leading brands across India and globally — backed by export-grade production standards.",
+        "body": "Second Form is backed by our manufacturing partner, Daiko Exports Pvt. Ltd., a globally compliant garment manufacturing unit with established international relationships.",
         "heading_size": 42,
         "color_scheme": "ivory",
         "custom_bg": "#f9f8f5",
@@ -1541,7 +1833,7 @@
     "collection_links_hJT8qb",
     "section_KTB6pA",
     "section_Ch3zEV",
-    "sf_corp_how",
+    "section_tcxxfE",
     "sf_corp_logos",
     "sf_corp_tiers",
     "sf_corp_contact",
