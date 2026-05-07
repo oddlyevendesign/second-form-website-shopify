@@ -2,7 +2,9 @@
 
 {%- assign _w = block.settings.width -%}
 {%- if _w == 'custom' -%}{%- assign _w = block.settings.custom_width | append: '%' -%}{%- endif -%}
-<div class="corp-cap-card" {{ block.shopify_attributes }} style="width:{{ _w }};">
+{%- assign _h = block.settings.height -%}
+{%- if _h == 'custom' -%}{%- assign _h = block.settings.custom_height | append: 'px' -%}{%- endif -%}
+<div class="corp-cap-card" {{ block.shopify_attributes }} style="width:{{ _w }};height:{{ _h }};">
   {%- if block.settings.image -%}
     <div class="corp-cap-card__icon" style="background:transparent;width:56px;height:56px;">
       <img src="{{ block.settings.image | image_url: width: 80 }}" alt="" width="40" height="40" style="object-fit:contain;width:40px;height:40px;">
@@ -38,6 +40,20 @@
       "type": "range", "id": "custom_width", "label": "Custom width",
       "min": 10, "max": 100, "step": 5, "unit": "%", "default": 50,
       "visible_if": "{{ block.settings.width == 'custom' }}"
+    },
+    {
+      "type": "select", "id": "height", "label": "Height",
+      "options": [
+        { "value": "fit-content", "label": "Fit" },
+        { "value": "100%", "label": "Fill" },
+        { "value": "custom", "label": "Custom" }
+      ],
+      "default": "fit-content"
+    },
+    {
+      "type": "range", "id": "custom_height", "label": "Custom height",
+      "min": 50, "max": 800, "step": 10, "unit": "px", "default": 200,
+      "visible_if": "{{ block.settings.height == 'custom' }}"
     }
   ],
   "presets": [
