@@ -693,6 +693,20 @@
               },
               "blocks": {}
             },
+            "spacer_VcUrKa": {
+              "type": "spacer",
+              "name": "t:names.spacer",
+              "settings": {
+                "size": "percent",
+                "percent_size": 100,
+                "pixel_size": 120,
+                "custom_mobile_size": false,
+                "size_mobile": "percent",
+                "percent_size_mobile": 100,
+                "pixel_size_mobile": 120
+              },
+              "blocks": {}
+            },
             "text_3RYqXV": {
               "type": "text",
               "name": "t:names.text",
@@ -718,38 +732,12 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "text_CKJqPC": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>Find what you're looking for.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "text_ijhkW6",
-            "text_3RYqXV",
-            "text_CKJqPC"
+            "spacer_VcUrKa",
+            "text_3RYqXV"
           ]
         }
       },
